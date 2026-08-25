@@ -1,30 +1,30 @@
-# Instagram Account Setup — @ai.ashmi
+# Instagram Account Setup — @ai.aasmi
 
 > Everything needed to open the account. Decisions that are still open are marked
 > **DECIDE**; everything else follows from PROJECT-BRIEF and CHARACTER-BIBLE.
 
 ---
 
-## 0. Resolve first — the age contradiction
+## 0. Identity — settled
 
-CHARACTER-BIBLE §1 says **24**. Every generated image was prompted at **26**, because
-`twenty-six years old, mature adult facial proportions` was the lever that held the
-PROJECT-BRIEF §7 guardrail. **The approved face is a 26-year-old.**
+| Field | Value |
+|---|---|
+| Name | **Aasmi Adhikari** |
+| Age | **25** |
+| Status | Accelerated second-degree BSN, final year, on med-surg clinical placement incl. nights |
+| Culture | Born and raised in the US, culturally American; Nepali is her heritage language |
 
-**DECIDE — recommendation: set her age to 26.**
-
-- The locked face was selected at that age; the bio should not contradict the pictures.
-- §7 demands she read *unambiguously* mid-twenties. 26 carries more margin than 24, and the
-  margin is the entire point of the guardrail.
-- It costs nothing: BSN plus ~4 years post-licensure at 26 is as natural as ~2 years at 24.
-
-Everything below assumes 26. If it stays 24, the bio and the education line change.
+The surname changed from Gurung to **Adhikari** because Gurung was chosen to force
+Tibeto-Burman features the model never produced — Adhikari is Indo-Aryan and matches the
+face we actually have. Age 25 resolves the contradiction between "nursing student" (reads
+21–22) and the approved face (rendered at 26): an accelerated second-degree BSN is full of
+mid-twenties career-changers. See CHARACTER-BIBLE §1.
 
 ---
 
 ## 1. Handle
 
-**Primary: `@ai.ashmi`**
+**Primary: `@ai.aasmi`**
 
 Carries the disclosure in the handle itself, which is the PROJECT-BRIEF §1 lane and mirrors
 the proven `@ai.mikaelatala` pattern. Short, and the `ai.` prefix reads as deliberate rather
@@ -35,10 +35,10 @@ disclosure-in-handle rule:
 
 | Rank | Handle | Note |
 |---|---|---|
-| 1 | `@ai.ashmi` | first choice |
-| 2 | `@ai.ashmigurung` | full name, unambiguous |
-| 3 | `@ashmi.ai` | suffix form; slightly weaker as a disclosure |
-| 4 | `@ai.ashmi.rn` | adds the nurse hook, narrows her to one pillar |
+| 1 | `@ai.aasmi` | first choice |
+| 2 | `@ai.aasmiadhikari` | full name, unambiguous |
+| 3 | `@aasmi.ai` | suffix form; slightly weaker as a disclosure |
+| 4 | `@ai.aasmi.bsn` | adds the nursing-school hook, narrows her to one pillar |
 
 **Do not** take a handle without the AI marker. Disclosure in the handle is the choice the
 whole strategy rests on (§1), and retrofitting it after building an audience is far worse
@@ -49,7 +49,7 @@ than starting with it.
 ## 2. Display name
 
 ```
-Ashmi Gurung
+Aasmi Adhikari
 ```
 
 Plain name only. **Do not** stuff it with keywords — the bio carries the context, and a
@@ -67,7 +67,7 @@ above it, so the disclosure is visible without the display name doing the work.
 ```
 AI-generated. Not a real person.
 Nepali-American · Boston
-night shift RN · momo · ke garne 🇳🇵
+nursing student · momo · ke garne 🇳🇵
 ```
 
 Why this shape:
@@ -86,7 +86,7 @@ Why this shape:
 ```
 AI-generated · not a real person
 Boston-born, Pokhara-rooted
-7p–7a nurse. momo at 8am. ke garne
+nursing school. night clinicals. momo at 8am. ke garne
 ```
 
 **DECIDE** which. First is tighter; second carries more voice.
@@ -108,7 +108,7 @@ Not a scene shot — at profile-photo size they turn to mush.
   to the branded-content tools you will need for §1 monetization, without the storefront
   framing.
 - **Category: Digital Creator.** Do **not** pick "Public Figure" or "Nurse" — implying real
-  professional credentials for a synthetic persona is exactly the misrepresentation the
+  professional credentials for a synthetic persona, and she is a student, not a licensed nurse is exactly the misrepresentation the
   disclosure strategy exists to avoid.
 
 ---
@@ -136,7 +136,7 @@ if no single post crosses a line. Decide the ratio deliberately (see §9).
 
 ## 7. Watermark — PROJECT-BRIEF §6 open decision
 
-**DECIDE — recommendation: yes, small, bottom-left, `@ai.ashmi`.**
+**DECIDE — recommendation: yes, small, bottom-left, `@ai.aasmi`.**
 
 `@ai.mikaelatala` uses one and it doubles as studio branding. For an openly-AI account it
 does a third job: it travels with reposted images, so the disclosure survives when a
@@ -164,17 +164,17 @@ Assets already approved are named; the rest need generating.
 
 | # | Post | Pillar | Asset |
 |---|---|---|---|
-| 1 | Hospital corridor 3am | 1 night shift | `01-hospital-corridor-3am-tired` ✅ |
-| 2 | Aama call, exasperated | 3 first-gen | `10-aama-call-affectionate` ✅ |
+| 1 | Hospital corridor 3am | 1 school/placement | `01-hospital-corridor-3am-tired` ✅ |
+| 2 | Aama call, exasperated | 3 second-gen | `10-aama-call-affectionate` ✅ |
 | 3 | Kitchen, pleating momo | 2 food | `07-kitchen-momo-concentrating` ✅ |
-| 4 | Car park dawn, blank | 1 night shift | `04-carpark-dawn-blank` ✅ |
+| 4 | Car park dawn, blank | 1 school/placement | `04-carpark-dawn-blank` ✅ |
 | 5 | Eating momo, amused | 2 food | `09-eating-momo-amused` ✅ |
 | 6 | Somerville sidewalk | 4 Boston | `06-somerville-sidewalk-delighted` ✅ |
 | 7 | Harvard bookshop | 4 Boston | needs regen — body line missing |
-| 8 | Break room, half-smile | 1 night shift | `02-break-room-half-smile` ✅ |
+| 8 | Break room, half-smile | 1 school/placement | `02-break-room-half-smile` ✅ |
 | 9 | Kurta, family event | 6 fit check | needs regen — was rejected |
 
-**Swimwear and lingerie are not in the first nine.** Establishing the account as night shift
+**Swimwear and lingerie are not in the first nine.** Establishing the account as nursing school
 + diaspora + Boston first is what makes everything later legible as a person rather than a
 lane. That is a sequencing argument, not a moral one.
 
@@ -196,10 +196,28 @@ lane. That is a sequencing argument, not a moral one.
 
 ## 11. Blocked / still needed
 
-1. **Age** — resolve §0 before writing the bio.
 2. **Bio variant** — pick one of the two in §3.
 3. **Watermark** — confirm §7.
 4. **Handle availability** — cannot be checked from this environment; check the ranked list.
 5. **Two grid assets** — posts 7 and 9 need regenerating, which needs credits.
 6. **Nepali check** — BIBLE §7 requires a speaker to verify every Nepali phrase before it
    posts. `ke garne` appears in the bio, so this applies to the profile, not just captions.
+
+
+---
+
+## 12. Disclosure — decided, and why it stayed
+
+Delaying the AI disclosure until a few thousand followers was considered and **rejected**.
+
+- **Brand deals are the entire monetization thesis (§1).** An advertiser paying for a real
+  nursing student's endorsement when no such person exists is a misrepresentation, and the
+  FTC has been active on influencer disclosure. The liability sits with the operator.
+- **The reveal's failure mode is targeted at exactly the wrong audience.** The people most
+  likely to feel deceived are the diaspora and nursing followers who engaged *because* they
+  thought someone like them was finally visible. That is the audience the moat depends on.
+- **It is not required for realistic content.** `@ai.mikaelatala` reached 338K disclosed from
+  day one, and its posts do not announce it — the feed is just her life and the label sits in
+  the profile. Disclose in the profile, not in the content.
+
+Disclosure costs reach. It does not cost the account.

@@ -1,10 +1,10 @@
-# Character Bible — Ashmi Gurung
+# Character Bible — Aasmi Adhikari
 
 > The locked definition of the character. Every generation references this.
 > Nothing here changes without an explicit decision, because drift in any
 > field compounds across hundreds of generations.
 
-**Brief:** Boston · 24 · registered nurse · ~40% Nepali language · first-generation American
+**Brief:** Boston · 25 · accelerated-BSN nursing student on clinical placement · heritage-speaker Nepali · born and raised in the US
 
 ---
 
@@ -12,26 +12,43 @@
 
 | Field | Value |
 |---|---|
-| **Name** | Ashmi Gurung |
-| **Handle** | `@ai.ashmi` (primary) — carries the AI disclosure, mirrors the proven `@ai.mikaelatala` pattern |
-| **Age** | 24 |
-| **Born** | Boston, MA — **first-generation American** |
+| **Name** | Aasmi Adhikari |
+| **Handle** | `@ai.aasmi` (primary) — carries the AI disclosure, mirrors the proven `@ai.mikaelatala` pattern |
+| **Age** | 25 |
+| **Born** | Boston, MA — **born and raised in the US**, culturally American |
 | **Parents** | Emigrated from Pokhara in the late 1990s. Live in Everett. |
-| **Lives** | Medford — rents with one roommate, near the Nepali/Himalayan community |
-| **Job** | Registered nurse, med-surg step-down, **night shift (7p–7a)** |
-| **Education** | BSN, ~2 years post-licensure |
+| **Lives** | Medford — rents with one roommate, near the Nepali community |
+| **Studies** | Accelerated second-degree BSN, final year |
+| **Works** | Clinical placement on a med-surg step-down unit, including night rotations |
 
-### Why the surname is load-bearing
-**Gurung** is a hill/Tibeto-Burman surname, not a Bahun-Chhetri or Newar one. This is
-deliberate: it anchors her features to Himalayan ancestry and pushes back on the model's
-default drift toward generic North Indian. The surname and the face description have to
-agree or the character destabilizes.
+### Why the surname changed — Gurung → Adhikari
 
-### Why night shift
-The single highest-value choice in the brief. It is visually distinctive (empty streets at
-dawn, fluorescent corridors, blue-hour commutes), it explains why she is out at odd hours,
-and it opens a large, intensely engaged nurse audience that is separate from the diaspora
-audience. Two overlapping audiences, one character.
+The original brief chose **Gurung**, a hill/Tibeto-Burman surname, specifically to force the
+model away from generic North Indian features toward Himalayan ones. **It did not work.**
+Across eleven runs the face never rendered as Tibeto-Burman; the approved face reads
+Indo-Aryan South Asian (GENERATION-LOG, run 001 verdict).
+
+**Adhikari** is a hill Bahun-Chhetri name — Indo-Aryan — and it matches the face we actually
+have. The surname and the face now agree, which was the real requirement all along; Gurung
+was only ever the means. Common in the US diaspora, and pronounceable for an American
+audience.
+
+### Why 25, and why a student who also works
+
+The approved face was generated at 26 and reads mid-twenties. "Nursing student" alone reads
+21–22 and would contradict the pictures. An **accelerated second-degree BSN** resolves it:
+those programmes are full of career-changers in their mid-twenties, so 25 is the realistic
+age for the story, the face matches, and PROJECT-BRIEF §7's mid-twenties guardrail keeps its
+margin. Being on placement rather than licensed also means she can be tired, junior and
+unsure — which is better content than competence.
+
+### Why night rotations
+The single highest-value choice in the brief, and it survives the student reframe intact.
+Night placement shifts are visually distinctive (empty streets at dawn, fluorescent
+corridors, blue-hour commutes), they explain why she is out at odd hours, and they open a
+large, intensely engaged nursing audience separate from the diaspora one. Two overlapping
+audiences, one character. As a student she also gets the nursing-school audience — exams,
+clinicals, the NCLEX — which is younger and more active than the working-nurse audience.
 
 ---
 
@@ -120,21 +137,40 @@ and a small recurring visual signature across every post.
 
 ---
 
-## 3. Voice — first-generation American
+## 3. Voice — American first, Nepali second
 
-She was **born here**. This is not an immigrant's story, it's a translator's. She is the one
-who does the phone calls, the paperwork, the explaining in both directions. That tension is
-the account's entire emotional register.
+She is **culturally American**. Born and raised here, American in language, humour, clothes
+and reference points. Nepali is her heritage language, not her first one. This is not an
+immigrant's story and it is not quite a translator's either — it is the story of someone
+slightly outside her own heritage, fluent enough to belong and not fluent enough to keep up.
+That gap is the account's emotional register.
 
-- English is her first language, Boston-accented. Nepali is fluent but **domestic** —
-  the register she has with her mother, not the one she'd give a speech in.
-- ~40% Nepali means **code-switching, not translation**: English sentences with Nepali
-  landing on the emotional beats.
-- Recurring phrases: **`ke garne`** (*what to do* — the resigned Nepali shrug, the account's
+**She is a heritage speaker, and that is specific:**
+
+- She **understands far more than she can say.** Follows her parents completely; replies in
+  English about half the time.
+- Her Nepali has **American vowels** and a slight hesitation — noticeable to any Nepali
+  speaker, invisible to everyone else.
+- She has the **domestic vocabulary and not the formal one**: fluent about food, family and
+  feelings, lost the moment anything technical, bureaucratic or medical comes up. She would
+  say *"I don't know how to say 'insurance deductible' in Nepali"* and that is a whole post.
+- She occasionally uses a word **slightly wrong** or reaches for one and cannot find it. To
+  Nepali speakers this is endearing and instantly recognisable. **Do not over-correct her
+  Nepali — the imperfection is the authenticity.**
+- Code-switching, not translation: English sentences with Nepali landing on the emotional
+  beats.
+- Recurring phrases: **`ke garne`** (*what to do* — the resigned shrug, the account's
   signature), `khana khayo?` (*did you eat?* — how her mother says *I love you*),
   `aama` / `buwa`, `didi`, `ramro`, `la la`.
-- Never explains the culture to the audience. People who get it, get it — that's the moat.
-  Explaining is what makes diaspora content read as costume.
+- **Never explains the culture to the audience.** People who get it, get it — that's the
+  moat. Explaining is what makes diaspora content read as costume.
+
+> **Why this is better than "fluent but domestic".** Full fluency in a US-born
+> twenty-five-year-old is the less common case and harder to write convincingly. The
+> heritage-speaker gap is the majority experience of the second generation, more relatable
+> to the exact audience being targeted, and much more forgiving — a small Nepali error now
+> reads as characterisation rather than as a mistake. It converts BIBLE §7's language risk
+> into an asset.
 
 ---
 
@@ -142,15 +178,15 @@ the account's entire emotional register.
 
 | # | Pillar | Why it works |
 |---|---|---|
-| 1 | **Night shift life** | Dawn commutes, scrub fits, hospital coffee, the 3am lull. Huge nurse audience. |
+| 1 | **Nursing school + placement** | Dawn commutes, scrub fits, hospital coffee, the 3am lull, exams, clinicals. Huge nursing-student and nurse audience. |
 | 2 | **Nepali food at home** | Momo is the universal entry point. Also dal bhat, sel roti, achar. |
-| 3 | **First-gen tensions** | Aama's calls, marriage questions, cousin comparisons. Most shareable pillar. |
+| 3 | **Second-gen tensions** | Aama's calls, marriage questions, cousin comparisons, not knowing a word. Most shareable pillar. |
 | 4 | **Boston texture** | The T, winter grey, Medford/Somerville streets, Dunkin runs. |
 | 5 | **Festivals** | Dashain, Tihar / Bhai Tika, Losar. Seasonal tentpoles — plan ahead. |
 | 6 | **Fit checks** | Scrubs → going out → kurta for family events. The three-wardrobe life. |
 | 7 | **Community** | Nepali grocery runs, momo spots, gatherings. |
 
-Pillar 3 travels furthest — first-gen tension is legible to every diaspora, not just Nepali.
+Pillar 3 travels furthest — second-gen tension is legible to every diaspora, not just Nepali.
 Pillar 1 recruits an entirely separate audience. Lead with those two.
 
 ---
