@@ -655,3 +655,61 @@ Still open: the model overshoots colour-cast instructions. `a faint green tint o
 produced a strong green corridor. Name the light source, not the colour.
 
 **v3 test jobs:** street `0e29f438` · kitchen `e3ffcdfb` · corridor `3381f9ff`
+
+---
+
+## Training set FINAL — 10 approved, imported and ready
+
+**Soul training could not be started from the MCP connector.** The set is complete and
+staged; only the training call fails.
+
+### The ten approved images (imported as Higgsfield media, ready to train)
+
+| # | Shot | Expression | Light | media_id |
+|---|---|---|---|---|
+| 1 | hospital corridor 3am | tired neutral | fluorescent | `039e0845-273e-43ca-b9b2-822271b1f575` |
+| 2 | staff break room | faint tired half-smile | fluorescent | `e27e9380-7a1b-4653-89eb-c6ba6d55390f` |
+| 3 | stairwell | exhausted, eyes closed | hard top-down fluorescent | `d3bd1e05-b2e9-4df1-a5f1-0962a42d4ebe` |
+| 4 | staff car park, dawn | blank, thousand-yard | blue hour, high ISO | `694e7387-d5e7-4776-a178-38737c19e196` |
+| 5 | Boston street, coffee | wistful | flat overcast | `80558502-648c-4da6-9be9-061cbb272226` |
+| 6 | Somerville sidewalk | delighted, mid-laugh | flat overcast | `2a8720e7-424a-494f-ae60-3fa02dc1ad64` |
+| 7 | kitchen, pleating momo | concentrating | warm tungsten, single source | `7a85dabd-dab2-49cf-9b04-dc5bc455d66d` |
+| 8 | hospital corridor, side-on | mildly exasperated | fluorescent | `c6f286ed-a34a-4f4c-99b6-1c1b6d4ff81f` |
+| 9 | kitchen table, eating momo | amused, embarrassed | warm pendant bulb | `8a9d1370-4cd8-4dad-b915-45d22442614c` |
+| 10 | floor, call with aama | affectionate exasperation | single warm lamp | `83a9068b-7b53-4df9-b3c8-42c8ae3adae5` |
+
+Coverage: 6 lighting conditions, 10 distinct expressions, 4 wardrobes, 7 close/medium and
+3 full-length. All under the §5 content grade, none studio-lit.
+
+### The training failure — what was ruled out
+
+`show_characters action=train` returns a bare *"Something went wrong"* with a request ID and
+no detail. Four input formats were tried, all failing identically:
+
+1. completed image-job IDs
+2. the same IDs via the `medias[{role,value}]` form
+3. https result URLs
+4. **confirmed `media_input` UUIDs** via `media_import_url` — the form every existing Soul
+   on this account uses
+
+`action: list` works, and the account already holds seven trained Souls, so the feature and
+the permissions exist. **Input format is not the cause.**
+
+**Leading hypothesis: insufficient credits.** Balance at the time was **11.98**. Soul
+training is a fine-tune, far heavier than the 1-credit generations, and the connector
+surfaces billing failures as this same generic error (as it did for unlim). Unproven — the
+error says nothing — but it is the only candidate left after format, permissions and
+account capability were eliminated.
+
+**Nothing is lost.** The ten images are imported into Higgsfield storage with stable media
+IDs. Training can be started from the web app, or from here after a top-up, without
+regenerating anything.
+
+### Selection pattern worth carrying forward
+
+Of ~45 training candidates generated, 10 were approved. **Close and medium shots passed;
+full-length shots mostly failed** on facial consistency and body proportions — in a
+full-length frame the face has too few pixels for the Element to hold. This is not fatal for
+Soul training, which learns a face; body proportions at generation time come from the
+prompt plus Element v3's body references. But it means full-length production shots will
+need Element v3 rather than the Soul alone.
