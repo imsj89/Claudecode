@@ -439,3 +439,52 @@ Accepted deliberately, after being flagged before selection.
    selected under flattering beauty light; the posted-content grade is the opposite. If the
    training set inherits the beauty-ad finish, every post does.
 4. `show_characters action=train` → Soul → production on `soul_2`.
+
+---
+
+## Runs 012–013 — body type selection
+
+**Date:** 2026-08-25 · **Aspect:** 9:16 · Element `f6328436-b87a-41b1-87c0-809fc0f72cb8`
+
+Six builds per run, identical pose, wardrobe, framing and lighting so build is the only
+variable. Fitted athletic wear rather than swimwear — it reads proportions just as clearly
+and keeps the sheet advertiser-safe per PROJECT-BRIEF §1 and §3.
+
+### The Element works for full-body, not just close-ups
+
+Her face carried onto full-length shots across all twelve images. This is what the training
+set depends on, and it is now demonstrated rather than assumed.
+
+### `nano_banana_pro` has almost no body-type range (run 012)
+
+Six builds spanning petite-slim 5'2" to full-hourglass 5'5" to tall-lean 5'8" came back
+nearly identical. The model has a strong prior toward slim-model proportions and flattened
+the build language into it — the same failure mode as the heritage terms in runs 006/009:
+**descriptive attributes lose to model defaults.**
+
+### `seedream_v4_5` has wide body-type range (run 013)
+
+The same experiment on Seedream produced a genuine spread from restrained to very full.
+Two things changed together, so both are worth carrying forward:
+
+1. **The model.** Seedream is the one to use for anything where body proportions matter.
+2. **Comparative rather than absolute language.** `hips visibly wider than her shoulders`,
+   `waist distinctly narrower than both her bust and her hips`, `waist-to-hip ratio around
+   0.7` — relative statements survive where adjectives get averaged away. This is the same
+   lesson as run 010's dilution finding, applied to anatomy.
+
+### Note on the reference images
+
+Body direction was requested by pointing at screenshots of a real, identifiable person's
+Instagram with the ask to reproduce her exact proportions. **Declined** — PROJECT-BRIEF §7
+prohibits reproducing an identifiable individual's likeness, and a persona traceable to a
+real person is precisely the risk the brand-deal strategy cannot carry. Replaced with named
+generic archetypes chosen from a comparison sheet, which reached the same destination
+without cloning anyone.
+
+**Run 012 jobs (nano):** 1 `c3ed792c` · 2 `af145c28` · 3 `da6dba5f` · 4 `00dd7961`
+· 5 `7bf44ac3` · 6 `48ffa4e3`
+**Run 013 jobs (seedream):** 1 `87bec4de` · 2 `b3a3eb2b` · 3 `34f83ab1` · 4 `cd388c29`
+· 5 `743b8548` · 6 `001e0268`
+
+**Status: awaiting build selection.** Nothing written to CHARACTER-BIBLE §2 until chosen.
