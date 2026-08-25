@@ -225,3 +225,55 @@ downstream post inherits a beauty-ad finish.
 `max 8 concurrent jobs on ultimate (annual) plan`. Submitting 10 at once silently drops the
 overflow — this is what the two unexplained "failures" in run 006 actually were, not model
 errors. **Submit in batches of 8 or fewer**, and always check `failed_count`.
+
+---
+
+## Runs 008–009 — no-makeup direction, and two solved problems
+
+**Date:** 2026-08-25 · **Model:** `soul_2` · **Aspect:** 9:16 · **Text-only**
+
+Direction changed to: no makeup, naturally beautiful, fair skin, hazel green eyes.
+Run 009 refined toward the preferred candidate (run 008 #8: bare face, fair skin, visible
+freckles, thick natural brows, hazel green eyes, fresh expression).
+
+### SOLVED: the inset-thumbnail defect
+
+Negative-listing (`no inset image`, `no thumbnail`, `no collage`) **did not work** and may
+have made it worse — naming an object in a negative can summon it. Replacing that with a
+**positive framing instruction** fixed it completely:
+
+> `A single full-bleed vertical photograph filling the entire frame edge to edge`
+
+Run 008: 5 of 8 defective. Run 009 with the positive framing: **0 of 8 defective.**
+Use the positive form in every future prompt; do not rely on single-subject negatives.
+
+### CONFIRMED: fair skin + hazel green eyes overrides heritage
+
+Run 009 tested this deliberately. Variants 6, 7 and 8 **front-loaded** the heritage terms
+into the opening clause — `young Nepali woman of Himalayan Gurung heritage, Tibeto-Burman
+facial structure, broad high cheekbones, low nasal bridge, pronounced epicanthic fold` —
+the strongest position in the prompt, where tokens carry the most weight.
+
+**It barely moved the result.** All three still read European or Mediterranean. Combined
+with run 006 (where clinical heritage wording also failed) and run 007 (where the same
+terms *did* work under a warmer skin tone), the conclusion is specific:
+
+> Skin tone and eye colour dominate the perceived-heritage read on `soul_2`. Once fair skin
+> and hazel-green eyes are specified, no amount of bone-structure language recovers a
+> Himalayan read — not even from the front of the prompt.
+
+This is not a prompt-engineering problem with a remaining fix. It is a genuine either/or:
+the fair-and-hazel aesthetic, or a face that reads Nepali. PROJECT-BRIEF §4 stakes the
+account's moat on the latter, so this is a strategic decision, not a technical one, and it
+should be recorded as such when it is made.
+
+### WATCH: the no-makeup direction reads younger
+
+Bare face + freckles + fresh expression pushes apparent age down. Several run 009 variants
+read early-twenties rather than mid-twenties. Still adult, so not a breach — but
+PROJECT-BRIEF §7 requires **unambiguous** mid-twenties, and this direction erodes the
+margin. Any face chosen from here needs an explicit age push (`27 years old, defined mature
+jawline, longer facial thirds`) before it becomes the Element.
+
+**Run 009 jobs:** 1 `9f65b8dc` · 2 `30ee78c3` · 3 `105e5ad7` · 4 `9d05e134` · 5 `52fc5942`
+· 6 `917932c2` · 7 `e6571e06` · 8 `89679ddb` (6–8 = heritage front-loaded)
