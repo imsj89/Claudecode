@@ -1,0 +1,15 @@
+# Never commit credentials
+.env
+.env.*
+*.key
+*.secret
+credentials.json
+
+# Generated media
+assets/
+output/
+*.mp4
+*.mov
+*.png
+*.jpg
+*.jpeg
