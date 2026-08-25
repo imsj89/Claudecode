@@ -14,28 +14,46 @@ filling the frame. If you also want it as a grid post, run a second pass at 4:5.
 
 ## The prompt — paste this
 
-Default expression is **A (wink + tongue)**. To use B, C or D, swap the `EXPRESSION` and
-`LIGHT` blocks only.
+**2,615 characters.** Default expression is **A (wink + tongue)**; for B, C or D swap the
+`EXPRESSION` and `LIGHT` blocks only, keeping every other block intact.
 
 ```
-A single full-bleed square photograph filling the entire frame edge to edge.
+Full-bleed square photo, edge to edge.
 
-CAPTURE: Shot on an iPhone 17 Pro Max front camera, held at arm's length above her head and angled down. Ultra-wide front lens at close range, so perspective distortion enlarges her nose and chin slightly and makes her ears small. Deep depth of field from the small sensor: the street behind her stays semi-sharp and detailed, not creamy. No portrait mode, no artificial background blur. Computational HDR processing, so shadows are lifted and slightly flat while highlights still clip on her forehead, everything evenly exposed in a way real film would not be. Faint over-sharpening halos along the edge of her jaw and hair. Noise reduction smearing fine detail in the shadow areas while visible luminance noise remains in the darker mid-tones. Neutral-cool white balance. Slight chromatic aberration at the frame edges, minor JPEG compression artifacts around high-contrast edges, mild veiling haze and a small lens flare from shooting near the sun, and a faint smudge on the lens softening one corner.
+CAPTURE: iPhone 17 Pro Max front camera, arm's length above her head, angled down. Ultra-wide lens close up, so her nose and chin are slightly enlarged. Deep depth of field, street behind stays semi-sharp, no portrait mode, no background blur. Computational HDR: shadows lifted and flat, highlights clipping on her forehead. Faint over-sharpening halos on her jaw and hair. Noise reduction smearing shadow detail, luminance noise in the mid-tones. Cool white balance, slight chromatic aberration, JPEG artifacts on high-contrast edges, mild flare and a lens smudge softening one corner.
 
-SUBJECT: The same woman as in the reference images, keeping her exact face, bone structure, nose, jawline, eye shape and identity completely unchanged. A 25-year-old Nepali-American woman on a sunny summer street in Boston, brick sidewalk and blurred storefronts behind her. She holds a tall clear plastic cup of iced lemonade with a straw up near her chin, condensation running down it. White ribbed tank top, thin gold hoops, a thin gold chain with a small round pendant with a coral orange centre stone inside a turquoise ring. Black sunglasses pushed up onto the top of her head holding her hair back. Long black-brown hair loose with flyaways, a few strands stuck to her neck in the heat.
+SUBJECT: the same woman as the reference images, exact face, bone structure, nose, jawline, eye shape and identity unchanged. 25-year-old Nepali-American woman on a sunny summer Boston street, brick sidewalk and blurred storefronts behind. Holding a tall clear cup of iced lemonade with a straw near her chin, condensation on it. White ribbed tank top, thin gold hoops, thin gold chain with a small round pendant, coral orange centre stone in a turquoise ring. Black sunglasses pushed up on her head. Long black-brown hair loose with flyaways, strands stuck to her neck.
 
-EXPRESSION: caught mid-goof, not posed. Her left eye is squeezed fully shut in an exaggerated wink while the right stays wide open, her nose is scrunched up wrinkling the bridge, her mouth is open in a wide crooked grin with her tongue sticking out over her lower teeth. Cheeks bunched high, laugh lines showing, eyebrows asymmetrical, one raised higher than the other. Genuinely silly, mid-movement, slightly out of control, not seductive and not cute-posed.
+EXPRESSION: caught mid-goof, not posed. Left eye squeezed shut in an exaggerated wink, right eye wide open, nose scrunched wrinkling the bridge, mouth open in a wide crooked grin with her tongue out over her lower teeth. Cheeks bunched high, eyebrows asymmetrical, one higher. Genuinely silly, mid-movement, not seductive, not cute-posed.
 
-BODY: 167 cm tall, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust. Full E cup breasts, clearly full on a narrow ribcage. Narrow shoulders, slim arms. She is not a heavier woman overall.
+BODY: 167 cm, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust. Full E cup breasts, clearly full on a narrow ribcage. Narrow shoulders, slim arms. She is not a heavier woman overall.
 
-LIGHT: harsh direct summer sun from above and slightly behind the phone, blown-out highlights across her forehead and the bridge of her nose, hard shadow under her chin, mild motion blur on her hair and one side of her face from moving while shooting, focus very slightly missed.
+LIGHT: harsh direct summer sun from above, blown highlights on her forehead and nose bridge, hard shadow under her chin, mild motion blur on her hair, focus slightly missed.
 
-FRAMING: her face fills most of the frame, roughly centred with a little headroom, framed so a circular crop keeps her whole face. Deliberately imperfect: the horizon is tilted, her head is not perfectly centred, part of one shoulder is cut off by the frame edge. Not symmetrical, not well-composed.
+FRAMING: face fills most of the frame, roughly centred with a little headroom, so a circular crop keeps her whole face. Deliberately imperfect: horizon tilted, head off-centre, one shoulder cut by the frame edge. Not symmetrical, not well-composed.
 
-REALISM: unretouched. Visible skin texture and open pores, a faint sheen of sweat on her nose and upper lip, uneven skin tone, natural facial asymmetry, a few flyaway hairs across her face. No makeup or barely-there makeup. No digital smoothing, no beauty filter, no airbrushing, no plastic skin, no waxy CGI look. Mature adult facial proportions, no babyface, no childlike features.
+REALISM: unretouched. Visible pores and skin texture, faint sweat sheen on her nose and upper lip, uneven skin tone, natural asymmetry, flyaway hairs across her face. Barely-there makeup. No digital smoothing, no beauty filter, no airbrushing, no plastic or waxy skin. Mature adult facial proportions, no babyface, no childlike features.
 
-One person alone, no other people, no text, no watermark, no phone or device frame visible, no screen interface, no status bar, no border.
+One person alone, no other people, no text, no watermark, no phone or device frame, no screen interface, no border.
 ```
+
+### What was cut, and what must never be
+
+Trimmed from the long version: adjective stacking, repeated negatives, and prose connectives.
+Nothing load-bearing was removed.
+
+**Never cut these, whatever the character budget:**
+
+1. `Full-bleed square photo, edge to edge` — the positive framing clause. It is the only
+   thing that reliably suppresses rendered phone bezels and inset thumbnails; negatives do
+   not work (GENERATION-LOG runs 008–009).
+2. **The whole BODY block.** The Element biases the silhouette but does not hold it; every
+   shot that drifted was one where this block was missing.
+3. `Deep depth of field … no portrait mode, no background blur` — the loudest AI tell in a
+   selfie.
+4. `Mature adult facial proportions, no babyface` — PROJECT-BRIEF §7 hard guardrail, and this
+   expression is the highest-risk one in the project.
+5. The identity clause naming the reference images.
 
 ---
 
