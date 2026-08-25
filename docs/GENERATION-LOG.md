@@ -384,3 +384,58 @@ lives on `nano_banana_pro` / `seedream_v4_5`**, and only the final trained Soul 
 
 **Jobs:** 1 `563ec34e` · 2 `4b0dfb1b` · 3 `bed3a02c` · 4 `1999e137` · 5 `920b1c12`
 · 6 `0b346b71` · 7 `d28972b5` · 8 `0ef4dc69`
+
+
+---
+
+## FACE LOCKED — 2026-08-25
+
+**Element `ashmi-gurung-FINAL` — `f6328436-b87a-41b1-87c0-809fc0f72cb8`**
+
+Selected: **run 011 variant 8** (job `0ef4dc69-eb73-44dd-b00b-b7c4c75b4e45`), Element-guided
+on `seedream_v4_5`. Source media `96523ded-d081-465f-a8b8-1f01e8ec90d9`.
+
+Eleven runs, ~60 candidates. The path that worked, in order:
+
+1. **Run 001** produced the base face text-only, and it survived every later comparison —
+   the user returned to it three separate times after exploring other directions.
+2. **Runs 002–004** failed trying to edit it with a raw reference image on `soul_2`.
+3. **Runs 006–010** explored alternatives (near-neighbours, beauty-forward, no-makeup,
+   fair/hazel). All rejected, but they produced the prompt-craft findings — dilution,
+   the plainness phrases, the full-bleed framing fix.
+4. **Run 011** applied the final edits through the **Element**, which preserved identity and
+   honoured the prompt at the same time. That was the mechanism the whole session needed.
+
+### Accepted departures from the original brief
+
+Recorded so a later session does not "fix" them:
+
+| Field | Bible original | Locked | Status |
+|---|---|---|---|
+| Eyes | dark brown | **light grey** | chosen |
+| Lips | rosy-brown | **soft rose-pink** | chosen |
+| Heritage read | Himalayan/Tibeto-Burman | reads South Asian, not distinctly Himalayan | known, accepted |
+
+The heritage point still carries the PROJECT-BRIEF §4 consequence — the Gurung surname and
+the Nepali content voice now rest on a face that does not visibly signal Himalayan ancestry.
+Accepted deliberately, after being flagged before selection.
+
+### Corrections to earlier entries in this log
+
+- **Runs 002–004 conclusion was too broad.** "Prompt fidelity and identity anchoring cannot
+  be had at the same time" is true only of raw reference images on `soul_2`. The Element path
+  does both. See run 011.
+- **Run 010's Seedream warning was overstated.** Choosing a Seedream-rendered face does *not*
+  take `soul_2` off the table. Soul training consumes images regardless of which model made
+  them, so the chain Element → training set → Soul → `soul_2` still closes.
+
+### Next
+
+1. **Settle body type, bust and hips** — blocks everything below.
+2. Generate 15–20 varied shots via `<<<f6328436-b87a-41b1-87c0-809fc0f72cb8>>>`, deliberately
+   varying angle, expression, distance and light (CHARACTER-BIBLE §6 step 3 is where projects
+   fail).
+3. **Re-derive under the §5 content grade before shooting that set.** The locked face was
+   selected under flattering beauty light; the posted-content grade is the opposite. If the
+   training set inherits the beauty-ad finish, every post does.
+4. `show_characters action=train` → Soul → production on `soul_2`.

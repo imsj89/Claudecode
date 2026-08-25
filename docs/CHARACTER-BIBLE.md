@@ -39,23 +39,41 @@ audience. Two overlapping audiences, one character.
 
 Copy these verbatim into every prompt. Do not paraphrase.
 
-> **The face is NOT yet chosen** (2026-08-25). Candidates are still being generated and
-> reviewed; the description below is the current best text spec, not a settled face.
-> A leading candidate has been saved as Element `ashmi-gurung-face-v1`
-> (`05a710b3-dba8-4f4e-9893-5c75c0cad576`) so it survives the session — saving a candidate
-> is not selecting it. One thing to weigh when choosing: that candidate reads more North
-> Indian than the Himalayan brief specifies (see `GENERATION-LOG.md`).
+> ## THE FACE IS LOCKED (2026-08-25)
+>
+> **Element `ashmi-gurung-FINAL` — `f6328436-b87a-41b1-87c0-809fc0f72cb8`**
+>
+> Selected after eleven runs and roughly sixty candidates. Source: run 011 variant 8
+> (job `0ef4dc69`). **That image is the authority on the face, not this prose.** The text
+> below has been updated to match it and exists to describe it, not to define it.
+>
+> **Use the Element for every future generation of her** — embed
+> `<<<f6328436-b87a-41b1-87c0-809fc0f72cb8>>>` in the prompt. Never re-derive the face from
+> a written description; that produces a different woman (proven in run 011, variants 1–4).
+>
+> Element `ashmi-gurung-face-v1` (`05a710b3…`) is **retired** — it predates the eye and lip
+> changes. Do not use it.
+>
+> Two things deliberately accepted when locking, both recorded so they are not rediscovered
+> as bugs: the face reads South Asian but not distinctly Himalayan (PROJECT-BRIEF §4), and
+> the grey eyes are a chosen departure from natural Nepali colouring.
+>
+> **Build below the neck is still open.** Body type, bust and hips remain unspecified and
+> must be settled before the training set is shot, since that set fixes the body too.
 >
 > **Build below the neck is still open.** Body type, bust and hips are unspecified and
 > must be settled before the training set is shot, since that set fixes the body too.
 
-- **Skin:** warm medium-tan, golden-olive undertone
-- **Face:** heart-shaped, defined tapered jawline, high broad cheekbones, **mature adult
-  bone structure and proportions**
-- **Nose:** straight, slightly low bridge, rounded tip
-- **Lips:** full, natural rosy-brown tint, soft matte finish
-- **Eyes:** dark brown, almond, slight upward outer tilt, soft epicanthic fold
-- **Eyebrows:** thick, straight, dark brown, lightly groomed with natural stray hairs
+- **Skin:** warm medium-tan, golden undertone, matte with visible natural texture
+- **Face:** oval, softly tapered jawline and chin, high cheekbones, softly lean cheeks,
+  **mature adult bone structure and proportions**
+- **Nose:** long and straight, medium bridge, defined rounded tip
+- **Lips:** full and wide, defined cupid's bow, **soft rose-pink**, bare matte finish
+- **Eyes:** **light grey** — soft pale grey irises with a subtle darker limbal ring and
+  natural tonal variation. Almond, slightly deep-set, full upper lids, softly downturned
+  outer corners. Always carry `muted rather than glowing, not coloured contact lenses` —
+  pale grey over warm-tan skin renders as a contact-lens overlay without it.
+- **Eyebrows:** very thick, straight, dark, set low and close to the eyes, natural strays
 - **Hair:** black-brown with warm undertone, long and thick, straight with a slight natural
   wave, centre parting, matte finish with visible flyaways
 - **Build:** petite, ~5'2", slim, small frame
@@ -63,7 +81,9 @@ Copy these verbatim into every prompt. Do not paraphrase.
 
 > **Mandatory:** she must read unambiguously mid-twenties. Every prompt carries
 > `no babyface, no overly youthful rounded proportions`. This is a hard project
-> guardrail (see PROJECT-BRIEF §7), not a stylistic preference.
+> guardrail (see PROJECT-BRIEF §7), not a stylistic preference. Adding an explicit
+> `twenty-six years old, mature adult facial proportions, longer facial thirds` is the
+> reliable lever — bare-face and fresh-expression directions pull the apparent age down.
 
 ### Signature wardrobe
 Ecru cable-knit sweater over a white cotton tee · straight-leg mid-wash jeans · white
@@ -172,6 +192,11 @@ and it is not optional:
 An Element **cannot** be used with `soul_2`, and a Soul **cannot** be used with anything
 else. So the training set at step 3 must be shot on an Element-compatible model, not on
 `soul_2`.
+
+**This does not put `soul_2` out of reach.** Soul training takes *images*, whatever produced
+them. The chain still closes: Element → training set on an Element-compatible model →
+`show_characters action=train` on those images → a Soul that works with `soul_2`. Choosing a
+face rendered on Seedream therefore costs nothing downstream.
 
 ### Never iterate a face with a raw reference image
 
