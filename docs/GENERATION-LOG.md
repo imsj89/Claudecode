@@ -277,3 +277,57 @@ jawline, longer facial thirds`) before it becomes the Element.
 
 **Run 009 jobs:** 1 `9f65b8dc` · 2 `30ee78c3` · 3 `105e5ad7` · 4 `9d05e134` · 5 `52fc5942`
 · 6 `917932c2` · 7 `e6571e06` · 8 `89679ddb` (6–8 = heritage front-loaded)
+
+---
+
+## Run 010 — hard beauty push, and a model comparison
+
+**Date:** 2026-08-25 · **Aspect:** 9:16 · Text-only · 1–6 `soul_2`, 7–8 `seedream_v4_5`
+
+Run 009 was still rejected as not attractive enough. **Diagnosis: dilution, plus wording
+that actively read as plain.** The prompts had grown to ~40 comma-separated clauses, so no
+single attribute carried weight, and three specific phrases were working against beauty:
+
+| Phrase | Reads as |
+|---|---|
+| `natural untouched eyebrows, softly uneven` | unkempt, not groomed |
+| dense freckles across nose *and cheeks* | rustic / girl-next-door |
+| flat even lighting | passport photo, no dimension |
+
+**What fixed it:**
+
+1. **Shorter, higher-signal prompts.** Written as sentences rather than a clause pile.
+2. **Superlative beauty language up front** — `breathtakingly beautiful`, `stunning
+   supermodel-level facial beauty`, `flawless facial harmony and ideal balanced proportions`.
+3. **The reframe that carried the most weight:** `the kind of face that needs no makeup`.
+   This keeps the bare-face requirement while removing the plainness the earlier phrasing
+   implied — "no makeup" had been read as "unremarkable" rather than "needs none".
+4. **Groomed but natural brows**, freckles reduced to the nose only, and **flattering light
+   with dimension** (subtle shadow under the cheekbones) instead of flat fill.
+5. **Explicit age push** — `twenty-six years old, mature adult facial proportions, longer
+   facial thirds` — which also repaired the age erosion flagged in run 009.
+
+### Model comparison
+
+`seedream_v4_5` (7, 8) renders more polished and more conventionally striking, but:
+
+- **It ignores `no cosmetics`** — both outputs show defined liner and worked lids.
+- **It reads retouched**, closer to a commercial beauty ad than a photograph, which is the
+  opposite of the CHARACTER-BIBLE §5 direction for content.
+- **Pipeline cost:** Seedream is Element-compatible but **not** Soul-compatible. A face
+  chosen here cannot be used for `show_characters action=train`, so the whole identity
+  pipeline would have to run through Elements on Element-compatible models, and `soul_2`
+  stills would be off the table.
+
+`soul_2` (1–6) stays more photographic and honours the bare-face instruction. **Recommend
+staying on `soul_2`** unless the Seedream look is decisively preferred, and if so, decide
+the pipeline consequence deliberately rather than by drift.
+
+### Defects
+
+- **4** — nostril/nose anatomy is subtly wrong; re-roll if chosen.
+- **5** — an orange lighting cast across the forehead; a lighting artifact, re-roll if chosen.
+- **Insets: 0 of 8.** The full-bleed positive framing continues to hold across both models.
+
+**Jobs:** 1 `55f1e28f` · 2 `d7926480` · 3 `0fc28d26` · 4 `0ce92043` · 5 `cb561aeb`
+· 6 `5dbf4044` · 7 `a6fe9f4e` (seedream) · 8 `4e0ef522` (seedream)
