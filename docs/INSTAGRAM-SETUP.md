@@ -62,34 +62,22 @@ above it, so the disclosure is visible without the display name doing the work.
 
 160 characters max. Three jobs: disclose, establish the two audiences, and set the voice.
 
-**Recommended:**
+**FINAL:**
 
 ```
 AI-generated. Not a real person.
-Nepali-American · Boston
-nursing student · momo · ke garne 🇳🇵
+Nepali-American · Boston 🇳🇵
+nursing student · momo · ke garne
 ```
 
 Why this shape:
 
-- **Disclosure on line one, unhedged.** "AI-generated. Not a real person." is plainer than
-  "virtual" or "digital" — words that let people miss the point. §7 requires disclosure and
-  this removes any argument about whether it was clear.
-- **`ke garne`** is the account's signature phrase (BIBLE §3). Putting it in the bio signals
-  to Nepali readers immediately and means nothing to everyone else — which is the moat
-  working as designed. **It is never translated.**
-- **Both audiences named**: diaspora and nurses, the two-audience design in BIBLE §1.
+- **Disclosure on line one, unhedged.** "Not a real person" is plainer than "virtual" or
+  "digital" — words that let people miss the point.
+- **`ke garne`** is the account's signature phrase (BIBLE §3). It signals to Nepali readers
+  instantly and means nothing to everyone else, which is the moat working. **Never translated.**
+- **Both audiences named**: diaspora and nursing.
 - **No link-bait, no "DM for collabs".** Advertiser-safe from day one (§1).
-
-**Alternate, warmer:**
-
-```
-AI-generated · not a real person
-Boston-born, Pokhara-rooted
-nursing school. night clinicals. momo at 8am. ke garne
-```
-
-**DECIDE** which. First is tighter; second carries more voice.
 
 ---
 
@@ -136,7 +124,7 @@ if no single post crosses a line. Decide the ratio deliberately (see §9).
 
 ## 7. Watermark — PROJECT-BRIEF §6 open decision
 
-**DECIDE — recommendation: yes, small, bottom-left, `@ai.aasmi`.**
+**DECIDED: yes — small, low-opacity, bottom-left, `@ai.aasmi`.**
 
 `@ai.mikaelatala` uses one and it doubles as studio branding. For an openly-AI account it
 does a third job: it travels with reposted images, so the disclosure survives when a
@@ -196,8 +184,6 @@ lane. That is a sequencing argument, not a moral one.
 
 ## 11. Blocked / still needed
 
-2. **Bio variant** — pick one of the two in §3.
-3. **Watermark** — confirm §7.
 4. **Handle availability** — cannot be checked from this environment; check the ranked list.
 5. **Two grid assets** — posts 7 and 9 need regenerating, which needs credits.
 6. **Nepali check** — BIBLE §7 requires a speaker to verify every Nepali phrase before it
