@@ -331,3 +331,56 @@ the pipeline consequence deliberately rather than by drift.
 
 **Jobs:** 1 `55f1e28f` · 2 `d7926480` · 3 `0fc28d26` · 4 `0ce92043` · 5 `cb561aeb`
 · 6 `5dbf4044` · 7 `a6fe9f4e` (seedream) · 8 `4e0ef522` (seedream)
+
+---
+
+## Run 011 — grey eyes + pinker lips, and the identity problem is SOLVED
+
+**Date:** 2026-08-25 · **Aspect:** 9:16 · 1–4 `soul_2` text-only, 5–6 Element on
+`nano_banana_pro`, 7–8 Element on `seedream_v4_5`
+
+Requested changes to the run 001 candidate face: **light grey eyes, pinker lips.**
+Everything else held.
+
+### Correction to the run 002–004 conclusion
+
+Earlier this session the log recorded that *"prompt fidelity and identity anchoring cannot
+be had at the same time on `soul_2`."* That was correct **only for raw reference images on
+`soul_2`**, and stating it as a general rule was too broad. This run tested the Element
+path properly and it works:
+
+> **Embedding `<<<element_id>>>` in the prompt preserves the face faithfully AND honours the
+> full prompt. No `enhance_prompt` rewrite occurs.**
+
+Variants 5–8 hold her bone structure, nose, lip shape, hair, the coral-and-turquoise
+pendant and the sweater collar, while applying both requested changes. Variants 1–4,
+text-only on `soul_2`, produced the right *family* of face but plainly a different woman —
+confirming that a written description cannot substitute for identity injection.
+
+**This is the mechanism to use for all future face iteration.** Do not iterate faces with
+text descriptions, and never with a raw reference image on `soul_2`.
+
+### Consequence for the pipeline
+
+The Element path runs on Element-compatible models only, so `soul_2` cannot be used for
+iterating this face. That is not a blocker — CHARACTER-BIBLE §6 already routes the training
+set through the Element — but it does mean the **face-selection and refinement stage now
+lives on `nano_banana_pro` / `seedream_v4_5`**, and only the final trained Soul returns to
+`soul_2`.
+
+### Observations
+
+- **5 and 6** (`nano_banana_pro`) are the most photographic and the closest to her. Note the
+  server reports these as `nano_banana_2` — the request was routed to a sibling model.
+- **7 and 8** (`seedream_v4_5`) hold identity equally well but run warmer, more saturated
+  and glossier, consistent with the run 010 finding.
+- **Grey eyes read as coloured contacts on several**, most visibly 2, 3 and 4: pale grey
+  against deep warm-tan skin is a high-contrast combination the model renders as an overlay.
+  5 is the most convincing. If grey is kept, the anti-contact-lens clause needs strengthening,
+  or a warmer grey-hazel would sit more naturally on this complexion.
+- **4 overshot the lip change** — reads as applied red lipstick rather than a natural pinker
+  lip, which also breaks the no-makeup direction.
+- Insets: 0 of 8. Full-bleed framing still holding across three models.
+
+**Jobs:** 1 `563ec34e` · 2 `4b0dfb1b` · 3 `bed3a02c` · 4 `1999e137` · 5 `920b1c12`
+· 6 `0b346b71` · 7 `d28972b5` · 8 `0ef4dc69`
