@@ -224,12 +224,22 @@ the Element interpolates between its references, the fix is to give it several: 
 neutral + soft smile + serious + pensive. Any Soul trained on drifted smiles learns a
 blurred identity, so this must be right *before* the training set is shot, not after.
 
-**An Element anchors only what its references show.** A face-only Element leaves the body
-to be re-derived from text on every generation, and it reverts to the model's slim default —
-the same extrapolation failure as expressions. Adding two locked-build full-body references
-(front and three-quarter) to v3 visibly recovered hip and thigh volume in full-length shots
-where prompt wording alone had failed across three attempts. **Whatever must stay constant
-belongs in the Element, not in the prompt.**
+**An Element anchors only what its references show — and it is not sufficient on its own.**
+A face-only Element leaves the body to be re-derived from text every generation, and it
+reverts to the model's slim default. Adding locked-build full-body references (front and
+three-quarter) to v3 recovered hip and thigh volume where prompt wording alone had failed.
+
+**But the Element alone does not hold it either.** Every shot where the build came out right
+carried *both* the Element and an explicit comparative body line in the prompt. Shots
+generated on the Element with no body line drifted straight back to slim. The rule is
+**Element AND prompt**, always:
+
+> `Her hips are visibly wider than her shoulders. Her waist is distinctly narrower than both
+> her bust and her hips. Her thighs are clearly fuller than her calves. She is not a heavier
+> woman overall.`
+
+Carry that block in every prompt where the body is visible. The Element biases toward the
+right silhouette; the prompt is what stops the model's slim prior from winning.
 
 **This model overshoots colour-cast instructions.** "Slight green cast" renders as heavy
 green; "a faint green tint only" still renders as strong green. Describe the *light source*

@@ -695,11 +695,19 @@ no detail. Four input formats were tried, all failing identically:
 `action: list` works, and the account already holds seven trained Souls, so the feature and
 the permissions exist. **Input format is not the cause.**
 
-**Leading hypothesis: insufficient credits.** Balance at the time was **11.98**. Soul
-training is a fine-tune, far heavier than the 1-credit generations, and the connector
-surfaces billing failures as this same generic error (as it did for unlim). Unproven — the
-error says nothing — but it is the only candidate left after format, permissions and
-account capability were eliminated.
+**Cause: still unknown.** An earlier version of this entry named insufficient credits as
+the leading hypothesis. **That is now unlikely and the entry is corrected.** When the account
+did later run out, the API returned an explicit, specific message:
+
+```
+Out of credits on ultimate (annual) plan in Private workspace
+```
+
+Training failed with a bare *"Something went wrong"* while the balance was ~11.98. Since the
+API demonstrably reports billing failures in plain language, credits were almost certainly
+not the cause. Format, permissions, account capability and credits are all now ruled out,
+and the real cause is unidentified — likely server-side, and worth reporting to Higgsfield
+with the request IDs above. Try the web app, where errors are surfaced in full.
 
 **Nothing is lost.** The ten images are imported into Higgsfield storage with stable media
 IDs. Training can be started from the web app, or from here after a top-up, without
@@ -713,3 +721,18 @@ full-length frame the face has too few pixels for the Element to hold. This is n
 Soul training, which learns a face; body proportions at generation time come from the
 prompt plus Element v3's body references. But it means full-length production shots will
 need Element v3 rather than the Soul alone.
+
+
+---
+
+## Correction — Element alone does not hold the body
+
+Late-session shots generated on Element v3 **without** a body line in the prompt drifted back
+to the model's slim default. Reviewing every result: each shot where the build was right
+carried both the Element *and* the explicit comparative body block. The earlier rule
+("whatever must stay constant belongs in the Element, not the prompt") was too strong —
+it should read **Element AND prompt**. CHARACTER-BIBLE §5b is corrected.
+
+Affected and needing regeneration when credits allow: the three personal shots (beach,
+mirror, bedroom) and the Boston shots that omitted the body line — library, aquarium,
+Esplanade, Harvard bookshop.
