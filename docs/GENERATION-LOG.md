@@ -636,3 +636,22 @@ one neutral face yields a Soul that can only make that face.
 
 **Element v2 jobs:** soft smile `f5666913` · serious `e9f1aef6` · pensive `5b7cdc1d`
 **v2 verification:** laugh `41b092ed` · street `005fcd00`
+
+### Element v3 — body anchoring
+
+**`ashmi-gurung-FULL-v3` — `83ab454a-a85a-4814-8459-c10fc7e493aa`** (six references)
+
+Full-length body drift resisted three rounds of prompt fixes: restating the locked spec,
+the `not a heavier woman overall` clause, comparative ratios, and cropped outerwear all
+helped only marginally. Adding the locked-build **full-body front and three-quarter renders
+as Element references** fixed what wording could not — hip and thigh volume in the v3 street
+shot is visibly closer to the locked build than v1 or v2 of the identical prompt.
+
+**Generalised rule: whatever must stay constant belongs in the Element, not the prompt.**
+Both this and the expression fix are the same failure — the Element extrapolating beyond its
+references — and the same remedy.
+
+Still open: the model overshoots colour-cast instructions. `a faint green tint only` again
+produced a strong green corridor. Name the light source, not the colour.
+
+**v3 test jobs:** street `0e29f438` · kitchen `e3ffcdfb` · corridor `3381f9ff`

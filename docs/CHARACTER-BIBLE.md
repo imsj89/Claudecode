@@ -41,15 +41,16 @@ Copy these verbatim into every prompt. Do not paraphrase.
 
 > ## THE FACE IS LOCKED (2026-08-25)
 >
-> **Element `ashmi-gurung-FINAL-v2` — `cd78b211-ae7d-45b6-8643-37a19f40d854`**
-> *(supersedes `ashmi-gurung-FINAL` — `f6328436-b87a-41b1-87c0-809fc0f72cb8`, kept as fallback)*
+> **Element `ashmi-gurung-FULL-v3` — `83ab454a-a85a-4814-8459-c10fc7e493aa`**
+> *Six references: neutral face, soft smile, serious, pensive, plus locked-build full-body
+> front and three-quarter. Supersedes v2 (`cd78b211`) and FINAL (`f6328436`), both kept.*
 >
 > Selected after eleven runs and roughly sixty candidates. Source: run 011 variant 8
 > (job `0ef4dc69`). **That image is the authority on the face, not this prose.** The text
 > below has been updated to match it and exists to describe it, not to define it.
 >
 > **Use the Element for every future generation of her** — embed
-> `<<<cd78b211-ae7d-45b6-8643-37a19f40d854>>>` in the prompt. Never re-derive the face from
+> `<<<83ab454a-a85a-4814-8459-c10fc7e493aa>>>` in the prompt. Never re-derive the face from
 > a written description; that produces a different woman (proven in run 011, variants 1–4).
 >
 > Element `ashmi-gurung-face-v1` (`05a710b3…`) is **retired** — it predates the eye and lip
@@ -222,6 +223,18 @@ wide laugh** — jaw and cheek structure change and it stops being the same pers
 the Element interpolates between its references, the fix is to give it several: v2 carries
 neutral + soft smile + serious + pensive. Any Soul trained on drifted smiles learns a
 blurred identity, so this must be right *before* the training set is shot, not after.
+
+**An Element anchors only what its references show.** A face-only Element leaves the body
+to be re-derived from text on every generation, and it reverts to the model's slim default —
+the same extrapolation failure as expressions. Adding two locked-build full-body references
+(front and three-quarter) to v3 visibly recovered hip and thigh volume in full-length shots
+where prompt wording alone had failed across three attempts. **Whatever must stay constant
+belongs in the Element, not in the prompt.**
+
+**This model overshoots colour-cast instructions.** "Slight green cast" renders as heavy
+green; "a faint green tint only" still renders as strong green. Describe the *light source*
+instead of naming the colour — `overhead fluorescent tubes, neutral-cool white` — and let
+the cast emerge.
 
 **Unlimited generations are not reachable from the MCP connector.** `use_unlim: true` is
 rejected for every model with *"Unlimited generations aren't supported"*, and the account
