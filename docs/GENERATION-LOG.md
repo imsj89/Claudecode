@@ -543,3 +543,45 @@ and every post inherits a beauty-ad finish, which is the exact AI tell §5 exist
 
 Then: 15–20 varied shots via the Element (vary angle, expression, distance, light) →
 `show_characters action=train` → Soul → production on `soul_2`.
+
+---
+
+## BUILD SPEC AMENDED — E cup
+
+**Final: 167 cm · 104 cm bust / 62 cm waist / 100 cm hips · 78 cm underbust (~E cup)**
+
+Verified across front, three-quarter, profile, signature sweater-and-jeans, and jeans at
+three-quarter. Silhouette and face both held in all five.
+
+### The instruction that actually worked
+
+"Enlarge the bust by 2×" was first read as circumference — 95 → 190 cm, not renderable on a
+167 cm frame. Laddering by circumference (105 / 115 / 125) also failed, for a second reason:
+**the model treats a larger bust as a larger woman** and inflated hips, thighs and arms even
+though those numbers were held constant in the prompt.
+
+The clarification — double the **cup volume**, not the circumference — is the correct
+anatomical reading, and it only rendered properly once the prompt **named the held
+variables**:
+
+> give the slim frame first (waist, hips, underbust, ribcage, shoulders, arms, thighs), then
+> the bust, then restate that everything else stays slim and that **she is not a heavier
+> woman overall**
+
+That last clause is what stops the whole-figure drift. Generalises: on these models,
+isolating one attribute requires explicitly pinning the ones that must not move.
+
+### Also learned
+
+- **The model stops tracking numbers past a ceiling.** 115 and 125 cm bust rendered nearly
+  identically, and 125 ignored its stated ratio. Past roughly 115 the model returns its own
+  maximum rather than the request — more circumference will not go further.
+- **Front-on framing hides bust volume.** A fitted tank flattens it; three-quarter and
+  profile are the honest reads. Judge chest specs off those angles.
+- **Under her signature oversized cable-knit the bust spec is nearly invisible.** Since
+  pillars 1 and 4 put her in scrubs and winter layers for most posts, this spec will only
+  visibly affect a minority of output.
+
+**Jobs:** front `c581d077` · three-quarter `6f69337a` · profile `82cc9fab` ·
+signature fit `f8ece926` · jeans 3/4 `8310be59`
+Rejected: G cup `af219354` / `be37b482` / `a6516624` / `c67bcef1`

@@ -76,13 +76,14 @@ Copy these verbatim into every prompt. Do not paraphrase.
 - **Eyebrows:** very thick, straight, dark, set low and close to the eyes, natural strays
 - **Hair:** black-brown with warm undertone, long and thick, straight with a slight natural
   wave, centre parting, matte finish with visible flyaways
-- **Build (LOCKED 2026-08-25):** **167 cm (5'6")** · approx. **95 cm bust / 62 cm waist /
-  100 cm hips** · a full bottom-leaning hourglass
+- **Build (LOCKED 2026-08-25):** **167 cm (5'6")** · approx. **104 cm bust / 62 cm waist /
+  100 cm hips** · **78 cm underbust, roughly an E cup on a narrow ribcage** · a full
+  bottom-leaning hourglass
 
   | Proportion | Target |
   |---|---|
   | Waist-to-hip ratio | ~0.62 |
-  | Bust-to-waist ratio | ~1.5 |
+  | Bust-to-waist ratio | ~1.68 |
   | Shoulder-to-waist ratio | ~1.45–1.6 |
   | Shoulders | narrower than hips |
   | Leg length / total height | ~0.52–0.56 (legs slightly longer than half her height) |
@@ -91,6 +92,14 @@ Copy these verbatim into every prompt. Do not paraphrase.
   Also: slim arms and lower legs, a smooth curved waist-to-hip transition (not angular),
   balanced upper and lower body. **This supersedes the earlier "petite ~5'2", slim, small
   frame" spec**, which was a planning-session guess and was never rendered.
+
+  > **How to prompt this build.** State the held variables, not just the changed one.
+  > `soul_2` and Seedream both read "larger bust" as "larger woman" and will silently
+  > inflate hips, thighs and arms unless the slim ones are named explicitly. The working
+  > form is: give the frame first (`slim narrow frame, 62 cm waist, 100 cm hips, 78 cm
+  > underbust, narrow ribcage, narrow shoulders, slim arms, slim thighs`), then the bust,
+  > then repeat that everything else stays slim and that **she is not a heavier woman
+  > overall**. Without that last clause the whole figure drifts up.
 - **Marks:** a small mole below the left jaw; faint freckles across the nose bridge
 
 > **Mandatory:** she must read unambiguously mid-twenties. Every prompt carries
