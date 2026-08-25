@@ -39,6 +39,15 @@ audience. Two overlapping audiences, one character.
 
 Copy these verbatim into every prompt. Do not paraphrase.
 
+> **The face is approved and locked** (2026-08-25). It lives as Element
+> `ashmi-gurung-face-v1` — `05a710b3-dba8-4f4e-9893-5c75c0cad576`. That image, not this
+> prose, is now the authority on the face; the text below stays as the description that
+> produced it. One known divergence: the approved face reads more North Indian than the
+> Himalayan brief specifies — accepted by explicit decision, see `GENERATION-LOG.md`.
+>
+> **Build below the neck is still open.** Body type, bust and hips are unspecified and
+> must be settled before the training set is shot, since that set fixes the body too.
+
 - **Skin:** warm medium-tan, golden-olive undertone
 - **Face:** heart-shaped, defined tapered jawline, high broad cheekbones, **mature adult
   bone structure and proportions**
@@ -147,6 +156,33 @@ does not exist yet. The Element is what generates them.
 
 Step 3 is where projects fail. A training set of near-identical shots produces a Soul that
 only renders that one shot. Deliberately vary angle, expression, distance, and light.
+
+### Model constraints (verified 2026-08-25)
+
+The two identity mechanisms cover **disjoint** sets of models. This is why both get built,
+and it is not optional:
+
+| | Element | Soul |
+|---|---|---|
+| Built from | 1 image, instant | 5–20 photos, ~10 min |
+| Works with | `nano_banana_pro`, `nano_banana_2`, `gpt_image_2`, `seedream_v4_5`, `seedream_v5_lite`, Cinema Studio image/video, Seedance, Kling | `soul_2`, `soul_cinema_studio` **only** |
+| Subjects per shot | multiple | exactly one |
+
+An Element **cannot** be used with `soul_2`, and a Soul **cannot** be used with anything
+else. So the training set at step 3 must be shot on an Element-compatible model, not on
+`soul_2`.
+
+### Never iterate a face with a raw reference image
+
+Attaching a reference image to `soul_2` silently forces `enhance_prompt: true`: the server
+throws away the submitted prompt and substitutes its own caption of the reference. Every
+locked clause in §2 and §5 — realism engine, heritage markers, wardrobe, mole, freckles —
+is summarised away. The flag cannot be turned off through the MCP path.
+
+A text-only `soul_2` call keeps `enhance_prompt: false` and honours the prompt exactly. So
+**prompt fidelity and identity anchoring cannot be had at the same time on `soul_2`** —
+which is precisely what the Element and Soul mechanisms exist to solve. Full evidence in
+`GENERATION-LOG.md`, runs 002–004.
 
 ---
 
