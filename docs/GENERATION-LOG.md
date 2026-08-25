@@ -488,3 +488,58 @@ without cloning anyone.
 · 5 `743b8548` · 6 `001e0268`
 
 **Status: awaiting build selection.** Nothing written to CHARACTER-BIBLE §2 until chosen.
+
+---
+
+## BUILD LOCKED — 2026-08-25
+
+**167 cm · 95 cm bust / 62 cm waist / 100 cm hips · full bottom-leaning hourglass**
+Waist-to-hip ~0.62 · bust-to-waist ~1.5 · shoulders narrower than hips · legs slightly
+longer than half total height. Written into CHARACTER-BIBLE §2.
+
+Selected as "A" from an escalation ladder, then verified across five angles — front,
+three-quarter, profile, signature sweater-and-jeans fit, and jeans at three-quarter. The
+silhouette and the locked face both held in all five, which is the check that matters
+before a training set.
+
+### How the spec was arrived at
+
+1. A ratio table was supplied (84–87 / 60–63 / 89–94 at 167 cm, WHR 0.66–0.71). Rendered
+   faithfully — but **that spec is a slim hourglass**, around a US 2–4, and read leaner than
+   the "fuller bust, curvy waist, fuller hips" direction given moments earlier. Ratios and
+   absolute circumference do different jobs: 0.67 WHR is genuinely curvy *as a ratio* while
+   the circumferences stay small. Flagged rather than silently resolved.
+2. The follow-up — "bust ×2, hips ×1.5" — is not renderable taken literally: 85 × 2 = 170 cm
+   bust on a 167 cm frame is roughly her own height. Rather than guess, an escalation ladder
+   was generated with explicit numbers at each rung (A 95/62/100, B 102/62/105,
+   C 109/61/106, where C doubles the bust-to-waist *difference*). A was chosen.
+
+**Lesson worth keeping:** when a numeric instruction is impossible or ambiguous, render a
+labelled ladder rather than picking an interpretation silently. It resolved in one round
+what a clarifying question would have taken several messages to settle.
+
+### Anatomical-stability note
+
+A was also the right call on durability. Past roughly B, the waist-to-bust contrast exceeds
+what stays stable across many generations — expect ribcage and shoulder-line drift as pose
+varies, and worse in video. The training set locks whatever is chosen into every future
+image, so stability compounds.
+
+**Jobs:** front `b5c73111` · three-quarter `1f9ecf8e` · profile `5e05599a` ·
+signature fit `531c8fad` · jeans 3/4 `1e0f9da5`
+Ladder: A `b5c73111` · B `37f89c31` · C `5c42e5bd` · B 3/4 `7d7c0be4`
+
+---
+
+## Both gates are now clear
+
+Face and build are locked. CHARACTER-BIBLE §6 step 3 is unblocked.
+
+**Before shooting the training set, re-derive under the §5 content grade.** Every image so
+far was made under flat or flattering studio light. The posted-content grade is the
+opposite — harsh hospital fluorescent, blue-hour grain, uneven kitchen tungsten, flat Boston
+overcast. A training set shot in studio light produces a Soul that renders studio light,
+and every post inherits a beauty-ad finish, which is the exact AI tell §5 exists to prevent.
+
+Then: 15–20 varied shots via the Element (vary angle, expression, distance, light) →
+`show_characters action=train` → Soul → production on `soul_2`.

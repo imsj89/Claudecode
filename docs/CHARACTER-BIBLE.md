@@ -58,8 +58,8 @@ Copy these verbatim into every prompt. Do not paraphrase.
 > as bugs: the face reads South Asian but not distinctly Himalayan (PROJECT-BRIEF §4), and
 > the grey eyes are a chosen departure from natural Nepali colouring.
 >
-> **Build below the neck is still open.** Body type, bust and hips remain unspecified and
-> must be settled before the training set is shot, since that set fixes the body too.
+> **The build is now locked too** — see §2. Face and body are both settled; the training
+> set is unblocked.
 >
 > **Build below the neck is still open.** Body type, bust and hips are unspecified and
 > must be settled before the training set is shot, since that set fixes the body too.
@@ -76,7 +76,21 @@ Copy these verbatim into every prompt. Do not paraphrase.
 - **Eyebrows:** very thick, straight, dark, set low and close to the eyes, natural strays
 - **Hair:** black-brown with warm undertone, long and thick, straight with a slight natural
   wave, centre parting, matte finish with visible flyaways
-- **Build:** petite, ~5'2", slim, small frame
+- **Build (LOCKED 2026-08-25):** **167 cm (5'6")** · approx. **95 cm bust / 62 cm waist /
+  100 cm hips** · a full bottom-leaning hourglass
+
+  | Proportion | Target |
+  |---|---|
+  | Waist-to-hip ratio | ~0.62 |
+  | Bust-to-waist ratio | ~1.5 |
+  | Shoulder-to-waist ratio | ~1.45–1.6 |
+  | Shoulders | narrower than hips |
+  | Leg length / total height | ~0.52–0.56 (legs slightly longer than half her height) |
+  | Torso / total height | ~0.44–0.48 |
+
+  Also: slim arms and lower legs, a smooth curved waist-to-hip transition (not angular),
+  balanced upper and lower body. **This supersedes the earlier "petite ~5'2", slim, small
+  frame" spec**, which was a planning-session guess and was never rendered.
 - **Marks:** a small mole below the left jaw; faint freckles across the nose bridge
 
 > **Mandatory:** she must read unambiguously mid-twenties. Every prompt carries
@@ -154,6 +168,47 @@ flawless skin, dewy highlight.
 
 Boston's grey winter light is an **asset**. It is the least glamorous, most photographic
 light there is, and it is very hard for a model to make look artificially pretty.
+
+---
+
+## 5b. Prompt craft — what actually works on these models
+
+Learned across thirteen runs. Ignoring these repeats a day of re-rolls.
+
+**Use a positive framing instruction, not single-subject negatives.** `no inset image`,
+`no collage`, `no duplicate figures` do not work and may summon what they name. This does:
+
+> `A single full-bleed vertical photograph filling the entire frame edge to edge`
+
+Took spurious inset thumbnails from 5-in-8 to 0-in-8, and it has held across three models.
+
+**Comparative beats absolute for anatomy.** `hips visibly wider than her shoulders`,
+`waist-to-hip ratio about 0.62` land reliably. Bare adjectives (`curvy`, `petite`) and even
+absolute measurements get averaged toward the model's defaults.
+
+**Keep prompts short and high-signal.** Around forty comma-separated clauses and nothing
+carries weight. Write sentences.
+
+**Beauty needs asking for.** The §5 realism engine at full strength actively suppresses it.
+`the kind of face that needs no makeup` was the single highest-leverage phrase found —
+it keeps the bare-face requirement without implying plainness.
+
+**Push age explicitly.** `twenty-six years old, mature adult facial proportions, longer
+facial thirds`. Bare-face and fresh-expression directions pull apparent age down, which
+erodes the §7 guardrail.
+
+**Model selection matters more than prompt wording for some attributes:**
+
+| Need | Use | Because |
+|---|---|---|
+| Body proportions | `seedream_v4_5` | `nano_banana_pro` has almost no body-type range |
+| Photographic realism, bare face | `nano_banana_pro` | Seedream renders retouched and adds makeup |
+| Identity from an Element | either | both honour `<<<element_id>>>` faithfully |
+| Face iteration | **never** a raw reference image on `soul_2` | forces `enhance_prompt`, strips every locked clause |
+
+**Operational:** the plan caps at **8 concurrent jobs** and silently drops the overflow —
+submit in batches of 8 or fewer and always check `failed_count`. Individual jobs also fail
+intermittently with no error detail; resubmitting unchanged generally works.
 
 ---
 
