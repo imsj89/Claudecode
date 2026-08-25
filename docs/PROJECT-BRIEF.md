@@ -20,47 +20,60 @@ production playbook (see *Open decisions* before writing it).
 
 ---
 
-## 2. IMMEDIATE BLOCKER — network egress
+## 2. ACCESS — use the hosted MCP connector
 
-Every Higgsfield host is refused by this environment's egress proxy:
+**Higgsfield has an official hosted MCP server with OAuth. No API keys required.**
+This is the primary access path. (An earlier plan to use raw API keys was a
+detour — the consumer app does not surface keys where expected. They exist at
+`cloud.higgsfield.ai/api-keys` if the MCP route ever fails.)
+
+### Connector setup (done via claude.ai UI, phone-friendly)
+
+1. `claude.ai` → profile icon → **Settings** → **Connectors**
+2. **Add custom connector** → URL: `https://mcp.higgsfield.ai/mcp`
+3. **Connect** → OAuth with the normal Higgsfield account
+4. **Enable the connector in the session** — installing is not enough. A
+   connector can show `installState: connected` but `enabledInChat: false`,
+   in which case its tools are NOT loaded. This is a common failure.
+5. New session → tools appear as `mcp__higgsfield__*`
+
+### Network egress — still required
+
+Verified: every Higgsfield host is refused by this environment's egress proxy.
 
 ```
-platform.higgsfield.ai  → CONNECT tunnel failed, 403
-cloud.higgsfield.ai     → CONNECT tunnel failed, 403
-higgsfield.ai           → CONNECT tunnel failed, 403
-docs.higgsfield.ai      → CONNECT tunnel failed, 403
+platform.higgsfield.ai  -> CONNECT tunnel failed, 403
+cloud.higgsfield.ai     -> CONNECT tunnel failed, 403
+higgsfield.ai           -> CONNECT tunnel failed, 403
+docs.higgsfield.ai      -> CONNECT tunnel failed, 403
 ```
 
-An API key alone does **not** fix this — the host is unreachable. Do not attempt
-to route around it; it is an org egress policy.
+MCP traffic is brokered through Anthropic infrastructure and should bypass this
+for *commands*. But **generated media is served from Higgsfield/CDN hosts**, so
+downloading results still hits the block. Both are needed: MCP to generate,
+allowlist to retrieve.
 
-### Unblock checklist (doable from a phone browser)
+`claude.ai/code` -> environment `Sj-creates` -> Edit -> **Network access** ->
+**Custom**, add:
 
-1. `claude.ai/code` → environment **`Sj-creates`** → **Edit**
-2. **Network access** → **Custom** → add:
-   - `higgsfield.ai`
-   - `platform.higgsfield.ai`
-   - `cloud.higgsfield.ai`
-3. Same dialog → **Environment variables**:
-   - `HF_API_KEY_ID`
-   - `HF_API_SECRET`
-4. Start a **new session** (env changes are not retroactive)
+```
+higgsfield.ai
+platform.higgsfield.ai
+cloud.higgsfield.ai
+mcp.higgsfield.ai
+```
 
-**Verify before building anything:**
+Do not attempt to route around the proxy — it is an org egress policy. If an
+asset host outside these domains shows up in a 403, add it to the list.
+
+### Verify
+
 ```bash
 curl -sS -o /dev/null -w "%{http_code}\n" --max-time 15 https://platform.higgsfield.ai/
 ```
 
-**Caveats**
-- Put credentials in **env vars, not chat** — pasted secrets persist in the
-  transcript. Never commit them.
-- **API billing is separate from the app subscription.** Credentials come from
-  the platform dashboard and may need a paid plan or a support request.
-- Custom allowlists have open bug reports about silently not applying. If step 2
-  doesn't take, that's a known issue.
-- A media/CDN host may also need allowlisting once downloads start failing.
-
----
+`000` + `CONNECT tunnel failed` = still blocked. Any HTTP status (including 401
+or 403 *from Higgsfield*) = through.
 
 ## 3. Reference account analysis
 
@@ -128,7 +141,7 @@ secondary source claiming "the API is not yet open" is **stale and wrong**.
 | Lipsync / talking | `/v1/speak/higgsfield` |
 | Camera motion presets | `getMotions()` |
 
-**Auth:** `Authorization: Key ${HF_API_KEY_ID}:${HF_API_SECRET}`
+**Auth:** OAuth via the hosted MCP connector (preferred), or `Authorization: Key ${HF_API_KEY_ID}:${HF_API_SECRET}` for direct API use.
 **Base URL:** `https://platform.higgsfield.ai`
 **Pattern:** async — submit to a model endpoint, then poll or use a webhook.
 
@@ -164,7 +177,7 @@ that solves character consistency.
 
 ## 8. Build order (next session)
 
-1. Verify network access (§2), then confirm API auth works.
+1. Confirm `mcp__higgsfield__*` tools are loaded and network access works (§2).
 2. Resolve §6 decisions.
 3. Character bible — locked physical description, wardrobe, world.
 4. **Soul ID training set spec** — the highest-leverage artifact (§4).
