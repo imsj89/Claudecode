@@ -37,43 +37,30 @@ detour — the consumer app does not surface keys where expected. They exist at
    in which case its tools are NOT loaded. This is a common failure.
 5. New session → tools appear as `mcp__higgsfield__*`
 
-### Network egress — still required
+### Network egress — RESOLVED
 
-Verified: every Higgsfield host is refused by this environment's egress proxy.
-
-```
-platform.higgsfield.ai  -> CONNECT tunnel failed, 403
-cloud.higgsfield.ai     -> CONNECT tunnel failed, 403
-higgsfield.ai           -> CONNECT tunnel failed, 403
-docs.higgsfield.ai      -> CONNECT tunnel failed, 403
-```
-
-MCP traffic is brokered through Anthropic infrastructure and should bypass this
-for *commands*. But **generated media is served from Higgsfield/CDN hosts**, so
-downloading results still hits the block. Both are needed: MCP to generate,
-allowlist to retrieve.
-
-`claude.ai/code` -> environment `Sj-creates` -> Edit -> **Network access** ->
-**Custom**, add:
+The environment's Network access was on **Trusted**, which blocks all Higgsfield
+hosts. Set to **Custom** with this list (verified working):
 
 ```
 higgsfield.ai
 platform.higgsfield.ai
 cloud.higgsfield.ai
 mcp.higgsfield.ai
+d2ol7oe51mr4n9.cloudfront.net
+upload.higgsfield.ai
 ```
 
-Do not attempt to route around the proxy — it is an org egress policy. If an
-asset host outside these domains shows up in a 403, add it to the list.
+The two non-obvious entries matter most: `d2ol7oe51mr4n9.cloudfront.net` is where
+generated media actually lands, and `upload.higgsfield.ai` is where inputs go. Without
+them the MCP tools work but no image can be seen or uploaded.
 
-### Verify
+Verified: `platform` 405, `mcp` 404, CloudFront serves a full PNG. Real responses from
+the destination servers, not tunnel failures. Note these applied to the **running**
+session — no restart was needed for the network change.
 
-```bash
-curl -sS -o /dev/null -w "%{http_code}\n" --max-time 15 https://platform.higgsfield.ai/
-```
-
-`000` + `CONNECT tunnel failed` = still blocked. Any HTTP status (including 401
-or 403 *from Higgsfield*) = through.
+Leave Environment variables empty — the UI warns they are visible to anyone using the
+environment. OAuth via MCP avoids needing them at all.
 
 ## 3. Reference account analysis
 

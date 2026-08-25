@@ -166,3 +166,29 @@ with the audience that matters most.
 
 **Language.** Every Nepali phrase should be checked by a speaker before posting. Wrong or
 stilted Nepali is instantly visible to the core audience and very hard to recover from.
+
+
+---
+
+## 8. Calibration reference
+
+An existing Soul on this account (`Pema Dolma`, an older Himalayan woman) was reviewed as
+a capability test. Three things it settles:
+
+1. **Higgsfield renders Himalayan features correctly.** Broad high cheekbones, correct eye
+   fold, no drift to generic North Indian or East Asian. The §7 drift risk is real but
+   tractable — the model can do this when the prompt is specific.
+2. **The unretouched grade works.** Genuine pores, uneven tone, age marks, natural
+   asymmetry, correct hands. The anti-airbrush engine delivers.
+3. **Coral-and-turquoise is authentic and renders well** — independent confirmation of
+   Ashmi's pendant motif.
+
+**But it is the wrong aesthetic to copy.** That image is a well-composed, warmly-lit,
+travel-magazine portrait. Ashmi is the opposite: a phone snapshot in a Medford kitchen,
+badly framed, mixed lighting, nothing staged. Same technical realism, deliberately worse
+photography.
+
+**One caveat:** an older face is far easier to make photoreal — wrinkles and weathering
+give the model texture to render. A 24-year-old's smooth skin is exactly where AI-tells
+surface. Ashmi's realism is a harder problem than this image proves, so the skin-texture
+clauses in the prompt carry more weight, not less.
