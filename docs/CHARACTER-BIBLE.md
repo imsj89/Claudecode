@@ -135,6 +135,21 @@ hoops · thin gold ring, right hand.
 The coral-and-turquoise pendant is the identity anchor — traditional Himalayan stones,
 and a small recurring visual signature across every post.
 
+#### Summer look (LOCKED — approved 2026-08-25)
+
+White ribbed scoop-neck cropped tank top, thick straps, black waistband just visible below ·
+**small thick gold huggie hoops** (not thin hoops) · thin gold chain with the small round
+coral-and-turquoise pendant · matching coral-and-turquoise ring · round black sunglasses
+pushed up on her head · dark brown hair in a high ponytail with loose flyaways.
+
+Locked from the approved profile-picture generation. Carry it verbatim as the `WARDROBE`
+block from `prompts/02-profile-picture.md` in any warm-weather shot meant to be the same
+outfit or the same day. Change it deliberately, not by rewording.
+
+**Note the hoops.** Earlier prompts said `thin gold hoops` and the approved image came back
+with thick huggies, which read better at profile-picture scale. The signature-wardrobe line
+above still says thin hoops for the autumn look; the summer look overrides it.
+
 ---
 
 ## 3. Voice — American first, Nepali second

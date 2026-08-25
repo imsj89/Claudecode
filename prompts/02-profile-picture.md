@@ -14,30 +14,68 @@ filling the frame. If you also want it as a grid post, run a second pass at 4:5.
 
 ## The prompt — paste this
 
-**2,971 characters.** Default expression is **A (wink + tongue)**; for B, C or D swap the
-`EXPRESSION` and `LIGHT` blocks only, keeping every other block intact.
+**2,994 characters.** Default expression is **A (wink + tongue)**; for B, C or D swap the
+`EXPRESSION` block only, keeping every other block intact.
 
 ```
 Full-bleed square photo, edge to edge.
 
-CAPTURE: iPhone 17 Pro Max front camera, arm's length above her head, angled down. Ultra-wide lens close up, nose and chin slightly enlarged. Deep depth of field, street behind stays semi-sharp, no portrait mode, no background blur. Computational HDR: shadows lifted and flat, highlights clipping on her forehead. Faint over-sharpening halos on jaw and hair. Noise reduction smearing shadow detail, luminance noise in mid-tones. Cool white balance, slight chromatic aberration, JPEG artifacts on high-contrast edges, mild flare, lens smudge in one corner.
+SELFIE: she holds the phone herself. iPhone 17 Pro Max front camera at arm's length, raised above her head, angled down at her face. Her free arm reaches up toward the lens from the bottom right corner, upper arm and shoulder in frame, nearer the camera so it renders larger and softer. Ultra-wide close up, nose and chin slightly enlarged, edges stretched. Her other hand holds the drink.
 
-SUBJECT: the same woman as the reference images, exact face, bone structure, nose, jawline, eye shape and identity unchanged. 25-year-old Nepali-American woman on a busy sunny summer Boston street, brick sidewalk and storefronts behind. Holding a tall clear cup of iced lemonade with a straw near her chin, condensation on it. White ribbed tank top, thin gold hoops, thin gold chain with a small round pendant, coral orange centre stone in a turquoise ring. Black sunglasses pushed up on her head. Long black-brown hair loose with flyaways, strands stuck to her neck.
+CAPTURE: deep depth of field, street behind stays semi-sharp, no portrait mode, no background blur. Harsh direct summer sun from above, hard shadow under her chin. Computational HDR, shadows lifted flat, highlights clipping on her forehead and nose bridge. Over-sharpening halos on jaw and hair, noise reduction smear, luminance noise, chromatic aberration, JPEG artifacts on high-contrast edges. Focus slightly missed.
 
-BACKGROUND: ordinary strangers behind her, none aware of the camera. One walking past mid-stride, cut off by the frame edge and motion-blurred. Two more at an outdoor cafe table further back, a cyclist passing. All turned away, in profile or cropped, softened by distance and movement, faces indistinct. Parked cars, a trash bin.
+SUBJECT: the same woman as the reference images, exact face, bone structure, nose, jawline, eye shape, identity unchanged. 25-year-old Nepali-American woman on a busy sunny summer Boston street, brick sidewalk and storefronts behind.
 
-EXPRESSION: caught mid-goof, not posed. Left eye squeezed shut in an exaggerated wink, right eye wide open, nose scrunched wrinkling the bridge, mouth open in a wide crooked grin with her tongue out over her lower teeth. Cheeks bunched high, eyebrows asymmetrical, one higher. Genuinely silly, mid-movement, not seductive, not cute-posed.
+WARDROBE, exact, do not substitute: white ribbed scoop-neck cropped tank top, thick straps, black waistband just visible at the bottom edge. Small thick gold huggie hoops. Thin gold chain with a small round pendant, turquoise ring around a coral red centre stone. Matching turquoise and coral ring on her finger. Round black sunglasses pushed up on her head. Dark brown hair in a high ponytail, loose flyaway strands around her face and neck. Tall clear plastic cup of iced lemonade, domed lid, white straw, near her chin.
+
+BACKGROUND: ordinary strangers behind her, none aware of the camera. One walking past mid-stride, cut by the frame edge, motion-blurred. Two at a cafe table behind, a cyclist passing. All turned away, in profile or cropped, softened by distance and movement, faces indistinct.
+
+EXPRESSION: caught mid-goof. Left eye squeezed shut in an exaggerated wink, right eye wide open, nose scrunched wrinkling the bridge, mouth open in a wide crooked grin, tongue out over her lower teeth. Cheeks bunched high, eyebrows asymmetrical. Genuinely silly, mid-movement, not seductive.
 
 BODY: 167 cm, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust. Full E cup breasts, clearly full on a narrow ribcage. Narrow shoulders, slim arms. She is not a heavier woman overall.
 
-LIGHT: harsh direct summer sun from above, blown highlights on forehead and nose bridge, hard shadow under her chin, mild motion blur on her hair, focus slightly missed.
+FRAMING: face fills most of the frame, centred with slight headroom so a circular crop keeps it whole. Imperfect: horizon tilted, head off-centre, one shoulder cut by the edge.
 
-FRAMING: face fills most of the frame, roughly centred with slight headroom so a circular crop keeps it whole. Deliberately imperfect: horizon tilted, head off-centre, one shoulder cut by the frame edge. Not symmetrical, not well-composed.
+REALISM: unretouched. Visible pores and skin texture, sweat sheen on nose and upper lip, uneven skin tone, natural asymmetry. Barely-there makeup. No smoothing, no beauty filter, no airbrushing, no plastic or waxy skin. Mature adult facial proportions, no babyface.
 
-REALISM: unretouched. Visible pores and skin texture, faint sweat sheen on nose and upper lip, uneven skin tone, natural asymmetry, flyaway hairs across her face. Barely-there makeup. No digital smoothing, no beauty filter, no airbrushing, no plastic or waxy skin. Mature adult facial proportions, no babyface, no childlike features.
-
-She is the only person in focus and the only version of her in frame. No duplicate or second copy of her face. No text, no watermark, no phone or device frame, no screen interface, no border.
+She is the only person in focus and the only version of her in frame. No duplicate or second copy of her face. No text, no watermark, no device frame, no screen interface.
 ```
+
+### Locking the outfit
+
+The approved generation set the wardrobe, so the `WARDROBE` block now describes exactly what
+is in it rather than leaving room for the model to reinterpret. Three items were corrected
+against the earlier prompt, which had drifted:
+
+| Was | Now |
+|---|---|
+| `thin gold hoops` | `small thick gold huggie hoops` |
+| `long black-brown hair loose` | `dark brown hair in a high ponytail` |
+| ring only | pendant **and** ring, both coral-red centre stone in turquoise |
+
+`WARDROBE, exact, do not substitute` is doing real work as a label. Clothing described inline
+inside a scene sentence gets treated as flavour and drifts between rolls; a named block with
+an explicit instruction not to substitute holds far better across seeds.
+
+This block travels with her from now on. Reuse it verbatim in any shot meant to be the same
+day or the same outfit, and change it deliberately — not by rewording — when she changes
+clothes.
+
+### Making it read as a self-taken shot
+
+The approved frame was a good photo but an ambiguous one: nothing in it proved she took it
+herself, so it read like someone standing in front of her. The high angle alone is not the
+cue — a friend holding the phone up gives the same geometry.
+
+The `SELFIE` block supplies what was actually missing: **her free arm entering the frame from
+the bottom right corner**, and rendering larger and softer than the rest of her because it is
+closest to the lens. That near-arm is the single most reliable signal that a photo is a
+selfie, and it also explains the drink — one hand on the cup, one hand on the phone, both
+accounted for.
+
+Do not ask for the phone itself. This is the front camera, so the phone is behind the lens and
+cannot appear; naming it invites the model to render a device frame, which the closing
+negatives then have to fight.
 
 ### Handling background people
 
@@ -71,6 +109,10 @@ Nothing load-bearing was removed.
 4. `Mature adult facial proportions, no babyface` — PROJECT-BRIEF §7 hard guardrail, and this
    expression is the highest-risk one in the project.
 5. The identity clause naming the reference images.
+6. **The whole WARDROBE block.** It is what makes this one outfit repeatable instead of a
+   one-off frame.
+7. The selfie arm clause. Drop it and the shot goes back to reading as a photo of her rather
+   than one by her.
 
 ---
 
@@ -100,8 +142,12 @@ held pose — scrunched face, eye shut, tongue out, blown highlights, slight mot
 from too close. Describe the *mechanics* of the face, never the adjective: "playful" gets a
 polite smile, "nose scrunched with one eye squeezed shut" gets the actual thing.
 
-Swap the `EXPRESSION` and `LIGHT` blocks in the base prompt for one of these. Everything else
-stays identical.
+Swap the `EXPRESSION` block in the base prompt for one of these. Everything else stays
+identical — **including `WARDROBE`**, which is locked.
+
+Each variant below also carries a `LIGHT` line. That is now optional: the base `CAPTURE` block
+already specifies the sun and the capture failures. Append a variant's `LIGHT` line only if you
+want that variant's specific failure mode, and only if you have characters to spare.
 
 ### A — wink + tongue
 
@@ -191,8 +237,12 @@ someone else's trademark in your profile picture. Prefer a plain cup.
    babyface-prone combination we have shot — this is the one to watch (PROJECT-BRIEF §7).
 4. **Skin.** Visible pores and sheen, not airbrushed. Bright sun tempts the model toward a
    beauty-ad finish.
-5. **Hands.** One hand holds the cup and the other holds the phone off-frame. Check finger
-   count on the cup hand.
+5. **Hands and arms.** One hand holds the cup; the other arm reaches up out of the bottom
+   right corner toward the lens. Check finger count on the cup hand, and check the selfie arm
+   attaches plausibly to her shoulder — this is the new failure mode.
+7. **Outfit.** Every `WARDROBE` item present and unsubstituted: white ribbed crop tank, gold
+   huggie hoops, coral-and-turquoise pendant, matching ring, black round sunglasses on her
+   head, high ponytail, domed-lid lemonade cup.
 6. **Sunglasses.** On top of her head, not over her eyes — the eyes are the identity.
 
 ---
