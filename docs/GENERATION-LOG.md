@@ -585,3 +585,54 @@ isolating one attribute requires explicitly pinning the ones that must not move.
 **Jobs:** front `c581d077` · three-quarter `6f69337a` · profile `82cc9fab` ·
 signature fit `f8ece926` · jeans 3/4 `8310be59`
 Rejected: G cup `af219354` / `be37b482` / `a6516624` / `c67bcef1`
+
+---
+
+## Training set — in progress
+
+**Element in use: `ashmi-gurung-FINAL-v2` — `cd78b211-ae7d-45b6-8643-37a19f40d854`**
+
+Shot in batches of five, one setting per batch, under the CHARACTER-BIBLE §5 content grade
+rather than studio light, so the Soul does not learn a beauty-ad finish.
+
+### Approved so far (5)
+
+| Shot | Setting | Expression |
+|---|---|---|
+| b1-01 | hospital corridor, 3am | tired neutral |
+| b1-02 | staff break room | faint tired half-smile |
+| b1-05 | stairwell | exhausted, eyes closed |
+| b2r-01 | staff car park, dawn | blank, thousand-yard stare |
+| b2r-05 | Boston street, coffee | wistful |
+
+### Defects found and fixed
+
+1. **Rendered phone hardware.** "Phone camera snapshot" made the model draw an actual
+   phone — device bezel, camera notch, status bar with signal and battery. Negatives
+   (`no device bezel`, `no notch`) **did not work**. The positive full-bleed clause did,
+   and it was already in §5b — dropping it from the scene prompts was the error.
+2. **Colour cast overshoot.** "Slight green cast" rendered as heavy monochrome green. Would
+   have trained a green tint into the Soul.
+3. **Body drift.** Abbreviating the locked build in scene prompts let the figure revert to
+   the model's slim default, and winter coats hid the silhouette. Fixed by restating the
+   spec in full plus the `she is not a heavier woman overall` clause, and by cropping the
+   outerwear so the hip line is visible.
+
+### The expression finding
+
+Every approved shot is a **low-intensity** expression; the rejected ones were the two
+strongest (open laugh, wide delighted smile). A controlled close-up test against the
+Element reference confirmed it: soft smile and pensive held identity tightly, serious held,
+**open laugh drifted** — jaw and cheek structure changed.
+
+Cause: the Element had a single neutral reference and was extrapolating beyond it. Fix:
+Element v2 with four references spanning the expression range. Re-testing the laugh against
+v2 recovered the brow, nose and jaw shape, and restored the pendant and wardrobe that v1
+had dropped.
+
+**Rule:** an identity Element needs expression coverage before it is used to shoot a
+training set. Emotional range is a training-set requirement, not a nice-to-have — a set of
+one neutral face yields a Soul that can only make that face.
+
+**Element v2 jobs:** soft smile `f5666913` · serious `e9f1aef6` · pensive `5b7cdc1d`
+**v2 verification:** laugh `41b092ed` · street `005fcd00`

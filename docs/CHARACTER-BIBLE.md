@@ -41,14 +41,15 @@ Copy these verbatim into every prompt. Do not paraphrase.
 
 > ## THE FACE IS LOCKED (2026-08-25)
 >
-> **Element `ashmi-gurung-FINAL` — `f6328436-b87a-41b1-87c0-809fc0f72cb8`**
+> **Element `ashmi-gurung-FINAL-v2` — `cd78b211-ae7d-45b6-8643-37a19f40d854`**
+> *(supersedes `ashmi-gurung-FINAL` — `f6328436-b87a-41b1-87c0-809fc0f72cb8`, kept as fallback)*
 >
 > Selected after eleven runs and roughly sixty candidates. Source: run 011 variant 8
 > (job `0ef4dc69`). **That image is the authority on the face, not this prose.** The text
 > below has been updated to match it and exists to describe it, not to define it.
 >
 > **Use the Element for every future generation of her** — embed
-> `<<<f6328436-b87a-41b1-87c0-809fc0f72cb8>>>` in the prompt. Never re-derive the face from
+> `<<<cd78b211-ae7d-45b6-8643-37a19f40d854>>>` in the prompt. Never re-derive the face from
 > a written description; that produces a different woman (proven in run 011, variants 1–4).
 >
 > Element `ashmi-gurung-face-v1` (`05a710b3…`) is **retired** — it predates the eye and lip
@@ -214,6 +215,21 @@ erodes the §7 guardrail.
 | Photographic realism, bare face | `nano_banana_pro` | Seedream renders retouched and adds makeup |
 | Identity from an Element | either | both honour `<<<element_id>>>` faithfully |
 | Face iteration | **never** a raw reference image on `soul_2` | forces `enhance_prompt`, strips every locked clause |
+
+**One reference image cannot hold strong expressions.** An Element built from a single
+neutral portrait keeps identity for neutral and mild expressions and **visibly drifts on a
+wide laugh** — jaw and cheek structure change and it stops being the same person. Because
+the Element interpolates between its references, the fix is to give it several: v2 carries
+neutral + soft smile + serious + pensive. Any Soul trained on drifted smiles learns a
+blurred identity, so this must be right *before* the training set is shot, not after.
+
+**Unlimited generations are not reachable from the MCP connector.** `use_unlim: true` is
+rejected for every model with *"Unlimited generations aren't supported"*, and the account
+reports `unlim: {available: false, remaining: null, expires_at: null}`. Ruled out as causes:
+workspace selection, quality tier, and model choice. The web app honours the plan's
+Unlimited entitlement; this path exposes only a separate free-trial allowance the account
+does not hold. Budget MCP work in credits (1 credit per image); use the web app for
+high-volume production.
 
 **Operational:** the plan caps at **8 concurrent jobs** and silently drops the overflow —
 submit in batches of 8 or fewer and always check `failed_count`. Individual jobs also fail
