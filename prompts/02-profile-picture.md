@@ -14,28 +14,45 @@ filling the frame. If you also want it as a grid post, run a second pass at 4:5.
 
 ## The prompt — paste this
 
-**2,615 characters.** Default expression is **A (wink + tongue)**; for B, C or D swap the
+**2,971 characters.** Default expression is **A (wink + tongue)**; for B, C or D swap the
 `EXPRESSION` and `LIGHT` blocks only, keeping every other block intact.
 
 ```
 Full-bleed square photo, edge to edge.
 
-CAPTURE: iPhone 17 Pro Max front camera, arm's length above her head, angled down. Ultra-wide lens close up, so her nose and chin are slightly enlarged. Deep depth of field, street behind stays semi-sharp, no portrait mode, no background blur. Computational HDR: shadows lifted and flat, highlights clipping on her forehead. Faint over-sharpening halos on her jaw and hair. Noise reduction smearing shadow detail, luminance noise in the mid-tones. Cool white balance, slight chromatic aberration, JPEG artifacts on high-contrast edges, mild flare and a lens smudge softening one corner.
+CAPTURE: iPhone 17 Pro Max front camera, arm's length above her head, angled down. Ultra-wide lens close up, nose and chin slightly enlarged. Deep depth of field, street behind stays semi-sharp, no portrait mode, no background blur. Computational HDR: shadows lifted and flat, highlights clipping on her forehead. Faint over-sharpening halos on jaw and hair. Noise reduction smearing shadow detail, luminance noise in mid-tones. Cool white balance, slight chromatic aberration, JPEG artifacts on high-contrast edges, mild flare, lens smudge in one corner.
 
-SUBJECT: the same woman as the reference images, exact face, bone structure, nose, jawline, eye shape and identity unchanged. 25-year-old Nepali-American woman on a sunny summer Boston street, brick sidewalk and blurred storefronts behind. Holding a tall clear cup of iced lemonade with a straw near her chin, condensation on it. White ribbed tank top, thin gold hoops, thin gold chain with a small round pendant, coral orange centre stone in a turquoise ring. Black sunglasses pushed up on her head. Long black-brown hair loose with flyaways, strands stuck to her neck.
+SUBJECT: the same woman as the reference images, exact face, bone structure, nose, jawline, eye shape and identity unchanged. 25-year-old Nepali-American woman on a busy sunny summer Boston street, brick sidewalk and storefronts behind. Holding a tall clear cup of iced lemonade with a straw near her chin, condensation on it. White ribbed tank top, thin gold hoops, thin gold chain with a small round pendant, coral orange centre stone in a turquoise ring. Black sunglasses pushed up on her head. Long black-brown hair loose with flyaways, strands stuck to her neck.
+
+BACKGROUND: ordinary strangers behind her, none aware of the camera. One walking past mid-stride, cut off by the frame edge and motion-blurred. Two more at an outdoor cafe table further back, a cyclist passing. All turned away, in profile or cropped, softened by distance and movement, faces indistinct. Parked cars, a trash bin.
 
 EXPRESSION: caught mid-goof, not posed. Left eye squeezed shut in an exaggerated wink, right eye wide open, nose scrunched wrinkling the bridge, mouth open in a wide crooked grin with her tongue out over her lower teeth. Cheeks bunched high, eyebrows asymmetrical, one higher. Genuinely silly, mid-movement, not seductive, not cute-posed.
 
 BODY: 167 cm, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust. Full E cup breasts, clearly full on a narrow ribcage. Narrow shoulders, slim arms. She is not a heavier woman overall.
 
-LIGHT: harsh direct summer sun from above, blown highlights on her forehead and nose bridge, hard shadow under her chin, mild motion blur on her hair, focus slightly missed.
+LIGHT: harsh direct summer sun from above, blown highlights on forehead and nose bridge, hard shadow under her chin, mild motion blur on her hair, focus slightly missed.
 
-FRAMING: face fills most of the frame, roughly centred with a little headroom, so a circular crop keeps her whole face. Deliberately imperfect: horizon tilted, head off-centre, one shoulder cut by the frame edge. Not symmetrical, not well-composed.
+FRAMING: face fills most of the frame, roughly centred with slight headroom so a circular crop keeps it whole. Deliberately imperfect: horizon tilted, head off-centre, one shoulder cut by the frame edge. Not symmetrical, not well-composed.
 
-REALISM: unretouched. Visible pores and skin texture, faint sweat sheen on her nose and upper lip, uneven skin tone, natural asymmetry, flyaway hairs across her face. Barely-there makeup. No digital smoothing, no beauty filter, no airbrushing, no plastic or waxy skin. Mature adult facial proportions, no babyface, no childlike features.
+REALISM: unretouched. Visible pores and skin texture, faint sweat sheen on nose and upper lip, uneven skin tone, natural asymmetry, flyaway hairs across her face. Barely-there makeup. No digital smoothing, no beauty filter, no airbrushing, no plastic or waxy skin. Mature adult facial proportions, no babyface, no childlike features.
 
-One person alone, no other people, no text, no watermark, no phone or device frame, no screen interface, no border.
+She is the only person in focus and the only version of her in frame. No duplicate or second copy of her face. No text, no watermark, no phone or device frame, no screen interface, no border.
 ```
+
+### Handling background people
+
+An empty summer sidewalk in a major city reads staged — emptiness is itself an AI tell. But
+background faces are where these models fail hardest, producing melted or duplicated
+features that ruin an otherwise good frame.
+
+The `BACKGROUND` block avoids both by making every stranger **turned away, in profile, or
+cropped by the frame** and softened by motion and distance. That is also exactly what a real
+phone photo does at this depth of field, so the fix costs no realism.
+
+The closing line changed from `One person alone, no other people` to `She is the only person
+in focus and the only version of her in frame. No duplicate or second copy of her face.` The
+old wording would have cancelled the crowd; the new wording still blocks the real risk, which
+is the model rendering a second Aasmi.
 
 ### What was cut, and what must never be
 
