@@ -168,3 +168,60 @@ reliable — always check `failed_count` rather than assuming a submitted batch 
   strength. If the Himalayan read matters, it likely needs the stronger levers in
   `prompts/01-character-sheet.md` or a different base model — not another round of the
   same wording.
+
+---
+
+## Run 007 — beauty-forward face candidates
+
+**Date:** 2026-08-25 · **Model:** `soul_2` · **Aspect:** 9:16 · **Text-only**
+
+Run 006 was rejected: the faces were not attractive enough. **Diagnosis: the §5 realism
+engine was suppressing beauty.** Clauses like `uneven foundation blending`, `fine lines`,
+`texture irregularities` and `unretouched documentary realism` are tuned for authenticity
+and actively work against a pretty face. Run 006 also anchored on replicating the run 001
+candidate's specific features — deep-set downturned eyes, low heavy brows, lean cheeks —
+which read as characterful rather than beautiful.
+
+**The distinction that resolves it:** CHARACTER-BIBLE §5's un-glamorous grade governs
+**posted content** — the bad phone photo in a Medford kitchen. The **character sheet** is a
+studio reference whose job is to define the face clearly, and there is no reason for it to
+be unflattering. Beauty comes from bone structure and feature harmony, not from
+airbrushing, so real skin texture and a genuinely attractive face are compatible.
+
+Rewritten toward: model-caliber facial harmony, high sculpted cheekbones, large luminous
+almond eyes with an **upward** outer tilt (downturned reads plainer), refined nose, full
+lips with a defined cupid's bow, soft flattering key light. Retained: fine visible pores,
+subtle natural asymmetry, `no plastic skin`, `no waxy skin`, and the mid-twenties guardrail.
+
+| # | Job | Direction |
+|---|---|---|
+| 1 | `13273ee8-7191-4a99-8f9c-ae2c177c976a` | balanced |
+| 2 | `64cf20cd-f742-4285-aa6c-0e41280c1e39` | Himalayan / Tibeto-Burman |
+| 3 | `452540d1-b428-45b1-8407-705b9e111769` | soft romantic |
+| 4 | `5f16fac6-6185-4b6b-ad17-927e8980f5f6` | sharp editorial |
+| 5 | `2f699a0a-071a-4974-95b6-c1d3bf86a32d` | delicate / fair |
+| 6 | `16b2045b-7482-47f2-8e78-437c5912e5a3` | eyes-forward |
+| 7 | `b05ba74e-1445-4884-88ff-8517603441fa` | lips + eyes |
+| 8 | `30e7617c-f323-4f6e-80a8-fc35fbb80791` | classic symmetrical |
+| 9 | `2b47b38c-b0f9-4391-a1f8-6100862e9329` | soft glam |
+| 10 | `eb066f73-d80d-4559-ae9a-f03a28f23831` | fresh natural |
+
+### Two defects in the set
+
+**Spurious inset thumbnails on 3, 4, 6, 7 and 10.** A small duplicate figure or a product
+shot of the sweater appears in a corner, despite `no inset figure`, `no duplicate figures`
+and `single subject only` in the negative tail. This is the same composition failure that
+put a doll-sized figure in the middle of the run 001 sheet. **`soul_2` does not reliably
+honour single-subject negatives.** Clean: 1, 2, 5, 8, 9. If a defective one is chosen,
+re-roll it rather than cropping — the inset signals the composition was unstable.
+
+**Glossier than bible §5 permits.** Deliberate: the anti-gloss clauses were relaxed to let
+the beauty lighting work. Fine for face selection, wrong for posted content. Once a face is
+chosen, re-derive it under the §5 content grade before shooting the training set, or every
+downstream post inherits a beauty-ad finish.
+
+### Plan limit discovered
+
+`max 8 concurrent jobs on ultimate (annual) plan`. Submitting 10 at once silently drops the
+overflow — this is what the two unexplained "failures" in run 006 actually were, not model
+errors. **Submit in batches of 8 or fewer**, and always check `failed_count`.
