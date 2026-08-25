@@ -12,13 +12,51 @@ filling the frame. If you also want it as a grid post, run a second pass at 4:5.
 
 ---
 
-## The prompt
+## The prompt — paste this
+
+Default expression is **A (wink + tongue)**. To use B, C or D, swap the `EXPRESSION` and
+`LIGHT` blocks only.
 
 ```
-A single full-bleed square photograph filling the entire frame edge to edge. Candid phone selfie held high above her head and angled down, arm's-length, slight tilt, casually framed. Close-up head-and-shoulders shot of the same woman as in the reference images, keeping her exact face, bone structure, nose, jawline, eye shape and identity completely unchanged. A 25-year-old Nepali-American woman on a sunny summer street in Boston, brick sidewalk and blurred storefronts behind her. She holds a tall clear plastic cup of iced lemonade with a straw up near her chin, condensation on the cup. Wearing a simple white ribbed tank top and thin gold hoops, a thin gold chain with a small round pendant with a coral orange centre stone inside a turquoise ring. Black sunglasses pushed up onto the top of her head, holding her hair back. Long black-brown hair loose with flyaways, a few strands stuck to her neck in the heat. EXPRESSION: a playful exaggerated pout, lips pushed forward, eyebrows slightly raised, eyes looking straight up into the lens, deliberately silly rather than seductive. Her face fills most of the frame, centred, with a little headroom, framed so a circular crop keeps her whole face. LIGHT: bright direct summer sunlight from above and slightly behind the phone, hard-edged shadows under her chin and nose, a few blown-out highlights on her forehead and cheekbones, warm and slightly overexposed, visible sensor noise in the shadows. Real phone-camera look with mild lens distortion from the close high angle. Unretouched: visible skin texture and pores, a faint sheen of sweat, uneven skin tone, natural asymmetry, no makeup or barely-there makeup, no digital smoothing, no beauty filter, no airbrushing, no plastic skin. Mature adult facial proportions, no babyface. One person alone, sharp focus on her face, no text, no watermark, no phone or device frame visible, no screen interface, no border.
+A single full-bleed square photograph filling the entire frame edge to edge.
+
+CAPTURE: Shot on an iPhone 17 Pro Max front camera, held at arm's length above her head and angled down. Ultra-wide front lens at close range, so perspective distortion enlarges her nose and chin slightly and makes her ears small. Deep depth of field from the small sensor: the street behind her stays semi-sharp and detailed, not creamy. No portrait mode, no artificial background blur. Computational HDR processing, so shadows are lifted and slightly flat while highlights still clip on her forehead, everything evenly exposed in a way real film would not be. Faint over-sharpening halos along the edge of her jaw and hair. Noise reduction smearing fine detail in the shadow areas while visible luminance noise remains in the darker mid-tones. Neutral-cool white balance. Slight chromatic aberration at the frame edges, minor JPEG compression artifacts around high-contrast edges, mild veiling haze and a small lens flare from shooting near the sun, and a faint smudge on the lens softening one corner.
+
+SUBJECT: The same woman as in the reference images, keeping her exact face, bone structure, nose, jawline, eye shape and identity completely unchanged. A 25-year-old Nepali-American woman on a sunny summer street in Boston, brick sidewalk and blurred storefronts behind her. She holds a tall clear plastic cup of iced lemonade with a straw up near her chin, condensation running down it. White ribbed tank top, thin gold hoops, a thin gold chain with a small round pendant with a coral orange centre stone inside a turquoise ring. Black sunglasses pushed up onto the top of her head holding her hair back. Long black-brown hair loose with flyaways, a few strands stuck to her neck in the heat.
+
+EXPRESSION: caught mid-goof, not posed. Her left eye is squeezed fully shut in an exaggerated wink while the right stays wide open, her nose is scrunched up wrinkling the bridge, her mouth is open in a wide crooked grin with her tongue sticking out over her lower teeth. Cheeks bunched high, laugh lines showing, eyebrows asymmetrical, one raised higher than the other. Genuinely silly, mid-movement, slightly out of control, not seductive and not cute-posed.
+
+BODY: 167 cm tall, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust. Full E cup breasts, clearly full on a narrow ribcage. Narrow shoulders, slim arms. She is not a heavier woman overall.
+
+LIGHT: harsh direct summer sun from above and slightly behind the phone, blown-out highlights across her forehead and the bridge of her nose, hard shadow under her chin, mild motion blur on her hair and one side of her face from moving while shooting, focus very slightly missed.
+
+FRAMING: her face fills most of the frame, roughly centred with a little headroom, framed so a circular crop keeps her whole face. Deliberately imperfect: the horizon is tilted, her head is not perfectly centred, part of one shoulder is cut off by the frame edge. Not symmetrical, not well-composed.
+
+REALISM: unretouched. Visible skin texture and open pores, a faint sheen of sweat on her nose and upper lip, uneven skin tone, natural facial asymmetry, a few flyaway hairs across her face. No makeup or barely-there makeup. No digital smoothing, no beauty filter, no airbrushing, no plastic skin, no waxy CGI look. Mature adult facial proportions, no babyface, no childlike features.
+
+One person alone, no other people, no text, no watermark, no phone or device frame visible, no screen interface, no status bar, no border.
 ```
 
 ---
+
+## Why the phone spec is written this way
+
+Naming a camera model does very little on its own — the model has no reliable idea what an
+iPhone 17 Pro Max file looks like. **The artifacts do the work**, and they are what separates
+a phone photo from a render:
+
+| Artifact | What it kills |
+|---|---|
+| Deep depth of field, no portrait mode | Creamy background blur is the loudest AI/DSLR tell in a selfie |
+| Computational HDR, lifted flat shadows | Renders have dramatic, physically-correct falloff; phones do not |
+| Over-sharpening halos | Real phone processing artifact; renders are cleanly sharp |
+| Noise reduction smear + residual noise | Renders are either clean or fake-grainy, never both |
+| Front-lens distortion at arm's length | Renders keep ideal facial proportions |
+| JPEG artifacts, chromatic aberration, lens smudge | Renders have no capture history |
+| Tilted horizon, shoulder cut off | Renders are well-composed by default |
+
+If the output still reads AI, **strengthen these before touching anything else.** The failure
+is almost always too clean, not wrong content.
 
 ## Expression variants — roll all four, pick one
 
