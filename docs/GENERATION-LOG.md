@@ -31,10 +31,11 @@ composition and identity tokens are first because early tokens carry more weight
 future run shows `enhance_prompt: true`, the model rewrote the prompt and the result is
 not a faithful test of the bible.
 
-### Verdict — APPROVED (variant A, right panel)
+### Verdict — CANDIDATE, not selected
 
-**The face is locked.** Reviewed 2026-08-25. The right-hand close-up panel of variant A
-is the approved face; it is now Element `ashmi-gurung-face-v1` (see run 005).
+Reviewed 2026-08-25. The right-hand close-up panel of variant A is the **leading
+candidate**, saved as Element `ashmi-gurung-face-v1` (run 005) so it survives the session.
+**No face has been selected yet** and none should be treated as final until it is.
 
 Observations on the approved image, for the record:
 
@@ -49,10 +50,10 @@ Observations on the approved image, for the record:
   composition is not reliable on `soul_2` and should not be trusted for a real turnaround.
 - **Heritage: drifted toward generic North Indian.** High nose bridge, no visible
   epicanthic fold, cheekbones not Himalayan-broad. This is the exact failure mode
-  PROJECT-BRIEF §4 names as the project's core technical risk. **Accepted by explicit
-  decision** — the face was chosen on its merits with the drift flagged. Logged here
-  because CHARACTER-BIBLE §1 makes the Gurung surname load-bearing on the face agreeing
-  with it, and that tension is now a known, owned trade rather than an accident.
+  PROJECT-BRIEF §4 names as the project's core technical risk. Flagged and still **open**
+  — it matters because CHARACTER-BIBLE §1 makes the Gurung surname load-bearing on the
+  face agreeing with it. Worth resolving while faces are still being chosen; it is far
+  cheaper now than after a Soul is trained.
 
 
 ---
@@ -119,7 +120,51 @@ uploaded, and registered as a reference element.
 Usage: embed `<<<05a710b3-dba8-4f4e-9893-5c75c0cad576>>>` inside the prompt of
 `generate_image` / `generate_video`. The backend injects the reference automatically.
 
-**Next:** 15–20 varied shots via the Element (vary angle, expression, distance, light),
-then `show_characters action=train` on that set. Body type is still unspecified and must
-be settled before the training set is shot — the training set fixes the body as well as
-the face.
+**This element preserves a candidate, it does not select one.** Face selection is still
+open. If a different candidate wins, create a new element and retire this one.
+
+---
+
+## Run 006 — ten face candidates
+
+**Date:** 2026-08-25 · **Model:** `soul_2` · **Aspect:** 9:16 · **Text-only**
+
+Ten near-neighbours of the run 001 variant A face, for selection. Text-only deliberately:
+a reference image would force `enhance_prompt` and strip the realism engine (runs 002–004).
+Similarity therefore comes from a tightened written description of the candidate face, with
+exactly **one feature perturbed per variant** so the axes stay separable.
+
+| # | Job | Perturbation |
+|---|---|---|
+| 1 | `195be596-bf84-448e-aef8-761251ca8e92` | baseline |
+| 2 | `ebe6e8ec-57bb-4682-8890-34325e6005ab` | lighter complexion |
+| 3 | `f4fb78e0-2ffd-48f9-918d-8153b6760a16` | fuller apple cheeks |
+| 4 | `77a866c9-4e21-4271-9253-c1ca0224c69a` | larger, more open eyes |
+| 5 | `db59a8bb-2817-411c-b2fc-a05124974d71` | lower nasal bridge, stronger epicanthic fold |
+| 6 | `662684da-81be-4350-8430-b75a6c76b740` | sharper jaw, more sculpted |
+| 7 | `991e42ce-4cb1-47f8-ba0e-b191d6d2d77b` | fuller petal lips (resubmitted; `b1916083` failed) |
+| 8 | `d5c476de-3d29-489f-8f41-d6fc7c97f4aa` | deeper, warmer tone |
+| 9 | `ca53d038-9646-47f9-97a5-e2aa4ffa6897` | softer, more arched brows |
+| 10 | `6adcc63f-debd-4841-a698-9e9278ad4bc1` | rounder, fuller face shape (resubmitted; `cabae37f` failed) |
+
+Variant 5 is the one that tests the PROJECT-BRIEF §4 heritage risk directly.
+
+Two of the twelve submissions failed with no error detail and were resubmitted
+unchanged; both succeeded on the retry. Batch submission on `soul_2` is not fully
+reliable — always check `failed_count` rather than assuming a submitted batch completes.
+
+**Review notes on the set:**
+
+- **Realism engine: held on all ten.** Matte skin, visible pores, natural asymmetry, no
+  gloss. This is the direct payoff of going text-only and confirms the run 002–004
+  diagnosis — the reference image, not the prompt, was what broke the grade.
+- **Age: passed on all ten.** No babyface drift anywhere.
+- **Pendant: rendered correctly on nearly all** — coral centre inside a turquoise ring.
+  The identity anchor is reproducible from text alone, which matters for the training set.
+- **Heritage: still unresolved across the whole set.** Every variant reads broadly South
+  Asian / North Indian. Variant 5, which was built specifically to push Tibeto-Burman
+  (lower nasal bridge, stronger epicanthic fold, broader cheekbones), moved the least of
+  any perturbation. Prompt-level heritage steering appears weak on `soul_2` at this
+  strength. If the Himalayan read matters, it likely needs the stronger levers in
+  `prompts/01-character-sheet.md` or a different base model — not another round of the
+  same wording.

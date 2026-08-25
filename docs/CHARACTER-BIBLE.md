@@ -39,11 +39,12 @@ audience. Two overlapping audiences, one character.
 
 Copy these verbatim into every prompt. Do not paraphrase.
 
-> **The face is approved and locked** (2026-08-25). It lives as Element
-> `ashmi-gurung-face-v1` — `05a710b3-dba8-4f4e-9893-5c75c0cad576`. That image, not this
-> prose, is now the authority on the face; the text below stays as the description that
-> produced it. One known divergence: the approved face reads more North Indian than the
-> Himalayan brief specifies — accepted by explicit decision, see `GENERATION-LOG.md`.
+> **The face is NOT yet chosen** (2026-08-25). Candidates are still being generated and
+> reviewed; the description below is the current best text spec, not a settled face.
+> A leading candidate has been saved as Element `ashmi-gurung-face-v1`
+> (`05a710b3-dba8-4f4e-9893-5c75c0cad576`) so it survives the session — saving a candidate
+> is not selecting it. One thing to weigh when choosing: that candidate reads more North
+> Indian than the Himalayan brief specifies (see `GENERATION-LOG.md`).
 >
 > **Build below the neck is still open.** Body type, bust and hips are unspecified and
 > must be settled before the training set is shot, since that set fixes the body too.
