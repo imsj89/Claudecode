@@ -5,7 +5,7 @@ weekend post rather than a routine one. Worth a caption that says so.
 
 ---
 
-## A — Nano Banana Pro (4328 characters)
+## A — Nano Banana Pro (4363 characters)
 
 Attach the ChatGPT-retouched frame as the single identity reference.
 
@@ -22,9 +22,9 @@ BODY: 167 cm, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust. Full
 
 PROP: a small silver-and-black handheld digital camcorder, plain and unbranded, wrist strap looped around her right hand, the flip-out screen swung open and angled away from the camera so only its back panel shows.
 
-POSE: mid-stride and half turned away from the photographer, both hands bringing the camcorder up to frame something off to her left. Elbows out, shoulders lifted, chin tipped down toward the screen, her eyes on it rather than on the lens, lips slightly parted in concentration. One heel just off the ground, the skirt still swinging from the turn. She has no idea she is being photographed.
+POSE: standing still and upright, square to the camera, weight even on both feet, spine straight, shoulders level and relaxed. Both hands hold the camcorder raised close to her face, just below her chin, elbows tucked in against her ribs. The open screen is tilted up toward her, her chin dipped and her eyes down on it rather than on the lens, lips slightly parted in concentration. The skirt hangs still. A quiet, ordinary, unposed stance. She has no idea she is being photographed.
 
-CAMERA: taken by a friend a few paces behind her, iPhone photo, framed head to sandals, held at chest height. Deep depth of field so the walkway and the trees behind stay semi-sharp, no portrait mode. Computational HDR with lifted flat shadows and highlights clipping where the sun lands. Over-sharpening halos on her arms and hair, noise reduction smear in the shade, chromatic aberration, JPEG artifacts on high-contrast edges. Slight motion blur on her hands and the hem of her skirt. Horizon a little tilted, she sits off-centre with uneven headroom.
+CAMERA: taken by a friend a few paces behind her, iPhone photo, framed head to sandals, held at chest height. Deep depth of field so the walkway and the trees behind stay semi-sharp, no portrait mode. Computational HDR with lifted flat shadows and highlights clipping where the sun lands. Over-sharpening halos on her arms and hair, noise reduction smear in the shade, chromatic aberration, JPEG artifacts on high-contrast edges. Horizon a little tilted, she sits off-centre with uneven headroom.
 
 LIGHT: high summer sun broken by the elm canopy into hard-edged patches, blowing out across one shoulder and the top of the skirt while the rest falls into open shade, a bright dapple pattern scattered over the walkway around her feet.
 
@@ -37,7 +37,7 @@ She is the only person in focus and the only version of her in frame. Unretouche
 
 ---
 
-## B — Seedream 4.5, shortened (2432 characters)
+## B — Seedream 4.5, shortened (2517 characters)
 
 No attachments. Identity comes from the Element at the top; attaching a reference to Seedream
 forces `enhance_prompt: true` and discards the prompt (BIBLE §6).
@@ -55,9 +55,9 @@ Short black fit-and-flare mini dress in a ditsy daisy print — small cream-whit
 
 She holds a small silver-and-black handheld digital camcorder, plain and unbranded, wrist strap around her right hand, the flip-out screen angled away from the camera so only its back panel shows.
 
-POSE: mid-stride, half turned away from the photographer, both hands bringing the camcorder up to frame something off to her left. Elbows out, chin tipped down toward the screen, her eyes on it rather than the lens. One heel off the ground, the skirt still swinging from the turn.
+POSE: standing still and upright, square to the camera, weight even on both feet, shoulders level and relaxed. Both hands hold the camcorder raised close to her face, just below her chin, elbows tucked in against her ribs. The open screen tilts up toward her, her chin dipped and her eyes down on it rather than on the lens. The skirt hangs still. A quiet, ordinary, unposed stance.
 
-Taken by a friend a few paces behind, iPhone photo, framed head to sandals. Deep depth of field, the walkway and trees stay semi-sharp, no portrait mode. High summer sun broken by the elm canopy into hard-edged patches, blown out on one shoulder, dappled light scattered across the paving. Over-sharpening halos, noise reduction smear, JPEG artifacts, motion blur on her hands and hem, horizon slightly tilted.
+Taken by a friend a few paces behind, iPhone photo, framed head to sandals. Deep depth of field, the walkway and trees stay semi-sharp, no portrait mode. High summer sun broken by the elm canopy into hard-edged patches, blown out on one shoulder, dappled light scattered across the paving. Over-sharpening halos, noise reduction smear, JPEG artifacts, horizon slightly tilted, uneven headroom.
 
 Green benches down both sides, park-goers behind her all turned away, in profile or cropped, faces indistinct with distance and motion.
 
@@ -92,16 +92,29 @@ melted one, and it sits right in the middle of the frame. Angling it away keeps 
 silhouette, which is the whole visual point of a camcorder, while removing the thing that
 breaks.
 
-## Why the pose reads candid
+## The pose: still, not staged
 
-She is absorbed in **her own** shot. Her eyes are on the camcorder screen, not the lens, framing
-something off to her left the photograph never shows. That off-frame subject does the work:
-the viewer reads a person mid-activity rather than a person posing with a prop.
+An earlier version had her mid-stride, half turned, elbows flared and the skirt swinging. It
+read as performed. Motion is the wrong tool here — a person operating a camcorder is
+**concentrating, and therefore still.**
 
-Everything else is capture failure, the same recipe as prompt 05 — motion blur on hands and
-hem, tilted horizon, uneven headroom, a friend walking a few paces behind. `She has no idea she
-is being photographed` states the intent outright, which these models do respond to when the
-mechanics back it up.
+What replaced it:
+
+| Was | Now |
+|---|---|
+| Mid-stride, half turned away | Standing still and upright, square to the camera |
+| Elbows out, shoulders lifted | Elbows tucked in against her ribs |
+| One heel off the ground | Weight even on both feet |
+| Skirt swinging from the turn | Skirt hanging still |
+| Motion blur on hands and hem | Removed — a still subject has none |
+
+The candid quality now comes from attention rather than action: **her eyes are on the screen,
+not on the lens.** That alone separates a person doing something from a person being
+photographed, and it survives at any energy level.
+
+**On `close to her face`** — the camcorder sits just below her chin with the open screen tilted
+up toward her, so her whole face stays clear above it. Held any higher it crops the face this
+project has spent every prompt locking down, and identity is worth more than the extra inch.
 
 ## Dappled light
 
