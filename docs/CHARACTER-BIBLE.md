@@ -156,6 +156,18 @@ a hit list (§5b).
 - **Face is hairless.** Vellus hair is never requested on her face: enlarged ten times it
   becomes visible facial hair, and peach fuzz has no safe enlarged form (§5b scale rule).
 
+#### Daisy dress look (LOCKED)
+
+Short black fit-and-flare mini dress in a **ditsy** daisy print — small cream-white daisies,
+pale yellow centres, fine dark green stems, scattered densely on black. Thin spaghetti straps ·
+gathered lightly sheer ruched band across the top of the bodice with a small centre tie ·
+fitted bodice seamed at the natural waist · full circle skirt flaring to mid-thigh · flat black
+strappy sandals · the usual gold huggie hoops, coral-and-turquoise pendant and matching ring ·
+sunglasses hooked on the neckline rather than on her head, since this look pairs with a bun.
+
+Describe it as construction, never as "black floral mini dress" — the print scale, the ruched
+band, the waist seam and the circle skirt are what make it the same garment twice.
+
 #### Summer look (LOCKED — approved 2026-08-25)
 
 White ribbed scoop-neck cropped tank top, thick straps, black waistband just visible below ·
