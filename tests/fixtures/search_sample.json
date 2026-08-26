@@ -1,0 +1,125 @@
+{
+  "total_count": 10,
+  "items": [
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-smi",
+      "number": 91,
+      "title": "[Bounty $800] Add JSON output mode to tt-smi snapshot",
+      "html_url": "https://github.com/tenstorrent/tt-smi/issues/91",
+      "body": "Emit machine-readable snapshots. Pure CLI work, unit tested on host.",
+      "assignees": [],
+      "labels": [{"name": "bounty"}, {"name": "medium"}],
+      "created_at": "2026-08-24T10:00:00Z",
+      "updated_at": "2026-08-25T10:00:00Z",
+      "comments": 0
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-blacksmith",
+      "number": 529,
+      "title": "[Bounty $2000] GraphSAGE training workload on Tenstorrent",
+      "html_url": "https://github.com/tenstorrent/tt-blacksmith/issues/529",
+      "body": "Bring up GraphSAGE training. Target Wormhole N300 hardware.",
+      "assignees": [],
+      "labels": [{"name": "bounty"}, {"name": "hard"}],
+      "created_at": "2026-08-20T10:00:00Z",
+      "updated_at": "2026-08-21T10:00:00Z",
+      "comments": 1
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-metal",
+      "number": 32140,
+      "title": "[Bounty $1500] Time Series Transformer Model Bring-Up Using TTNN APIs",
+      "html_url": "https://github.com/tenstorrent/tt-metal/issues/32140",
+      "body": "Model must run on Tenstorrent hardware (Wormhole or Blackhole).",
+      "assignees": [{"login": "velonica0"}],
+      "labels": [{"name": "bounty"}],
+      "created_at": "2025-11-08T10:00:00Z",
+      "updated_at": "2026-05-01T10:00:00Z",
+      "comments": 4
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-metal",
+      "number": 52037,
+      "title": "[Bounty $1500] logaddexp / logaddexp2: overflow-safe reformulation",
+      "html_url": "https://github.com/tenstorrent/tt-metal/issues/52037",
+      "body": "Validated with ttsim; no hardware required for the numerical tests.",
+      "assignees": [{"login": "EazyHood"}],
+      "labels": [{"name": "bounty"}],
+      "created_at": "2026-07-01T10:00:00Z",
+      "updated_at": "2026-08-24T10:00:00Z",
+      "comments": 3
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-metal",
+      "number": 54016,
+      "title": "[Bounty $35000] Welford Two-Pass Statistics Optimisation",
+      "html_url": "https://github.com/tenstorrent/tt-metal/issues/54016",
+      "body": "Benchmark on Wormhole and Blackhole accelerators. Device CI required.",
+      "assignees": [{"login": "jasondavies"}],
+      "labels": [{"name": "bounty"}, {"name": "hard"}],
+      "created_at": "2026-08-18T10:00:00Z",
+      "updated_at": "2026-08-25T10:00:00Z",
+      "comments": 2
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-metal",
+      "number": 40494,
+      "title": "[Bounty $2.5k] Implement Lifting Wavelet Transform (LWT) and Inverse LWT",
+      "html_url": "https://github.com/tenstorrent/tt-metal/issues/40494",
+      "body": "Targets Wormhole/Blackhole. Deadline May 31 2026.",
+      "assignees": [{"login": "ke1rro"}],
+      "labels": [{"name": "bounty"}],
+      "created_at": "2026-02-01T10:00:00Z",
+      "updated_at": "2026-06-15T10:00:00Z",
+      "comments": 7
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-metal",
+      "number": 19418,
+      "title": "[Bounty $500-2500] Bring up microsoft/phi-4 on Wormhole (N300/LB/QB)",
+      "html_url": "https://github.com/tenstorrent/tt-metal/issues/19418",
+      "body": "Tiered payout by achieved throughput on Wormhole.",
+      "assignees": [],
+      "labels": [{"name": "bounty"}],
+      "created_at": "2026-08-01T10:00:00Z",
+      "updated_at": "2026-08-02T10:00:00Z",
+      "comments": 0
+    },
+    {
+      "repository_url": "https://api.github.com/repos/tenstorrent/tt-buda-demos",
+      "number": 20,
+      "title": "[$$ BOUNTY] Add Qwen 1.5 (0.5B) model to TT-Buda Model Demos",
+      "html_url": "https://github.com/tenstorrent/tt-buda-demos/issues/20",
+      "body": "Add the model. Amount unspecified.",
+      "assignees": [],
+      "labels": [{"name": "bounty"}],
+      "created_at": "2026-03-01T10:00:00Z",
+      "updated_at": "2026-03-02T10:00:00Z",
+      "comments": 0
+    },
+    {
+      "repository_url": "https://api.github.com/repos/xevrion-v2/agent-playground",
+      "number": 4,
+      "title": "[Bounty $1000] Calculate the exact value of PI",
+      "html_url": "https://github.com/xevrion-v2/agent-playground/issues/4",
+      "body": "Compute pi exactly.",
+      "assignees": [],
+      "labels": [{"name": "💎 Bounty"}],
+      "created_at": "2026-08-25T10:00:00Z",
+      "updated_at": "2026-08-25T10:00:00Z",
+      "comments": 0
+    },
+    {
+      "repository_url": "https://api.github.com/repos/Scottcjn/rustchain-bounties",
+      "number": 16622,
+      "title": "Bounty claim: BoTTube docstring PR #1766 batch 52",
+      "html_url": "https://github.com/Scottcjn/rustchain-bounties/issues/16622",
+      "body": "4.0 RTC",
+      "assignees": [],
+      "labels": [],
+      "created_at": "2026-08-26T10:00:00Z",
+      "updated_at": "2026-08-26T10:00:00Z",
+      "comments": 0
+    }
+  ]
+}
