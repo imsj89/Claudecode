@@ -251,6 +251,22 @@ preserved. `Do not add freckles, moles, beauty marks` deleted the mole above her
 Protect with a positive keep — `keep the small dark mole above her eyebrow` — or say nothing
 at all. **A do-not list is a list of things you have just drawn the model's attention to.**
 
+**A model cannot draw below its own resolution.** Anything requested at a scale too small to
+render comes back ten to fifty times too big, and a size qualifier does not prevent it — the
+model is not disobeying, it has no smaller mark available. So the enlarged version of a request
+is what you are actually ordering. `A network of tiny lines a fraction of a millimetre deep`
+returned wrinkles; `tone variation at two or three millimetres` returned moles; `nothing larger
+than a pore changes` bound neither. Pores, vellus hair and micro-speculars are safe because
+their enlarged forms are still pores, fuzz and glints. **Before adding a clause, ask what it
+looks like ten times too big — if that is a defect, the clause cannot go in at any wording.**
+Where a texture has no safe small form, describe it as a quality of the surface rather than as
+a structure: `the faint orange-peel quality of real skin` has no scale to inflate, `a mesh of
+tiny lines` does.
+
+**Naming is only dangerous in negation.** §5b's do-not rule is about things you want left
+alone. An edit prompt that wants something *removed* should name it plainly — `clear the dark
+spots on her forehead away` is the correct form, and the polarity problem does not arise.
+
 **An edit prompt must be additive and short.** Editors re-synthesise what you describe to
 them, so a long preservation list is a re-description of the subject and invites a re-render.
 The crowd pass that held was 921 characters naming one region; the skin pass that failed was
