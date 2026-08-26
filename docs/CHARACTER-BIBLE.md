@@ -135,6 +135,27 @@ hoops · thin gold ring, right hand.
 The coral-and-turquoise pendant is the identity anchor — traditional Himalayan stones,
 and a small recurring visual signature across every post.
 
+#### Canonical face — locked detail (from the approved profile-picture frame)
+
+Reusable as a `FACE LOCK` block in any prompt. Written as positive statements of what each
+feature **is**, never as instructions to avoid changing it — a lock written as a do-not list is
+a hit list (§5b).
+
+- **Shape** — oval, high wide cheekbones, jaw tapering to a small rounded chin.
+- **Skin** — warm mid-brown with a golden olive undertone.
+- **Eyebrows** — thick, dark, natural; unplucked at the inner ends where the hairs sweep
+  upward; thinning slightly along the tails; a wide gap between them. Naturally asymmetric.
+- **Mole** — one small dark mole above her left eyebrow. The only mole on her face.
+- **Eyes** — light grey with a faint blue cast and a distinct darker limbal ring; small pupil in
+  bright sun; almond shaped, outer corner slightly downturned, clear upper lid crease; dark
+  lashes of moderate length, sparse lower lashes.
+- **Nose** — narrow straight bridge, tip slightly rounded and lifted, oval nostrils.
+- **Mouth** — upper lip medium with a defined cupid's bow, lower lip full and rose pink;
+  straight even upper teeth in a faintly warm white, the two centre teeth slightly larger.
+- **Ears** — small, close to the head.
+- **Face is hairless.** Vellus hair is never requested on her face: enlarged ten times it
+  becomes visible facial hair, and peach fuzz has no safe enlarged form (§5b scale rule).
+
 #### Summer look (LOCKED — approved 2026-08-25)
 
 White ribbed scoop-neck cropped tank top, thick straps, black waistband just visible below ·
