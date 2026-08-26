@@ -129,3 +129,87 @@ cup, which is what people actually do with a full drink and a lid.
 
 They pair naturally: post 1 straight, post 2 as the follow-up. Voice rules and patterns are in
 CAPTIONS-AND-CADENCE.md — lowercase, short, the turn goes last.
+
+---
+
+## Seedream 4.5 versions — shortened
+
+**Model:** `seedream_v4_5` · **Aspect:** `4:5` · **Quality:** 4K · **Unlimited:** on
+**No attachments.** Identity comes from the Element injected at the top of each prompt
+(`ashmi-gurung-FULL-v3`). Attaching a raw reference image to Seedream instead forces
+`enhance_prompt: true` and your prompt is discarded (BIBLE §6).
+
+### 1S — The sip (1861 characters)
+
+```
+<<<83ab454a-a85a-4814-8459-c10fc7e493aa>>>
+
+A single full-bleed vertical photograph filling the entire frame edge to edge.
+
+A 25-year-old Nepali-American woman sitting on a granite step on a sunny Boston street. Her exact face from the reference: thick natural brows, light grey eyes with a darker ring around the iris, the small dark mole above her left eyebrow. Her face is smooth-shaven and hairless, with mature adult proportions.
+
+White ribbed cropped tank top, short black skirt to mid-thigh, small thick gold huggie hoops, thin gold chain with a coral-and-turquoise pendant, matching ring, black sunglasses pushed up on her head, dark hair in a high ponytail with flyaways. Tall clear cup of iced lemonade, domed lid, white straw.
+
+167 cm, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust, full E cup on a narrow ribcage, narrow shoulders, slim arms and legs.
+
+POSE: seated, knees together and angled to one side, feet a step below, one forearm on her thigh. She leans down to the straw instead of lifting the cup, chin tucked, lips closed on it, cheeks drawn in mid-sip, eyes lifted to the camera over the rim, one brow raised.
+
+Taken by a friend a few steps away at eye level, iPhone photo, three-quarter view from mid-shin up. Deep depth of field, the street behind stays semi-sharp, no portrait mode. Harsh summer sun from above, blown highlights on her shoulders, hard shadow under her chin. Over-sharpening halos, noise reduction smear, JPEG artifacts, horizon slightly tilted.
+
+Strangers passing behind her, all turned away, in profile or cropped, faces indistinct with distance and motion.
+
+Real pores on her nose and cheeks, the sheen broken into small uneven glints with drier matte skin between, her skin clear and even in tone. Unretouched, phone-camera soft.
+
+She is the only person in focus and the only version of her in frame.
+```
+
+### 2S — The near-tumble (2143 characters)
+
+```
+<<<83ab454a-a85a-4814-8459-c10fc7e493aa>>>
+
+A single full-bleed vertical photograph filling the entire frame edge to edge.
+
+A 25-year-old Nepali-American woman sitting on a granite step on a sunny Boston street. Her exact face from the reference: thick natural brows, light grey eyes with a darker ring around the iris, the small dark mole above her left eyebrow. Her face is smooth-shaven and hairless, with mature adult proportions.
+
+White ribbed cropped tank top, short black skirt to mid-thigh, small thick gold huggie hoops, thin gold chain with a coral-and-turquoise pendant, matching ring, black sunglasses pushed up on her head, dark hair in a high ponytail with flyaways. Tall clear cup of iced lemonade, domed lid, white straw.
+
+167 cm, slim narrow frame, 62 cm waist, 100 cm hips, 78 cm underbust, full E cup on a narrow ribcage, narrow shoulders, slim arms and legs.
+
+POSE: caught as her balance goes. Tipped backward past recovery, hips sliding off the step edge, torso falling away from the camera, knees lifting, skirt hem caught under her thigh. One hand flung back, fingers spread, reaching for the step and not yet touching it. Her other arm swings wide with the lemonade, the cup tilted, the drink surging up one side. Ponytail swinging across her cheek, mouth wide open in a startled laugh, brows shot up, eyes wide.
+
+Taken by a friend who reacted a fraction too late, iPhone photo, from mid-shin up. Motion blur on her flung hand, her ponytail and the drink, her face slightly softer than the step behind her because the focus stayed where she used to be. Deep depth of field, no portrait mode. Harsh summer sun from above, blown highlights on her shoulders. Badly held frame: horizon tilted several degrees, her body shoved to one side, one knee cut by the edge.
+
+Strangers passing behind her, all turned away, in profile or cropped, faces indistinct with distance and motion.
+
+Real pores on her nose and cheeks, the sheen broken into small uneven glints with drier matte skin between, her skin clear and even in tone. Unretouched, phone-camera soft.
+
+She is the only person in focus and the only version of her in frame.
+```
+
+### What was cut, and what could not be
+
+Seedream carries less prompt weight than Nano Banana Pro — past forty comma-separated clauses
+nothing lands (BIBLE §5b) — so these run at roughly half length.
+
+**Cut:** the full face description, most capture artifacts, the scene inventory, the subsurface
+and surface-tooth blocks, and all prose connective tissue.
+
+**Kept, and not negotiable:**
+
+| Kept | Why |
+|---|---|
+| `A single full-bleed vertical photograph filling the entire frame edge to edge` | The only thing that suppresses rendered bezels and inset thumbnails. Negatives do not work |
+| The whole BODY line | The Element biases the silhouette, it does not hold it. Every drifted shot was one missing this |
+| Brows, grey iris with darker ring, the mole | The three identity details that have actually drifted. The Element carries the rest |
+| `smooth-shaven and hairless` | Vellus hair enlarged is facial hair |
+| `mature adult proportions` | PROJECT-BRIEF §7 hard guardrail |
+| `Deep depth of field … no portrait mode` | The loudest AI tell in a phone photo |
+| The strangers line | An empty summer sidewalk reads staged, and resolved background faces are the worst failure |
+| Pores plus broken sheen | The two skin items that survive at this length |
+
+**Which model to use.** Nano Banana Pro has held identity, framing and wardrobe through every
+pass in this project; Seedream re-rendered a frame it was asked to edit. The reason to run
+Seedream is Unlimited — free re-rolls on a pose that will need several. A reasonable split is
+to explore the pose on Seedream until the composition is right, then run the keeper on Nano
+Banana Pro with the long prompt above.
