@@ -244,6 +244,19 @@ Learned across thirteen runs. Ignoring these repeats a day of re-rolls.
 
 Took spurious inset thumbnails from 5-in-8 to 0-in-8, and it has held across three models.
 
+**On edit passes the same rule is sharper: never name a thing you want left alone.** A
+negation does not shield its subject, it nominates it, and the polarity is not reliably
+preserved. `Do not add freckles, moles, beauty marks` deleted the mole above her eyebrow.
+`Do not change her skin tone` changed her skin tone (cheek RGB 172,100,67 to 178,107,81).
+Protect with a positive keep — `keep the small dark mole above her eyebrow` — or say nothing
+at all. **A do-not list is a list of things you have just drawn the model's attention to.**
+
+**An edit prompt must be additive and short.** Editors re-synthesise what you describe to
+them, so a long preservation list is a re-description of the subject and invites a re-render.
+The crowd pass that held was 921 characters naming one region; the skin pass that failed was
+1,951 naming eyes, brows, nose, lips, teeth, jawline, cheeks and hairline. Say what to add,
+name the few marks to keep, and stop.
+
 **Comparative beats absolute for anatomy.** `hips visibly wider than her shoulders`,
 `waist-to-hip ratio about 0.62` land reliably. Bare adjectives (`curvy`, `petite`) and even
 absolute measurements get averaged toward the model's defaults.
