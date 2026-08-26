@@ -1,20 +1,99 @@
-# Prompt 04 — Skin texture (edit pass, additive only)
+# Prompt 04 — Skin texture (edit pass)
 
-**Type:** image edit · **Input:** the approved crowd version of the profile picture
-**Model:** `nano_banana_pro`. Attach only the image being fixed, no character references.
-
-**Current state:** version A produced correct pores, texture and specular break-up, and also
-added moles across the forehead, nose, cheeks, neck, chest and shoulders, plus forehead lines,
-crow's feet, under-eye lines, nasolabial creases and neck lines. Prompt **FIX** below repairs
-that output directly. Version **A2** is A with the two offending blocks removed, for running
-again from the clean original.
+**Type:** image edit · **Model:** `nano_banana_pro`, image only, no character references.
+**Input:** the approved crowd frame — the one with plastic skin, the correct mole above her
+eyebrow and no extra marks. Not the over-textured output.
 
 ---
 
-## FIX — corrective pass on the over-textured output (1162 characters)
+## A3 — the prompt to run (2874 characters)
 
-Run this on the image that has the good pores. Faster than starting over, and it keeps the
-texture that already worked.
+```
+Add photographic micro-detail to her skin. Everything already in the photograph stays exactly as it is, pixel for pixel — her face, her expression, her colouring, her hair, her clothes, the crop, the light and the background. Keep the small dark mole above her eyebrow on the right of the image, the mark on her chest and the mark on her upper arm.
+
+Work at the millimetre scale only. Two things stay true throughout: her skin stays clear and even in tone, carrying only the marks it already has, and the only creasing anywhere on her face is the soft folding her expression is making in this moment. Her skin is the smooth young skin of a 25-year-old that simply has visible pores.
+
+PORE STRUCTURE: give the skin real pores with real anatomy. Each pore is a tiny pit with a soft shadowed centre and a faintly raised rim catching light, not a printed dot. Largest and slightly open across the nose, the sides of the nose and the nose bridge. Smaller and denser on the inner cheeks beside the nose. Fine and shallow across the forehead. Sparse and barely there on the outer cheeks toward the jaw. Pores are confined to those areas alone.
+
+SURFACE TOOTH: between the pores, the faint orange-peel quality of real skin — a barely perceptible roughness in the surface itself, strongest across the forehead and the bridge of the nose. It reads as a fine tooth at the very limit of what the sensor resolves, the way skin looks rather than plastic.
+
+VELLUS HAIR: fine, short, pale hairs across her cheeks, jawline, temples and in front of her ears, most lying flat against the skin. Where the sun rims her jaw and cheek they light up individually and give the edge of her face a soft translucent halo instead of a hard outline. A tiny dark follicle point where each hair leaves the skin.
+
+SPECULAR BEHAVIOUR: bring the gloss down to the scale of that surface tooth. Light catches on the raised rims and ridges and stays out of the pits, so every shiny area resolves into hundreds of small, uneven, sharp-edged glints separated by duller skin. The brightest clusters sit on the tip and bridge of her nose, the tops of her cheekbones, her chin and her forehead, and between the clusters the skin is drier and more matte. Sweat sits as individual micro-beads, each with its own pinpoint highlight, gathering in the pores.
+
+SUBSURFACE: light sinks a millimetre or two into the skin before it returns, so the edge between lit and shadowed skin is soft and bleeds warm red rather than turning at a hard line. The rim of her ear and the edges of her nostrils glow faintly where the sun passes through thin tissue.
+
+Match the photograph's own grain, noise and focus. The new detail belongs at the same sharpness as the brickwork behind her — resolved but soft, the way a phone sensor renders skin in bright sun. The result is unretouched, healthy skin on a 25-year-old in hard summer light.
+```
+
+---
+
+## Why A3 and not A
+
+Version A got the pores, surface texture and specular break-up right, and also produced moles
+across her forehead, nose, cheeks, neck, chest and shoulders, plus forehead lines, crow's feet,
+under-eye lines, nasolabial creases and neck lines. A3 is A with the two causes removed and a
+replacement guard added.
+
+**Removed: `MELANIN GRAIN`.** `Tone variation at two or three millimetres` is what became
+moles. Deleted outright — there is no safe wording for it (see the scale rule below).
+
+**Replaced: `MICRO-RELIEF` → `SURFACE TOOTH`.** The old block asked for `a network of tiny
+lines`, which became wrinkles. The new one asks for the same roughness as `the faint
+orange-peel quality of real skin` — a property of the surface rather than a structure drawn on
+it. A quality has no scale to inflate; a line does.
+
+**Removed:** `pores stretch and elongate in the direction the skin is pulled by her expression`
+(invited expression lines) and `gathering in pores and micro-creases` (put *creases* in a
+prompt that had no business containing the word).
+
+**Added, in place of the old size limit:**
+
+> `her skin stays clear and even in tone, carrying only the marks it already has, and the only
+> creasing anywhere on her face is the soft folding her expression is making in this moment`
+
+`Nothing larger than a pore changes` did not bind and has been dropped in favour of this. Note
+the form: it states positively what the skin *is*, rather than listing what to avoid. Saying
+"no moles, no wrinkles" would name both and risk summoning them (BIBLE §5b); describing clear,
+uncreased skin occupies the same space with none of that exposure.
+
+## The scale rule this came from
+
+> **A model cannot draw below its own resolution.** A feature requested at a scale too small to
+> render is rendered at the smallest scale the model *can* draw — ten to fifty times larger
+> than asked. It is not disobeying; it has no smaller mark available.
+
+So the enlarged version of a request is what you are actually ordering:
+
+| Request | Ten times too big | |
+|---|---|---|
+| Pores | Larger pores | safe |
+| Vellus hair | Coarser fuzz | safe |
+| Micro-speculars | Larger glints | safe |
+| Subsurface bleed | Softer shadow edge | safe |
+| `network of tiny lines` | **Wrinkles** | cut |
+| `tone variation at 2–3 mm` | **Moles** | cut |
+
+Everything left in A3 sits in the safe half of that table. Before adding any clause, ask what
+it looks like ten times too big; if that is a defect, no wording saves it.
+
+## What to check, in order
+
+1. **The mole above her eyebrow is still there**, and it is the only one on her face.
+2. **No new lines** on her forehead, beside her eye, under her eye, from nose to mouth, or on
+   her neck. Only the folds the expression itself makes.
+3. **Skin tone unchanged** — sample a cheek patch against the input if unsure.
+4. **Sheen broken up, not enlarged.**
+5. **Then** the pores: present, graded by region, and no sharper than the brick behind her.
+
+---
+
+## Other versions in this file
+
+### FIX — corrective pass, for the over-textured output only (1162 characters)
+
+Only for the image that already has good pores plus unwanted moles and lines. It does not apply
+to the plastic base.
 
 ```
 Keep this photograph exactly as it is — the same face, expression, skin tone, hair, clothes, crop, light and background — and keep all of the fine skin texture, pores, fine hairs and small specular glints exactly as they are now. This is a correction to spots and lines only.
@@ -26,38 +105,12 @@ Second, the lines. Ease out the horizontal lines across her forehead, the lines 
 Everything else stays untouched, pixel for pixel, at the same sharpness and grain as the rest of the photograph.
 ```
 
-Note that this prompt *names* the moles and lines it wants gone. That is correct here and does
-not contradict BIBLE §5b: the earlier rule is about naming things you want **left alone**.
-Naming something you want the model to **act on** is exactly how an edit prompt should work —
-the danger was only ever in negation, where polarity is unreliable.
+This one deliberately names the moles and lines. That is correct and does not contradict
+BIBLE §5b: the rule concerns naming things you want **left alone**. Naming something you want
+the model to **act on** is how an edit prompt should work — the hazard was only ever in
+negation, where polarity is unreliable.
 
----
-
-## A2 — the micro-level pass with the two failure blocks removed (2610 characters)
-
-Use this instead of A when generating from the clean original.
-
-```
-Add photographic micro-detail to her skin. Everything already in the photograph stays exactly as it is, pixel for pixel — her face, her expression, her colouring, her hair, her clothes, the crop, the light and the background. Keep the small dark mole above her eyebrow on the right of the image, the mark on her chest and the mark on her upper arm.
-
-Work at the millimetre scale only. Nothing larger than a pore changes.
-
-PORE STRUCTURE: give the skin real pores with real anatomy. Each pore is a tiny pit with a soft shadowed centre and a faintly raised rim catching light, not a printed dot. Largest and slightly open across the nose, the sides of the nose and the nose bridge. Smaller and denser on the inner cheeks beside the nose. Fine and shallow across the forehead. Sparse and barely there on the outer cheeks toward the jaw. Pores are confined to those areas alone.
-
-SURFACE TOOTH: between the pores, the faint orange-peel quality of real skin — a barely perceptible roughness in the surface itself, strongest across the forehead and the bridge of the nose. It reads as a fine tooth at the very limit of what the sensor resolves, the way skin looks rather than plastic.
-
-VELLUS HAIR: fine, short, pale hairs across her cheeks, jawline, temples and in front of her ears, most lying flat against the skin. Where the sun rims her jaw and cheek they light up individually and give the edge of her face a soft translucent halo instead of a hard outline. A tiny dark follicle point where each hair leaves the skin.
-
-SPECULAR BEHAVIOUR: bring the gloss down to the scale of the micro-relief. Light catches on the raised rims and ridges and stays out of the pits, so every shiny area resolves into hundreds of small, uneven, sharp-edged glints separated by duller skin. The brightest clusters sit on the tip and bridge of her nose, the tops of her cheekbones, her chin and her forehead, and between the clusters the skin is drier and more matte. Sweat sits as individual micro-beads, each with its own pinpoint highlight, gathering in the pores.
-
-SUBSURFACE: light sinks a millimetre or two into the skin before it returns, so the edge between lit and shadowed skin is soft and bleeds warm red rather than turning at a hard line. The rim of her ear and the edges of her nostrils glow faintly where the sun passes through thin tissue.
-
-Match the photograph's own grain, noise and focus. The new detail belongs at the same sharpness as the brickwork behind her — resolved but soft, the way a phone sensor renders skin in bright sun. The result is unretouched, healthy skin on a 25-year-old in hard summer light.
-```
-
----
-
-## B — short pass (785 characters)
+### B — short pass (785 characters)
 
 ```
 Add fine skin texture to this photograph. Everything else stays exactly as it is, pixel for pixel.
@@ -72,9 +125,7 @@ Add only, at pore scale:
 Nothing larger than a pore changes. Match the existing grain and sharpness so the new texture sits at the same softness as the rest of the photo.
 ```
 
----
-
-## C — minimal fallback (284 characters)
+### C — minimal fallback (284 characters)
 
 ```
 Keep this photograph exactly as it is, pixel for pixel, including the small dark mole above her eyebrow. Add only real skin pores and fine vellus hair to her face and shoulders, and break the wide shiny highlights into small uneven specular points. Nothing larger than a pore changes.
