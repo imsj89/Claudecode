@@ -359,13 +359,38 @@ green; "a faint green tint only" still renders as strong green. Describe the *li
 instead of naming the colour — `overhead fluorescent tubes, neutral-cool white` — and let
 the cast emerge.
 
-**Unlimited generations are not reachable from the MCP connector.** `use_unlim: true` is
-rejected for every model with *"Unlimited generations aren't supported"*, and the account
-reports `unlim: {available: false, remaining: null, expires_at: null}`. Ruled out as causes:
-workspace selection, quality tier, and model choice. The web app honours the plan's
-Unlimited entitlement; this path exposes only a separate free-trial allowance the account
-does not hold. Budget MCP work in credits (1 credit per image); use the web app for
-high-volume production.
+**Unlimited generations are not reachable from the MCP connector.** Re-verified 2026-08-26
+against the current connector, which now documents `use_unlim` as a first-class parameter on
+`generate_image`. It still does not help, for two independent reasons.
+
+*Reason one — the flag is rejected by every model worth using.* Preflighted with
+`get_cost: true`, so no credits were spent:
+
+| Model | `use_unlim: true` |
+|---|---|
+| `soul_2`, `soul_v2` | Accepted |
+| `nano_banana_pro` | `Unlimited generations aren't supported for nano_banana_pro` |
+| `nano_banana_2` | `…aren't supported for nano_banana_flash` |
+| `seedream_v4_5` | `…aren't supported for seedream_v4_5` |
+| `seedream_v5_pro` | `…aren't supported for seedream_v5_pro` |
+
+**The catalog is wrong about this.** `models_explore(unlim: true)` returns all eleven image
+models tagged `supports_unlim: true`, including every model in the rejected column. Trust the
+`get_cost` preflight, not the catalog tag.
+
+*Reason two — the allowance does not exist on this account.* `models_explore` reports
+`unlim: {available: false, remaining: null, expires_at: null}`, and even on `soul_2`, where the
+flag is accepted, the preflight still quotes credits (`credits_exact: 0.12`). The connector's
+`use_unlim` means **free-trial unlimited generations**, a different pool from the plan
+entitlement the web app honours — `balance` returns only `{credits, subscription_plan_type:
+"ultimate"}` and exposes no plan-level unlimited at all.
+
+*And a third, if the first two were ever fixed:* the only model that accepts the flag is
+`soul_2`, which needs a trained Soul for identity consistency — attaching a raw reference to it
+instead silently forces `enhance_prompt: true` and discards the prompt (§6). Soul training on
+this account fails with a bare "Something went wrong", so that route is blocked anyway.
+
+Budget MCP work in credits (1 credit per image); use the web app for anything high-volume.
 
 **Operational:** the plan caps at **8 concurrent jobs** and silently drops the overflow —
 submit in batches of 8 or fewer and always check `failed_count`. Individual jobs also fail
