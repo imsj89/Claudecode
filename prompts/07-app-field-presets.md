@@ -289,68 +289,74 @@ strengthening the wording.
 
 ---
 
-## Background swap — matching one generation's set to another (Nano Banana Pro edit)
+## Background swap — take the background from a second image (Nano Banana Pro edit)
 
-**Type:** image edit, not a field preset · **Model:** `nano_banana_pro`
-**Input:** the generation whose background is wrong. Attach that image only.
+**Type:** image edit · **Model:** `nano_banana_pro`
+**Attach two images, in this order:** first the shot being fixed, second the shot whose
+background is correct. Order is load-bearing — the prompt addresses them by position.
 
-When two shots in a set land in visibly different venues, editing the background of one is
-cheaper and safer than re-rolling it: a re-roll puts the face back in play, and the face is the
-thing this project has spent the most effort locking. Fix the half that is wrong.
+When two shots in a set land in different venues, editing one is cheaper and safer than
+re-rolling it: a re-roll puts the face back in play, and the face is what this project has spent
+the most effort locking. Fix the half that is wrong.
 
-**1843 characters.**
+**1542 characters.**
 
 ```
-Keep the woman in this photograph exactly as she is, pixel for pixel: her face, her closed eyes, her downturned head, her hair, her grey hoodie and sweatpants, the plaid waistband, the red heart on her thigh, her hands, the bowling ball she is holding, her position and scale in the frame, and the light falling on her. She is untouched, and she is the only person in the frame. The crop and aspect ratio stay the same.
+Two images are attached.
 
-Rebuild everything behind her as this bowling alley:
+The FIRST image is the photograph being edited. The woman in it stays exactly as she is, pixel for pixel: her face, her closed eyes, her downturned head, her hair, her grey hoodie and sweatpants, the plaid waistband, the red heart on her thigh, her hands, the bowling ball she is holding, her position and scale in the frame, and the light falling on her. She is untouched, and she remains the only person in the finished picture. The crop and aspect ratio stay the same.
 
-Lanes running away to her right, brightly lit, with rows of white-blue pins at the far ends and large pale lane numbers glowing above them in sequence. A long dark green banner runs horizontally across the back wall behind her at about shoulder height, carrying pale soft-focus lettering and a faint speckled starfield texture. Mounted high above the banner, three flat screens: a large purple scoreboard on the left showing a mostly empty scoring grid, a television in the middle playing a music video, and the edge of a third dark screen at the right.
+The SECOND image is a background reference only. Take from it the bowling alley itself, exactly as photographed: the lanes and the angle they run at, the lit pins, the glowing lane numbers, the green banner across the back wall, the screens mounted above it, the ball return machine at the left edge, the pale wood approach flooring, the purple patterned carpet, the deep blue and purple light and the dark ceiling. Reproduce that space as it would look standing empty, and put it behind the woman from the first image.
 
-At the left edge of the frame, a dark metal ball return machine with a small control panel. Underfoot, pale honey-coloured wood approach flooring, with dark purple patterned carpet filling the lower left corner.
+The one element free to differ is the television. The music video playing on it can show any ordinary crowd scene with indistinct, unrecognisable performers.
 
-Deep blue and purple light washing the lanes, the green banner the only warm accent, the ceiling above it dark. The background sits one to two stops darker than she is.
-
-Match her camera exactly: the same eye level, the same lens and perspective, the lanes receding at the angle her stance already implies, her feet meeting the floor where they already do. The new background carries the same grain, noise and softness as the rest of the photograph and stays slightly less sharp than she is.
-
-The music video on the television shows an ordinary crowd scene with indistinct, unrecognisable performers.
+Fit the background to her. Keep the first image's eye level, lens and perspective, with the lanes receding at the angle her stance already implies and her feet meeting the floor where they already do. Carry the first image's grain, noise and exposure across the whole frame, keep the background slightly softer than she is, and let it sit one to two stops darker.
 ```
 
-### How it is built
+### The hard part is role separation
 
-**Preservation is a positive list, and it comes first.** Every element of her is named as a
-thing that *stays*, never as a thing to avoid changing. `Do not change her hair` nominates her
-hair for editing; `her hair … she is untouched` does not (BIBLE §5b). The prompt contains no
-negation at all — verified before use.
+Both attached images contain the same woman. Left to itself the model blends them — her pose
+drifts toward the second image, or a second copy of her appears down the lane. Three things
+prevent it:
 
-**`She is the only person in the frame`** is doing real work. Background rebuilds are where a
-second copy of the subject appears, usually small and further down the lane.
+**Addressing the images by position, repeatedly.** `The FIRST image is the photograph being
+edited` and `The SECOND image is a background reference only`, then every subsequent instruction
+names which image it draws from. Vague reference is what produces blending.
 
-**The camera-match paragraph is the part most often left out.** A rebuilt background that
-ignores the original lens sits behind the subject like a backdrop. Tying it to things already
-in the frame — `the same eye level`, `the angle her stance already implies`, `her feet meeting
-the floor where they already do` — is what makes it read as one photograph. Same
-comparative-over-absolute rule as everywhere else.
+**`Reproduce that space as it would look standing empty.`** This is the clause that removes the
+woman from the second image, and it is phrased positively — describing the room as empty rather
+than instructing the model to exclude her. Naming her to leave her out is the same trap as
+naming a mole to preserve it (BIBLE §5b): the negation nominates its subject.
 
-**Sharpness and grain are specified, and the background is asked to stay *less* sharp than
-she is.** A rebuilt background typically renders crisper than the subject it sits behind, which
-reads instantly as a composite.
+**`She remains the only person in the finished picture.`** A backstop for the same failure,
+stated as the desired end state.
 
-**The television is deliberately unpinned.** Reproducing the exact programme is both hard and
-undesirable: the earlier generation rendered a real music video with recognisable artists and
-their song credit. `An ordinary crowd scene with indistinct, unrecognisable performers` gets the
-screen-glow without putting real people's likenesses into a commercial post — the same call as
-the Brand Deal slots and the Thai banner.
+### The rest
 
-**Signage lettering is described, not spelled.** `Pale soft-focus lettering` gets the shape of a
-banner without demanding glyphs the model will mangle.
+**`Fit the background to her`** sets the direction of adjustment. Without it the model will
+happily reproject her to suit the reference frame, which defeats the point of the edit.
+
+**Camera match is tied to what is already in the first frame** — its eye level, the angle her
+stance implies, where her feet already meet the floor — rather than to absolutes. Same
+comparative-over-absolute rule as everywhere else in this repo.
+
+**The background stays softer and a stop or two darker than she is.** Rebuilt backgrounds render
+crisper than the subject by default, and that reads as a composite immediately.
+
+**The television is deliberately unpinned.** The earlier generation rendered a real music video
+with recognisable artists and their song credit. An indistinct crowd scene gets the screen glow
+without putting real likenesses into a commercial post — the same call as the Brand Deal slots.
 
 ### What to check
 
-1. **Her face is untouched** — compare at full size against the input before anything else.
-2. **No second version of her** anywhere down the lanes.
-3. **Floor line** — her feet meet the new floor at the same height and angle they did.
-4. **Background is softer than she is**, not sharper.
-5. **Perspective** — the lanes converge toward a vanishing point consistent with her scale.
+1. **Her face is untouched** — compare at full size against the first image before anything else.
+2. **No second version of her** anywhere down the lanes. This is the characteristic failure here.
+3. **Her pose has not drifted** toward the second image's pose.
+4. **Floor line** — her feet meet the new floor at the same height and angle they did.
+5. **Background is softer than she is**, not sharper.
 6. **Screens** stay glow rather than legible text.
 
+### If it blends anyway
+
+Fall back to describing the background in words with only the first image attached. It is less
+accurate but it cannot blend, because there is no second person in the context to blend with.
