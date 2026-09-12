@@ -360,3 +360,77 @@ without putting real likenesses into a commercial post — the same call as the 
 
 Fall back to describing the background in words with only the first image attached. It is less
 accurate but it cannot blend, because there is no second person in the context to blend with.
+
+---
+
+## Preset 5 — Glow bowling, ball raised (a separate night)
+
+Same outfit, **different venue and different light**. This does not belong to the 4A/4B set:
+that pair is flash-lit in a blue-and-green alley, this is ambient neon in a magenta glow-bowl.
+Treat it as its own post rather than trying to match it to generation 1.
+
+| Field | Value |
+|---|---|
+| 1 Location | free text below |
+| 2 Time of Day | **Night** |
+| 3 Pose | **Hip Pop** + **Standing** |
+| 4 Expression | **Natural** + **Looking Away** |
+| 5 Outfit | **Athleisure** — unchanged from 4A/4B |
+| 7 Format | **9:16**, **4K**, output **4** |
+
+**Location** — changed
+```
+Inside a neon glow-bowling alley at night, standing out on the pale wood lane approach. Lanes run away on both sides of her, their surfaces wet-looking and streaked with reflected magenta and blue. Large LED video walls span the back wall above the pin decks showing rippling liquid patterns in hot pink and electric blue, an illuminated venue logo glowing at the centre, pale lane numbers along the top. A white cylindrical pillar at the left. The ceiling washed deep violet. Lit only by the venue's own neon, with no flash and no camera light: a heavy magenta and blue cast falls across her grey clothes and the floor, deep shadow fills everywhere the neon does not reach, and the brightest things in the frame are the screens and the lanes rather than her. Shot on a phone in low light, with visible grain and colour noise, slightly soft focus, muddy shadows, deep depth of field, no portrait mode.
+```
+
+**Pose** — changed
+```
+Standing out on the lane approach, her whole body in frame from head to shoes, shot from about six metres away so she occupies roughly half the frame height with a wide expanse of glowing lanes and floor around her. Her right arm is raised high and almost straight above her head, the bowling ball balanced up on her open palm and fingertips. Her left hand rests on her hip at the waistband, elbow out. Her weight is on one leg with the other relaxed and turned slightly inward, hips tipped to one side, her right shoulder pulled up by the reach and her left shoulder dropped.
+```
+
+**Expression** — changed
+```
+Head tipped down and turned away from the raised ball, chin toward her shoulder, eyes lowered almost closed, a small closed-mouth private smile. Quiet and pleased with herself, unhurried, completely unaware of the camera.
+```
+
+**Lock hairstyle** — optional, see below
+```
+Dark brown-black hair scraped back and twisted into a small high topknot bun, a few loose strands escaping at her nape and temples.
+```
+
+### The mood is the ambient light, and that is the whole change
+
+Every other preset in this file specifies **flash**. This one specifies its absence, and that
+single difference produces most of the look:
+
+- **She is not the brightest thing in the frame.** Flash makes the subject brightest and drops
+  the room away; ambient neon does the opposite. `The brightest things in the frame are the
+  screens and the lanes rather than her` is the clause that inverts it.
+- **The colour cast lands on her.** Under flash her grey hoodie stays grey. Under neon it takes
+  magenta and blue, which is what ties her into the room.
+- **Low light brings its own artifacts** — grain, colour noise, soft focus, muddy shadows. These
+  replace the flash artifacts, they do not stack with them.
+
+**Distance carries the mood as much as the light.** At roughly half the frame height with lanes
+running away on both sides, the room is the subject and she is a figure in it. Shot close, the
+same pose is just a person holding a ball.
+
+### On the hair
+
+The reference has it up in a topknot; the 4A/4B set settled on hair down. Since this is a
+separate night at a separate venue, either works — the Lock hairstyle box above gives the
+topknot. Leave the box on the loose-hair text instead if you would rather her hair stay
+constant across every post regardless of venue.
+
+### What to check
+
+1. **The arm.** A raised arm with a heavy ball balanced on an open palm is the failure point.
+   Check the wrist angle, the finger count, and whether the ball reads as resting rather than
+   glued.
+2. **She is not flash-lit.** If she comes out bright against a dark room, the ambient clause
+   lost — strengthen `lit only by the venue's own neon` and move it to the front of the box.
+3. **Colour cast on her clothes.** Grey clothes that stayed neutral grey mean the light did not
+   land.
+4. **Scale** — roughly half the frame height, lanes visible both sides.
+5. **Shoes and feet.** Full-length framing puts them in play for the first time in this set.
+
