@@ -287,3 +287,70 @@ signage. The blur clause now present in both Location boxes is the second attemp
 comes through, the next lever is moving the screens out of frame entirely rather than
 strengthening the wording.
 
+---
+
+## Background swap — matching one generation's set to another (Nano Banana Pro edit)
+
+**Type:** image edit, not a field preset · **Model:** `nano_banana_pro`
+**Input:** the generation whose background is wrong. Attach that image only.
+
+When two shots in a set land in visibly different venues, editing the background of one is
+cheaper and safer than re-rolling it: a re-roll puts the face back in play, and the face is the
+thing this project has spent the most effort locking. Fix the half that is wrong.
+
+**1843 characters.**
+
+```
+Keep the woman in this photograph exactly as she is, pixel for pixel: her face, her closed eyes, her downturned head, her hair, her grey hoodie and sweatpants, the plaid waistband, the red heart on her thigh, her hands, the bowling ball she is holding, her position and scale in the frame, and the light falling on her. She is untouched, and she is the only person in the frame. The crop and aspect ratio stay the same.
+
+Rebuild everything behind her as this bowling alley:
+
+Lanes running away to her right, brightly lit, with rows of white-blue pins at the far ends and large pale lane numbers glowing above them in sequence. A long dark green banner runs horizontally across the back wall behind her at about shoulder height, carrying pale soft-focus lettering and a faint speckled starfield texture. Mounted high above the banner, three flat screens: a large purple scoreboard on the left showing a mostly empty scoring grid, a television in the middle playing a music video, and the edge of a third dark screen at the right.
+
+At the left edge of the frame, a dark metal ball return machine with a small control panel. Underfoot, pale honey-coloured wood approach flooring, with dark purple patterned carpet filling the lower left corner.
+
+Deep blue and purple light washing the lanes, the green banner the only warm accent, the ceiling above it dark. The background sits one to two stops darker than she is.
+
+Match her camera exactly: the same eye level, the same lens and perspective, the lanes receding at the angle her stance already implies, her feet meeting the floor where they already do. The new background carries the same grain, noise and softness as the rest of the photograph and stays slightly less sharp than she is.
+
+The music video on the television shows an ordinary crowd scene with indistinct, unrecognisable performers.
+```
+
+### How it is built
+
+**Preservation is a positive list, and it comes first.** Every element of her is named as a
+thing that *stays*, never as a thing to avoid changing. `Do not change her hair` nominates her
+hair for editing; `her hair … she is untouched` does not (BIBLE §5b). The prompt contains no
+negation at all — verified before use.
+
+**`She is the only person in the frame`** is doing real work. Background rebuilds are where a
+second copy of the subject appears, usually small and further down the lane.
+
+**The camera-match paragraph is the part most often left out.** A rebuilt background that
+ignores the original lens sits behind the subject like a backdrop. Tying it to things already
+in the frame — `the same eye level`, `the angle her stance already implies`, `her feet meeting
+the floor where they already do` — is what makes it read as one photograph. Same
+comparative-over-absolute rule as everywhere else.
+
+**Sharpness and grain are specified, and the background is asked to stay *less* sharp than
+she is.** A rebuilt background typically renders crisper than the subject it sits behind, which
+reads instantly as a composite.
+
+**The television is deliberately unpinned.** Reproducing the exact programme is both hard and
+undesirable: the earlier generation rendered a real music video with recognisable artists and
+their song credit. `An ordinary crowd scene with indistinct, unrecognisable performers` gets the
+screen-glow without putting real people's likenesses into a commercial post — the same call as
+the Brand Deal slots and the Thai banner.
+
+**Signage lettering is described, not spelled.** `Pale soft-focus lettering` gets the shape of a
+banner without demanding glyphs the model will mangle.
+
+### What to check
+
+1. **Her face is untouched** — compare at full size against the input before anything else.
+2. **No second version of her** anywhere down the lanes.
+3. **Floor line** — her feet meet the new floor at the same height and angle they did.
+4. **Background is softer than she is**, not sharper.
+5. **Perspective** — the lanes converge toward a vanishing point consistent with her scale.
+6. **Screens** stay glow rather than legible text.
+
