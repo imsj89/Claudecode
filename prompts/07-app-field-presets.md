@@ -228,7 +228,9 @@ sitting low at the top of her waistband so only a narrow strip of skin shows` pi
 
 ## Preset 4B — Bowling alley, ball low, eyes closed
 
-Same alley, same outfit, different frame. Everything except Outfit changes from 4A.
+**Revised to match generation 1.** Gen 1 is now the consistency anchor for the set: the venue,
+light, skin and outfit fit all follow it, and only the pose and expression differ. Six boxes
+changed; the chips did not.
 
 | Field | Value |
 |---|---|
@@ -239,60 +241,66 @@ Same alley, same outfit, different frame. Everything except Outfit changes from 
 | 5 Outfit | preset **Athleisure** |
 | 7 Format | **9:16**, **4K**, output **4** |
 
-**Location**
+**Location** — changed
 ```
-Inside a bowling alley at night, standing at the head of a lane. Lanes recede behind her with lit pins at the far ends and glowing lane numbers above them. A bright green LED strip runs along the top of the back wall with large illuminated green display lettering below it, and overhead score monitors across the top of the frame. A rack of multicoloured bowling balls at the lower left edge. Dark blue and green neon wash, magenta light spilling across the floor in the foreground. Shot on a phone with flash so she is lit brightly and the alley behind falls away into dark blue and green. Deep depth of field, no portrait mode, sensor noise in the shadows, mild over-sharpening, JPEG artifacts.
-```
-
-**Pose**
-```
-Standing close to the camera and filling the frame from mid-thigh up, angled very slightly to one side. Both arms are down in front of her: her right arm curls around a bowling ball held low against her stomach at waist height, fingers wrapped underneath it. Her left hand rests low on her own hip at the waistband, fingers relaxed. Shoulders soft and slightly rounded, head tipped down and turned a little to one side.
+Inside a bowling alley at night. Lanes recede to her right with lit pins at the far ends and glowing blue lane numbers above them. A long green illuminated banner runs across the back wall behind her. A metal ball return machine at the left edge of the frame, pale wood flooring underfoot and patterned purple carpet in the lower corner. Overhead score monitors across the top of the frame. Cool blue and purple light across the lanes with the green banner as the only warm accent. The monitors and the banner are far enough away and dim enough that their lettering reads only as blurred coloured glow. Shot on a phone with flash: she is lit brightly and evenly and the alley behind her sits a stop or two darker. Deep depth of field, no portrait mode, sensor noise in the shadows, mild over-sharpening, JPEG artifacts.
 ```
 
-**Expression**
+**Pose** — changed (framing only)
 ```
-Eyes fully closed, head tipped down and slightly away, lips pushed forward into a soft pout. Calm and dreamy, chin tucked, eyebrows relaxed, unaware of the camera. Dewy skin with bright wet-looking highlights on her cheekbones, nose, chin and brow bones, visible pores across her nose and cheeks.
-```
-
-**Outfit — custom**
-```
-Oversized light heather-grey hoodie, dropped shoulders, very long sleeves, the hood bunched loosely at the back of her neck, a large kangaroo pocket across the front, hanging long enough to cover her waist. Matching light heather-grey sweatpants with a visible drawstring and a small red embroidered heart motif on the right thigh. The red and white plaid waistband of boxer shorts showing at her hip. A small silver stud earring.
+Standing angled very slightly to one side, shot from about two and a half metres away so she is framed from mid-thigh up and fills roughly three quarters of the frame height. Both arms are down in front of her: her right arm curls around a bowling ball held low against her stomach at waist height, fingers wrapped underneath it. Her left hand rests low on her own hip at the waistband, fingers relaxed. Shoulders soft and slightly rounded, head tipped down and turned a little to one side.
 ```
 
-**Lock hairstyle**
+**Expression** — changed (skin only)
 ```
-Dark brown hair, centre parting, pulled up into a small messy high bun with loose wispy strands escaping around her face, at her temples and down the back of her neck.
-```
-
-**Props**
-```
-A bright glossy red-orange bowling ball held low against her stomach, and a rack of multicoloured bowling balls at the edge of the frame.
+Eyes fully closed, head tipped down and slightly away, lips pushed forward into a soft pout. Calm and dreamy, chin tucked, eyebrows relaxed, unaware of the camera. Natural matte skin with visible pores across her nose and cheeks and only a light sheen on her forehead and cheekbones.
 ```
 
-### What changed from 4A, and why
+**Outfit — custom** — changed
+```
+Her long dark brown-black hair is loose and down, centre parted, falling over both shoulders and in front of them, slightly wavy with a few flyaway strands at the crown. Oversized light heather-grey hoodie, dropped shoulders, very long sleeves, the hood lying flat behind her neck, a large kangaroo pocket across the front, the hem sitting at the top of her waistband so a narrow band of midriff shows. Matching light heather-grey sweatpants with a visible drawstring and a small solid red embroidered heart on the right thigh. A band of red and white plaid boxer waistband visible above the sweatpants. Small silver stud earring.
+```
 
-| | 4A | 4B |
-|---|---|---|
-| Ball | Raised at chest height, palm flat underneath, fingers spread | Held low against her stomach, arm curled round it |
-| Free hand | On her hip, elbow out | Low on her hip at the waistband, arm down |
-| Eyes | Straight down the lens | Fully closed |
-| Head | Level and square | Tipped down and turned aside |
-| Hair | Tight smooth bun | Small messy bun, strands escaping |
-| Midriff | Sliver visible | Covered — the hoodie hangs longer |
-| Framing | Mid-shin up | Mid-thigh up, closer |
-| Background | Blue neon | Green LED wall and lettering, magenta floor spill |
+**Lock hairstyle** — changed
+```
+Long dark brown-black hair worn loose and down, centre parted, falling over both shoulders, slightly wavy, a few flyaway strands at the crown.
+```
 
-**The framing change lives in the Pose box.** The app has no zoom or shot-size control, so
-`close to the camera and filling the frame from mid-thigh up` is the only place to ask for it.
+**Props** — changed
+```
+A plain smooth glossy red-orange bowling ball, its surface uniform and unmarked, held low against her stomach.
+```
 
-**The dewy skin lives in the Expression box.** There is no skin field either. Expression is the
-closest lane, being the only face-facing box, so the sheen and pore clauses ride there.
+### What changed after generation 2, and why
 
-**Closed eyes are the risk.** These models drift toward open eyes because almost all their
-training portraits have them. If they come back open, strengthen to `both eyelids fully closed,
-lashes resting on her cheeks` before changing anything else.
+Gen 2 diverged from gen 1 on six axes. Three of them were caused by this file describing the
+*original* reference photo instead of matching the first generation.
 
-**Wall lettering is described, not spelled.** The reference shows readable words on the green
-displays. Asking for specific words produces mangled glyphs, so the box asks for `large
-illuminated green display lettering` and leaves the content to the model.
+| | Gen 1 | Gen 2 | Cause |
+|---|---|---|---|
+| Mood | Cool blue, green banner accent | Dark, green and magenta neon | 4B Location asked for exactly that |
+| Skin | Natural, light sheen | Dewy, wet-looking speculars | 4B Expression asked for `dewy … wet-looking` |
+| Framing | Alley visible around her | Noticeably tighter | 4B Pose asked for `close to the camera` |
+| Hoodie | Hem at waistband, midriff band | Hangs long, midriff covered | 4B Outfit said `long enough to cover her waist` |
+| Ball | Plain and smooth | Marbled, serial and number printed on it | Nothing specified it |
+| Venue | Ball return machine, blue lanes | Ball rack, PINZ neon | Different furniture named |
+
+**The hair instruction is reversed on purpose.** The previous revision pushed hard for a tight
+bun, because the original photo has one. Both generations came back with hair down anyway, and
+gen 1 is now the anchor — so this preset asks for hair **down** to match it. Consistency across
+her own posts is worth more than fidelity to a stranger's photograph, and fighting the model
+for a bun costs re-rolls on a detail that no longer matters.
+
+**Flash strength is softer here than in revised 4A.** 4A asks for two to three stops of falloff;
+this asks for one or two, because that is what gen 1 actually looks like. If the pair is meant
+to sit side by side in a grid, 4A should be brought down to match rather than 4B pushed up.
+
+**The ball needed specifying at all.** Left unstated, the model added a marbled finish, a serial
+number and a lane number. `Plain … uniform and unmarked` is now explicit, phrased as what the
+surface *is* rather than as a list of things to leave off.
+
+**Legible screen text is still unfixed in the outputs.** Both generations rendered readable
+signage. The blur clause now present in both Location boxes is the second attempt; if it still
+comes through, the next lever is moving the screens out of frame entirely rather than
+strengthening the wording.
 
