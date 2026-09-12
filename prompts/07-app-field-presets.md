@@ -148,6 +148,9 @@ Leave empty.
 
 ## Preset 4A — Bowling alley, ball raised, straight to camera
 
+**Revised after run 1.** The first version missed on hair, ball height, framing, flash falloff
+and legible signage. What changed and why is in the notes below.
+
 | Field | Value |
 |---|---|
 | 1 Location | free text below (no chip matches) |
@@ -159,12 +162,12 @@ Leave empty.
 
 **Location**
 ```
-Inside a bowling alley at night, standing on the approach at the head of a lane. The polished wood lane recedes behind her to the right with lit pins at the far end and glowing blue lane numbers above them. Overhead score monitors run along the top of the frame, one of them playing a music video. A long green illuminated advertising banner along the back wall. Dark ceiling, deep blue and purple neon wash over the walls, a dark ball return unit at the left edge, patterned purple carpet in the foreground. Shot on a phone with direct on-camera flash so she is lit hard and bright and the alley behind falls off fast into dark blue. Deep depth of field, no portrait mode, sensor noise in the shadows, mild over-sharpening, JPEG artifacts.
+Inside a bowling alley at night, standing on the approach at the head of a lane. The polished lane recedes behind her with lit pins at the far end and glowing lane numbers above them, a dark ball return unit at the left edge, patterned purple carpet in the foreground. Overhead score monitors and an illuminated banner along the back wall, all of them far enough away and dim enough that their lettering reads only as blurred coloured glow. Shot on a phone with direct on-camera flash: she is lit hard and bright and the flash falls off sharply behind her, so the lanes are two to three stops darker than she is and the corners of the frame go almost black. Deep depth of field, no portrait mode, sensor noise in the shadows, mild over-sharpening, JPEG artifacts.
 ```
 
 **Pose**
 ```
-Standing straight and square to the camera, weight even on both feet. Her right arm is held out from her body with a bowling ball balanced up at chest height, palm flat underneath it and fingers spread wide, elbow bent. Her left hand rests on her hip, fingers forward, elbow pushed out. Shoulders level, head straight, completely still.
+Standing straight and square to the camera, weight even on both feet, shot from about three metres away so her whole body from head to below the knees fits in frame and she fills roughly two thirds of the frame height with alley visible around her. Her right upper arm hangs down close to her side and her forearm is horizontal, so the bowling ball sits level with her chest, well below her chin, held out clear of her body. Her palm is flat underneath the ball taking its weight from below, fingers spread wide across the underside. Her left hand rests on her hip with the fingers forward and the elbow pushed out. Shoulders level, head straight, completely still.
 ```
 
 **Expression**
@@ -174,32 +177,52 @@ Calm and neutral, lips together, no smile, eyebrows relaxed, chin level, eyes lo
 
 **Outfit — custom**
 ```
-Oversized light heather-grey hoodie, dropped shoulders, very long sleeves bunched at the wrists, hem sitting high enough to show a sliver of bare midriff. Matching light heather-grey sweatpants with a visible drawstring and a small red embroidered heart motif on the left thigh. The red and white plaid waistband of boxer shorts showing above the sweatpants. Small silver stud earrings.
+Her hair is scraped back tight and smooth from the hairline into a high rounded bun, her neck and shoulders completely clear, with only a few fine wisps loose at the temples. Oversized light heather-grey hoodie, dropped shoulders, very long sleeves bunched at the wrists, the hem sitting low at the top of her waistband so only a narrow strip of skin shows. Matching light heather-grey sweatpants with a visible drawstring and a small red embroidered heart on one thigh. A narrow band of red and white plaid boxer waistband just visible above the sweatpants. Small silver stud earrings.
 ```
 
 **Lock hairstyle**
 ```
-Dark brown hair, centre parting, pulled back tight and smooth into a high rounded bun at the back of the head, a few fine wispy strands loose at the temples.
+Dark brown hair scraped back tight and smooth from the hairline into a high rounded bun at the back of the head, neck and shoulders completely clear of hair, a few fine wisps at the temples.
 ```
 
 **Props**
 ```
-A bright glossy red-orange bowling ball held up in her right hand, a hard specular highlight on its surface from the flash.
+A bright glossy red-orange bowling ball held out level with her chest, a hard specular highlight on its surface from the flash.
 ```
 
-### Notes on this one
+### What changed after run 1
 
-**The signage is described, not transcribed.** The reference has Thai text on the back-wall
-banner. Foreign-script text is where these models produce garbage, and reproducing a real
-brand's advertisement serves no purpose, so it is specified as `a long green illuminated
-advertising banner` and left at that. Same reasoning as leaving the Brand Deal slots empty.
+**Hair — the worst miss, and the reason for a deliberate rule break.** The Lock hairstyle field
+alone did not hold: the output came back with her hair down over her shoulders. Hair is now
+stated in **both** Lock hairstyle and at the front of the Outfit box. That violates the
+one-idea-per-box rule at the top of this file, and it is intentional — Outfit is the most
+reliably honoured descriptive box, and a field that demonstrably fails needs a second carrier.
 
-**Aspect mismatch.** The reference is roughly 3:4; the app offers only 9:16 or 16:9. At 9:16 she
-will sit smaller in a taller frame with extra floor and ceiling. Shoot 9:16 and crop to 4:5,
-rather than trying to fight the framing in the pose box.
+The wording also changed from naming the bun to describing the **whole head state**: `her neck
+and shoulders completely clear`. Asking for a bun leaves loose hair unaddressed, so the model
+supplies it; describing what the neck and shoulders look like closes the gap without a negation.
 
-**The hand is the hard part.** Fingers spread flat under a sphere fails more often than
-anything else in this frame. Check it at full size on every output before picking one.
+**Ball height — fixed by arm geometry, not by naming a height.** `Chest height` produced a ball
+up beside her head. The reliable lever is the joints: `her right upper arm hangs down close to
+her side and her forearm is horizontal`. That constrains the height mechanically. `Palm flat
+underneath taking its weight from below` fixes the side-grip.
+
+**Framing — fixed with a distance and a fraction.** `Framed from mid-shin up` was ignored. `Shot
+from about three metres away … she fills roughly two thirds of the frame height` gives two
+concrete quantities instead of a crop name the app has no field for.
+
+**Flash falloff — fixed with stops.** The output was evenly lit with a well-exposed background,
+which killed the flash look. `Two to three stops darker than she is` is a measurable
+instruction; `falls off fast` is a vibe.
+
+**Legible signage — fixed by distance and dimness.** The output rendered `BOOK YOUR PARTY`, a
+real song credit and a venue name. Beyond looking wrong, fabricated third-party brand and
+artist content in a commercial post is the same exposure as the Brand Deal slots. The fix is
+positive: the signage is `far enough away and dim enough that their lettering reads only as
+blurred coloured glow`, rather than asking for no text.
+
+**Midriff.** The output showed a wide band of skin and a very prominent waistband. `The hem
+sitting low at the top of her waistband so only a narrow strip of skin shows` pins it.
 
 ---
 
