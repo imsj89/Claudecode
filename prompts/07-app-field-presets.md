@@ -143,3 +143,60 @@ Dark brown-black hair loose and slightly windblown, middle part, a few strands a
 ```
 Leave empty.
 ```
+
+---
+
+## Preset 4 — Bowling alley, flash (reproduces a supplied reference frame)
+
+| Field | Value |
+|---|---|
+| 1 Location | free text below (no chip matches) |
+| 2 Time of Day | **Night** |
+| 3 Pose | **Front-Facing** + **Standing** |
+| 4 Expression | **Natural** + **Looking at Camera** |
+| 5 Outfit | preset **Athleisure** |
+| 7 Format | **9:16**, **4K**, output **4** |
+
+**Location**
+```
+Inside a bowling alley at night, standing on the approach at the head of a lane. The polished wood lane recedes behind her to the right with lit pins at the far end and glowing blue lane numbers above them. Overhead score monitors run along the top of the frame, one of them playing a music video. A long green illuminated advertising banner along the back wall. Dark ceiling, deep blue and purple neon wash over the walls, a dark ball return unit at the left edge, patterned purple carpet in the foreground. Shot on a phone with direct on-camera flash so she is lit hard and bright and the alley behind falls off fast into dark blue. Deep depth of field, no portrait mode, sensor noise in the shadows, mild over-sharpening, JPEG artifacts.
+```
+
+**Pose**
+```
+Standing straight and square to the camera, weight even on both feet. Her right arm is held out from her body with a bowling ball balanced up at chest height, palm flat underneath it and fingers spread wide, elbow bent. Her left hand rests on her hip, fingers forward, elbow pushed out. Shoulders level, head straight, completely still.
+```
+
+**Expression**
+```
+Calm and neutral, lips together, no smile, eyebrows relaxed, chin level, eyes looking straight down the lens.
+```
+
+**Outfit — custom**
+```
+Oversized light heather-grey hoodie, dropped shoulders, very long sleeves bunched at the wrists, hem sitting high enough to show a sliver of bare midriff. Matching light heather-grey sweatpants with a visible drawstring and a small red embroidered heart motif on the left thigh. The red and white plaid waistband of boxer shorts showing above the sweatpants. Small silver stud earrings.
+```
+
+**Lock hairstyle**
+```
+Dark brown hair, centre parting, pulled back tight and smooth into a high rounded bun at the back of the head, a few fine wispy strands loose at the temples.
+```
+
+**Props**
+```
+A bright glossy red-orange bowling ball held up in her right hand, a hard specular highlight on its surface from the flash.
+```
+
+### Notes on this one
+
+**The signage is described, not transcribed.** The reference has Thai text on the back-wall
+banner. Foreign-script text is where these models produce garbage, and reproducing a real
+brand's advertisement serves no purpose, so it is specified as `a long green illuminated
+advertising banner` and left at that. Same reasoning as leaving the Brand Deal slots empty.
+
+**Aspect mismatch.** The reference is roughly 3:4; the app offers only 9:16 or 16:9. At 9:16 she
+will sit smaller in a taller frame with extra floor and ceiling. Shoot 9:16 and crop to 4:5,
+rather than trying to fight the framing in the pose box.
+
+**The hand is the hard part.** Fingers spread flat under a sphere fails more often than
+anything else in this frame. Check it at full size on every output before picking one.
