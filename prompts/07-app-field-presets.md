@@ -146,7 +146,7 @@ Leave empty.
 
 ---
 
-## Preset 4 — Bowling alley, flash (reproduces a supplied reference frame)
+## Preset 4A — Bowling alley, ball raised, straight to camera
 
 | Field | Value |
 |---|---|
@@ -200,3 +200,76 @@ rather than trying to fight the framing in the pose box.
 
 **The hand is the hard part.** Fingers spread flat under a sphere fails more often than
 anything else in this frame. Check it at full size on every output before picking one.
+
+---
+
+## Preset 4B — Bowling alley, ball low, eyes closed
+
+Same alley, same outfit, different frame. Everything except Outfit changes from 4A.
+
+| Field | Value |
+|---|---|
+| 1 Location | free text below |
+| 2 Time of Day | **Night** |
+| 3 Pose | **Candid** + **Standing** |
+| 4 Expression | **Natural** + **Looking Away** |
+| 5 Outfit | preset **Athleisure** |
+| 7 Format | **9:16**, **4K**, output **4** |
+
+**Location**
+```
+Inside a bowling alley at night, standing at the head of a lane. Lanes recede behind her with lit pins at the far ends and glowing lane numbers above them. A bright green LED strip runs along the top of the back wall with large illuminated green display lettering below it, and overhead score monitors across the top of the frame. A rack of multicoloured bowling balls at the lower left edge. Dark blue and green neon wash, magenta light spilling across the floor in the foreground. Shot on a phone with flash so she is lit brightly and the alley behind falls away into dark blue and green. Deep depth of field, no portrait mode, sensor noise in the shadows, mild over-sharpening, JPEG artifacts.
+```
+
+**Pose**
+```
+Standing close to the camera and filling the frame from mid-thigh up, angled very slightly to one side. Both arms are down in front of her: her right arm curls around a bowling ball held low against her stomach at waist height, fingers wrapped underneath it. Her left hand rests low on her own hip at the waistband, fingers relaxed. Shoulders soft and slightly rounded, head tipped down and turned a little to one side.
+```
+
+**Expression**
+```
+Eyes fully closed, head tipped down and slightly away, lips pushed forward into a soft pout. Calm and dreamy, chin tucked, eyebrows relaxed, unaware of the camera. Dewy skin with bright wet-looking highlights on her cheekbones, nose, chin and brow bones, visible pores across her nose and cheeks.
+```
+
+**Outfit — custom**
+```
+Oversized light heather-grey hoodie, dropped shoulders, very long sleeves, the hood bunched loosely at the back of her neck, a large kangaroo pocket across the front, hanging long enough to cover her waist. Matching light heather-grey sweatpants with a visible drawstring and a small red embroidered heart motif on the right thigh. The red and white plaid waistband of boxer shorts showing at her hip. A small silver stud earring.
+```
+
+**Lock hairstyle**
+```
+Dark brown hair, centre parting, pulled up into a small messy high bun with loose wispy strands escaping around her face, at her temples and down the back of her neck.
+```
+
+**Props**
+```
+A bright glossy red-orange bowling ball held low against her stomach, and a rack of multicoloured bowling balls at the edge of the frame.
+```
+
+### What changed from 4A, and why
+
+| | 4A | 4B |
+|---|---|---|
+| Ball | Raised at chest height, palm flat underneath, fingers spread | Held low against her stomach, arm curled round it |
+| Free hand | On her hip, elbow out | Low on her hip at the waistband, arm down |
+| Eyes | Straight down the lens | Fully closed |
+| Head | Level and square | Tipped down and turned aside |
+| Hair | Tight smooth bun | Small messy bun, strands escaping |
+| Midriff | Sliver visible | Covered — the hoodie hangs longer |
+| Framing | Mid-shin up | Mid-thigh up, closer |
+| Background | Blue neon | Green LED wall and lettering, magenta floor spill |
+
+**The framing change lives in the Pose box.** The app has no zoom or shot-size control, so
+`close to the camera and filling the frame from mid-thigh up` is the only place to ask for it.
+
+**The dewy skin lives in the Expression box.** There is no skin field either. Expression is the
+closest lane, being the only face-facing box, so the sheen and pore clauses ride there.
+
+**Closed eyes are the risk.** These models drift toward open eyes because almost all their
+training portraits have them. If they come back open, strengthen to `both eyelids fully closed,
+lashes resting on her cheeks` before changing anything else.
+
+**Wall lettering is described, not spelled.** The reference shows readable words on the green
+displays. Asking for specific words produces mangled glyphs, so the box asks for `large
+illuminated green display lettering` and leaves the content to the model.
+
