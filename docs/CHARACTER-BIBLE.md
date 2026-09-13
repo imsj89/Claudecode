@@ -156,6 +156,55 @@ a hit list (§5b).
 - **Face is hairless.** Vellus hair is never requested on her face: enlarged ten times it
   becomes visible facial hair, and peach fuzz has no safe enlarged form (§5b scale rule).
 
+### Her bedroom (LOCKED — canonical location)
+
+Canonical frame: the doorway view, Higgsfield job `435a75c0-cee9-4f13-8929-03531a8e7681`.
+Every future at-home shot matches this room. Reuse the frame as an `image_references` input
+rather than re-describing it — that is what kept four camera angles consistent.
+
+**Architecture.** An upper-floor room in an older house. Two-tone walls: the bed wall is warm
+**butter yellow**, the adjoining window wall is clear **sky blue**, meeting at a crisp white
+corner. White cornice, skirting and window frame. Pale honey floorboards. One tall sash window
+with white sheer curtains, rooftops and trees beyond. A white paper globe pendant.
+
+**Furniture.** A full-size bed against the yellow wall with a tall fan-shaped white rattan
+headboard, white linen duvet, cream waffle blanket, cushions in cream, white and terracotta.
+Dark wood bedside table at the door end. Large round handwoven jute rug. Woven basket with
+stacked books by the window. In the far corner, a **terracotta hanging canopy** gathered to a
+point at the ceiling over floor cushions and a sheepskin, warm fairy lights threaded down it.
+
+**The poster wall.** Four framed anime character art prints on the yellow wall, slim white
+frames, **top edges aligned so the bottom edges step upward**, descending in size left to
+right as seen from the doorway:
+
+| Position | Print | Size |
+|---|---|---|
+| 1 | Eren Yeager — hooded Survey Corps cloak, charcoal and olive | largest, ~1 m |
+| 2 | Gojo Satoru — white hair, blindfold, indigo and violet | smaller |
+| 3 | Asta — spiky black hair, tattered cloak, green and black | smaller again |
+| 4 | Naruto Uzumaki — blonde spikes, orange jacket | smallest, ~half of 1 |
+
+Order runs shelf → Eren → Gojo → Asta → Naruto from the canopy corner toward the door, so a
+**reverse angle shows them mirrored** — that is correct, not a defect.
+
+**Her things in the room.** Navy scrubs on a wooden hanger on the back of the door with a
+**plain unbranded lanyard** beside them. Thick textbooks lying flat with colour-coded tabs and
+**spines turned away from camera**. A coiled stethoscope. A floating shelf on the yellow wall
+with a small **brass butter lamp**, a folded **red and gold silk scarf** and one framed family
+photograph — the inherited layer, older than everything else in the room.
+
+**No plants anywhere.**
+
+### Two rules this room established
+
+**Turn text away rather than forbidding it.** Book spines face inward and the wall art is
+*framed art prints* rather than commercial posters. Both work where five attempts at "no
+lettering" had failed: commercial key art carries title treatments, gallery prints do not.
+Change the object so the text is not there to render.
+
+**Reverse angles invent furniture.** An earlier reverse view grew a chest of drawers and a
+landing that exist in no other frame. Always check a new angle against the canonical one.
+
 #### Daisy dress look (LOCKED)
 
 Short black fit-and-flare mini dress in a **ditsy** daisy print — small cream-white daisies,
