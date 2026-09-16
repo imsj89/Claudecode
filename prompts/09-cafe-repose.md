@@ -68,3 +68,39 @@ The pose reference has her **right arm hanging straight down beside her hip**. T
 generation put **both** arms up behind her head. Everything else lands: head tilted
 down to her left shoulder, eyes closed, legs crossed with knees to the right, leaning
 back, café light, Macy's signage, cappuccino and pastry in place.
+
+---
+
+## v2 — five references (job `8efa001d-2044-4673-b406-13d11549c3ea`)
+
+Face and body had drifted off-model in v1, so v2 splits the references by job:
+
+| Reference | media_id | Governs |
+|---|---|---|
+| finalised café photo | `34f5f93a-ba72-4ab0-970c-a17c7b678a56` | scene, wardrobe, jewellery, bag, table, light |
+| `closeup.jpg` | `df911583-fe52-4bd9-a5f1-7cacfaf1cacb` | face |
+| `features.jpg` | `0545a247-7c20-4ce1-839c-dfa04e175b92` | face |
+| `charsheet.jpg` | `93cbe1f4-d16b-4f5f-9c0b-2d64014259df` | face + proportions |
+| `5.jpg` | `d5434a5e-c7cc-4ad3-a520-b463aacdf48c` | proportions |
+
+The prompt opens with a **HOW TO USE THE REFERENCES** block that assigns each image a
+job and settles the tie-break explicitly: *"Where the café photograph and the identity
+sheets disagree about how she looks, the identity sheets are correct."* Without that,
+five references just average.
+
+Two other changes from v1:
+
+- **Arm fix.** v1 raised both arms. Fixed with a positive statement of where the other
+  arm is plus a count: *"Her RIGHT arm hangs straight down at her side beside her hip…
+  Only one arm is raised. The other arm is down."*
+- **Face spec corrected** to what the references actually show — brows low and close
+  with a narrow gap, hooded upper lids creasing low, two beauty marks on her cheek,
+  clear skin above the brows. (The old bible spec says *wide* brow gap and a mole above
+  her left eyebrow; neither is in any reference. §2 still needs this fix.)
+
+Proportions carried on `Her hips read visibly wider than her shoulders` — comparative,
+not measured. No size adjectives anywhere in the prompt, which is what keeps it clear of
+the safety filter.
+
+**Known drift in v2:** the street sign behind her now reads "NO EXIT" instead of
+"DO NOT ENTER", and the hair ties sit on the raised wrist rather than the hanging one.
