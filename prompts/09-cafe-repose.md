@@ -104,3 +104,43 @@ the safety filter.
 
 **Known drift in v2:** the street sign behind her now reads "NO EXIT" instead of
 "DO NOT ENTER", and the hair ties sit on the raised wrist rather than the hanging one.
+
+---
+
+## v3 — two references, corrected pose read (job `c94668f4-fe88-4be6-bfce-c6aeccaf6525`)
+
+Five references was one too many — it pulled the face and figure off-model. v3 drops to two,
+each with a single job:
+
+| Reference | media_id | Governs |
+|---|---|---|
+| finalised café photo | `34f5f93a-ba72-4ab0-970c-a17c7b678a56` | **everything except the face** — figure, hair, wardrobe, jewellery, bag, chair, table, café, window, signage, light |
+| `charsheet.jpg` | `93cbe1f4-d16b-4f5f-9c0b-2d64014259df` | **the face only** |
+
+Phrasing that carries it: *"Her build and proportions come from this photograph and from
+nothing else — do not alter her figure in any way"* / *"Use it for the face and for nothing else."*
+
+### Three pose details I had wrong in v1 and v2
+
+Re-read the pose reference at full size. My earlier description was wrong on:
+
+1. **Eyes.** Not closed — **open but heavily lidded**, gaze cast down and away from the lens.
+2. **Head tilt.** Leans toward her **right** shoulder, i.e. *away* from the raised arm.
+   v1/v2 tilted it toward the raised arm.
+3. **Camera.** Not standing height looking down — **close, at about chest height, just
+   below her eye line, angled slightly up.**
+
+Also corrected: lips closed and softly pouted (not parted, no smile); legs crossed **left
+thigh over right**; the three black hair elastics and the pale mint nail polish belong on
+the **hanging right hand**.
+
+### Result
+
+Pose matches: slouch, raised left arm with the underarm open, right arm hanging to the
+seat with curled fingers, high leg cross, head tilt, downcast lidded gaze, camera height.
+Hair elastics and mint nails landed on the correct hand.
+
+**Known drift:** the street sign behind her has degraded across generations — "DO NOT
+ENTER" → "NO EXIT" (v2) → garbled lettering (v3). Signage text is the one element that
+does not survive re-generation; fix it by patching that region from the original café
+photo rather than by re-prompting.
