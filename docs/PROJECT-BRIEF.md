@@ -47,17 +47,33 @@ higgsfield.ai
 platform.higgsfield.ai
 cloud.higgsfield.ai
 mcp.higgsfield.ai
-d2ol7oe51mr4n9.cloudfront.net
 upload.higgsfield.ai
+cdn.higgsfield.ai
+d2ol7oe51mr4n9.cloudfront.net
+d8j0ntlcm91z4.cloudfront.net
 ```
 
-The two non-obvious entries matter most: `d2ol7oe51mr4n9.cloudfront.net` is where
-generated media actually lands, and `upload.higgsfield.ai` is where inputs go. Without
-them the MCP tools work but no image can be seen or uploaded.
+The non-obvious entries matter most: the CloudFront hosts are where generated media
+actually lands, `upload.higgsfield.ai` is where inputs go, and `cdn.higgsfield.ai` serves
+style thumbnails. Without them the MCP tools work but no image can be fetched or uploaded.
 
-Verified: `platform` 405, `mcp` 404, CloudFront serves a full PNG. Real responses from
-the destination servers, not tunnel failures. Note these applied to the **running**
-session — no restart was needed for the network change.
+Verified: `platform` 405, `mcp` 404, `d2ol7...` serves a full PNG. Real responses from the
+destination servers, not tunnel failures. Note these applied to the **running** session —
+no restart was needed for the network change.
+
+> **The media CDN hostname is not stable — allowlist both.** Run 001 (2026-08-25) had its
+> results served from `d8j0ntlcm91z4.cloudfront.net`, not the `d2ol7...` host verified
+> during planning. That host was not on the list, so the images could not be fetched even
+> though generation succeeded.
+>
+> **Telling the two failures apart matters.** A `403` in the response body is the
+> destination server answering — the host is reachable. `curl: (56) CONNECT tunnel failed,
+> response 403` is the *proxy* refusing before any connection is made — the host is not
+> allowlisted. Only the second one is a network-policy problem.
+>
+> Consequence: a generation can succeed and be visible in the Higgsfield widget while
+> being unreadable to the session that made it. That is survivable for approval steps a
+> human performs anyway, but it blocks anything that needs to read pixels back.
 
 Leave Environment variables empty — the UI warns they are visible to anyone using the
 environment. OAuth via MCP avoids needing them at all.
@@ -172,3 +188,12 @@ that solves character consistency.
 6. Shot-list library + hook/caption banks.
 7. Posting cadence and the first 30 days.
 8. Brand-deal positioning and media kit.
+
+**Progress.** Steps 1–3 are done: MCP tools and egress verified (§2), the §6 decisions
+resolved, and the bible written (`docs/CHARACTER-BIBLE.md`). Step 4 is under way — the
+character sheet that seeds the training set has been generated (`prompts/01-character-sheet.md`,
+run 001 in `docs/GENERATION-LOG.md`).
+
+**The sheet is generated but not approved.** The heritage and age reads are hard-fail
+gates and need human eyes before the Reference Element is created — nothing downstream
+should be built on an unreviewed face.
