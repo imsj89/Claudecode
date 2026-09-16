@@ -144,3 +144,50 @@ Hair elastics and mint nails landed on the correct hand.
 ENTER" → "NO EXIT" (v2) → garbled lettering (v3). Signage text is the one element that
 does not survive re-generation; fix it by patching that region from the original café
 photo rather than by re-prompting.
+
+---
+
+## v4 — face fixes (job `3b6cf5a4-3dc4-4258-b0a9-83eeddab6aba`)
+
+Two faults in v3, both caused by the prompt rather than the model.
+
+### The oversized mole — the scale rule again
+
+v3's face block said *"Two small beauty marks on her cheek"* and the skin block said
+*"Keep her two cheek beauty marks."* A real beauty mark is 2–3mm. The model cannot draw
+below its own resolution, so it rendered one roughly ten times too large.
+
+**Fix: say nothing about moles at all.** Not "two small beauty marks", and not "no moles"
+either — a negation nominates its subject and is just as likely to produce one. The skin
+block now carries a positive quality instead: *"Smooth, clear, even complexion."* Whatever
+marks she has come from the character sheet on their own.
+
+This is the third time the scale rule has produced exactly this failure (`network of tiny
+lines` → wrinkles, `tone variation at 2–3mm` → moles, and now this). Anything smaller than
+a few millimetres must be left unnamed.
+
+### The full face — an omission, not a drift
+
+The café photograph is the master for everything except the face, so with no face-shape
+description the face drifted toward the master too. The v3 face block described features
+(brows, lids, nose, lips) but never described **shape**.
+
+Added, from her closeup reference:
+
+> Her face is long and narrow: an oval that tapers from her cheekbones down to a defined,
+> slightly pointed chin. Her cheekbones sit high and flat and are the widest part of her
+> face, and the plane of her cheek below them is flat with a shallow hollow running toward
+> her jaw. Her jaw is narrow and clean. Long neck. Keep the face slender and tapered.
+
+Plus one line settling the tie-break: *"Her face shape follows the character sheet, not the
+café photograph."*
+
+General rule: when one reference is master for everything but the face, the face block must
+describe **shape and structure**, not just features. Anything left undescribed defaults to
+the master.
+
+### Still outstanding
+
+The street sign reads "DO AOT ENTER". Better than v3's garble, still wrong. Signage text
+does not survive re-generation at any prompt wording — patch that region from the original
+café photo instead.
